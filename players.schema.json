@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tracked players",
+  "type": "object",
+  "required": ["players"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "club"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 2, "description": "Full name, e.g. \"Bukayo Saka\"" },
+          "club": { "type": "string", "minLength": 3, "description": "Current club, e.g. \"Arsenal\"" },
+          "id": { "type": "integer", "description": "Highlightly player id; filled in automatically on first run" }
+        }
+      }
+    }
+  }
+}

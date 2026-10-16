@@ -1,0 +1,120 @@
+{
+  "$schema": "./players.schema.json",
+  "players": [
+    {
+      "name": "Orkun Kökçü",
+      "club": "Besiktas",
+      "id": 5982109
+    },
+    {
+      "name": "Cole Palmer",
+      "club": "Chelsea",
+      "id": 24630256
+    },
+    {
+      "name": "Ernest Muci",
+      "club": "Trabzonspor",
+      "id": 585872
+    },
+    {
+      "name": "Felix Uduokhai",
+      "club": "Union Berlin",
+      "id": 4090520
+    },
+    {
+      "name": "Gökhan Sazdağı",
+      "club": "Corum FK",
+      "id": 88692639
+    },
+    {
+      "name": "Emre Bilgin",
+      "club": "Eyüpspor",
+      "id": 44289644
+    },
+    {
+      "name": "Emrecan Uzunhan",
+      "club": "Istanbulspor",
+      "id": 20757562
+    },
+    {
+      "name": "Fahri Ay",
+      "club": "Corlu 1947",
+      "id": 58185071
+    },
+    {
+      "name": "Cumali Gürsel",
+      "club": "Bandirma Spor",
+      "id": 107480695
+    },
+    {
+      "name": "Arda Kılıç",
+      "club": "Kirklarelispor",
+      "id": 71800841
+    },
+    {
+      "name": "João Mário",
+      "club": "AEK Athens",
+      "id": 33320
+    },
+    {
+      "name": "Moatasem Al-Musrati",
+      "club": "Al-Ahli",
+      "id": 6763120
+    },
+    {
+      "name": "Amir Hadziahmetovic",
+      "club": "Ludogorets",
+      "id": 8051120
+    },
+    {
+      "name": "Göktuğ Baytekin",
+      "club": "Sakaryaspor",
+      "id": 54203380
+    },
+    {
+      "name": "Salih Uçan",
+      "club": "Genclerbirligi",
+      "id": 5000492
+    },
+    {
+      "name": "Tayyip Talha Sanuç",
+      "club": "Rizespor",
+      "id": 9981027
+    },
+    {
+      "name": "Emrecan Terzi",
+      "club": "Igdir FK",
+      "id": 54203058
+    },
+    {
+      "name": "Ersin Destanoğlu",
+      "club": "Al-Jazira",
+      "id": 317485
+    },
+    {
+      "name": "Devrim Şahin",
+      "club": "Bodrum FK",
+      "id": 85307453
+    },
+    {
+      "name": "Élan Ricardo",
+      "club": "ETO FC",
+      "id": 58735530
+    },
+    {
+      "name": "Jean Onana",
+      "club": "Without Club",
+      "id": 6721582
+    },
+    {
+      "name": "Yasin Özcan",
+      "club": "Aston Villa",
+      "id": 60542433
+    },
+    {
+      "name": "Necip Uysal",
+      "club": "Retired",
+      "id": 321671
+    }
+  ]
+}

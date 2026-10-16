@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Player Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Player Tracker</h1>
+      <p id="updated" class="muted"></p>
+    </div>
+    <div class="controls">
+      <div class="seg" id="season-seg" role="group" aria-label="Season"></div>
+      <select id="category" aria-label="Competition">
+        <option value="club">All club competitions</option>
+        <option value="league">League</option>
+        <option value="cup">Cups</option>
+        <option value="europe">Europe</option>
+      </select>
+    </div>
+  </header>
+
+  <div id="notices"></div>
+
+  <main>
+    <section class="card">
+      <div class="card-head">
+        <h2>Overview</h2>
+        <span class="muted small">Click a row for the competition breakdown · tick 2–4 players to compare</span>
+      </div>
+      <div class="table-wrap">
+        <table id="overview">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p id="empty" class="muted" hidden>No players yet — add some to <code>players.json</code>.</p>
+    </section>
+
+    <section class="card" id="compare" hidden>
+      <div class="card-head">
+        <h2>Compare</h2>
+        <button id="clear-compare" class="link">Clear</button>
+      </div>
+      <div id="compare-body"></div>
+    </section>
+  </main>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

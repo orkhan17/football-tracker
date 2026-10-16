@@ -1,0 +1,13 @@
+{
+  "name": "football-tracker",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "fetch": "node --env-file=.env scripts/fetch.mjs",
+    "test": "node --test scripts/"
+  }
+}

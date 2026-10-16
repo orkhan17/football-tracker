@@ -1,0 +1,1308 @@
+{
+  "generatedAt": "2026-10-16T22:11:08.518Z",
+  "seasons": [
+    2026,
+    2025
+  ],
+  "players": [
+    {
+      "name": "Orkun Kökçü",
+      "club": "Besiktas",
+      "id": 5982109,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 30,
+              "starts": 29,
+              "minutes": 2485,
+              "goals": 8,
+              "assists": 10
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 6,
+              "starts": 4,
+              "minutes": 383,
+              "goals": 2,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 4,
+              "starts": 4,
+              "minutes": 328,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 60,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 7,
+              "starts": 7,
+              "minutes": 585,
+              "goals": 2,
+              "assists": 2
+            },
+            {
+              "name": "UEFA Europa League",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 116,
+              "goals": 0,
+              "assists": 2
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 5,
+              "starts": 5,
+              "minutes": 436,
+              "goals": 3,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Orkun Kökçü"
+    },
+    {
+      "name": "Cole Palmer",
+      "club": "Chelsea",
+      "id": 24630256,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Premier League",
+              "category": "league",
+              "team": "Chelsea FC",
+              "apps": 26,
+              "starts": 24,
+              "minutes": 1965,
+              "goals": 10,
+              "assists": 1
+            },
+            {
+              "name": "FA Cup",
+              "category": "cup",
+              "team": "Chelsea FC",
+              "apps": 3,
+              "starts": 2,
+              "minutes": 171,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "EFL Cup",
+              "category": "cup",
+              "team": "Chelsea FC",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 30,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Champions League",
+              "category": "europe",
+              "team": "Chelsea FC",
+              "apps": 4,
+              "starts": 3,
+              "minutes": 277,
+              "goals": 1,
+              "assists": 2
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Premier League",
+              "category": "league",
+              "team": "Chelsea FC",
+              "apps": 6,
+              "starts": 6,
+              "minutes": 531,
+              "goals": 2,
+              "assists": 3
+            },
+            {
+              "name": "EFL Cup",
+              "category": "cup",
+              "team": "Chelsea FC",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 135,
+              "goals": 2,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Cole Jermaine Palmer"
+    },
+    {
+      "name": "Ernest Muci",
+      "club": "Trabzonspor",
+      "id": 585872,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Trabzonspor",
+              "apps": 26,
+              "starts": 21,
+              "minutes": 1802,
+              "goals": 11,
+              "assists": 4
+            },
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 58,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Trabzonspor",
+              "apps": 8,
+              "starts": 5,
+              "minutes": 518,
+              "goals": 4,
+              "assists": 5
+            },
+            {
+              "name": "TFF Süper Kupa",
+              "category": "cup",
+              "team": "Trabzonspor",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 3,
+              "starts": 1,
+              "minutes": 149,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 117,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Trabzonspor",
+              "apps": 6,
+              "starts": 6,
+              "minutes": 377,
+              "goals": 2,
+              "assists": 2
+            },
+            {
+              "name": "UEFA Conference League",
+              "category": "europe",
+              "team": "Trabzonspor",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 16,
+              "goals": 0,
+              "assists": 1
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Trabzonspor",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 72,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Ernest Muçi"
+    },
+    {
+      "name": "Felix Uduokhai",
+      "club": "Union Berlin",
+      "id": 4090520,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 15,
+              "starts": 12,
+              "minutes": 1124,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 180,
+              "goals": 0,
+              "assists": 1
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 3,
+              "starts": 2,
+              "minutes": 181,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 180,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Bundesliga",
+              "category": "league",
+              "team": "1.FC Union Berlin",
+              "apps": 4,
+              "starts": 4,
+              "minutes": 360,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Ohis Felix Uduokhai"
+    },
+    {
+      "name": "Gökhan Sazdağı",
+      "club": "Corum FK",
+      "id": 88692639,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 17,
+              "starts": 14,
+              "minutes": 1305,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Kayserispor",
+              "apps": 3,
+              "starts": 3,
+              "minutes": 270,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Corum FK",
+              "apps": 7,
+              "starts": 7,
+              "minutes": 603,
+              "goals": 0,
+              "assists": 2
+            }
+          ]
+        }
+      },
+      "fullName": "Gokhan Sazdagi"
+    },
+    {
+      "name": "Emre Bilgin",
+      "club": "Eyüpspor",
+      "id": 44289644,
+      "seasons": {
+        "2025": {
+          "competitions": []
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Eyüpspor",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 45,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Emre Bilgin"
+    },
+    {
+      "name": "Emrecan Uzunhan",
+      "club": "Istanbulspor",
+      "id": 20757562,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "1.Lig",
+              "category": "league",
+              "team": "Istanbulspor",
+              "apps": 26,
+              "starts": 26,
+              "minutes": 2302,
+              "goals": 1,
+              "assists": 1
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Istanbulspor",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "1.Lig",
+              "category": "league",
+              "team": "Istanbulspor",
+              "apps": 5,
+              "starts": 5,
+              "minutes": 403,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Emrecan Uzunhan"
+    },
+    {
+      "name": "Fahri Ay",
+      "club": "Corlu 1947",
+      "id": 58185071,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "1.Lig",
+              "category": "league",
+              "team": "Istanbulspor",
+              "apps": 7,
+              "starts": 1,
+              "minutes": 152,
+              "goals": 1,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Istanbulspor",
+              "apps": 3,
+              "starts": 2,
+              "minutes": 155,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": []
+        }
+      },
+      "fullName": "Fahri Kerem Ay"
+    },
+    {
+      "name": "Cumali Gürsel",
+      "club": "Bandirma Spor",
+      "id": 107480695,
+      "seasons": {
+        "2025": {
+          "competitions": []
+        },
+        "2026": {
+          "competitions": []
+        }
+      },
+      "fullName": null
+    },
+    {
+      "name": "Arda Kılıç",
+      "club": "Kirklarelispor",
+      "id": 71800841,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "3.Lig Grup 4",
+              "category": "league",
+              "team": "Karsiyaka",
+              "apps": 7,
+              "starts": 2,
+              "minutes": 196,
+              "goals": 1,
+              "assists": 1
+            },
+            {
+              "name": "Super liga Srbije",
+              "category": "league",
+              "team": "FK Novi Pazar",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 7,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "2.Lig Kirmizi",
+              "category": "league",
+              "team": "Kirklarelispor",
+              "apps": 5,
+              "starts": 3,
+              "minutes": 268,
+              "goals": 2,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Kirklarelispor",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 65,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Yakup Arda Kılıç"
+    },
+    {
+      "name": "João Mário",
+      "club": "AEK Athens",
+      "id": 33320,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Super League Play-off",
+              "category": "league",
+              "team": "AEK Athens",
+              "apps": 6,
+              "starts": 1,
+              "minutes": 163,
+              "goals": 1,
+              "assists": 0
+            },
+            {
+              "name": "Super League 1",
+              "category": "league",
+              "team": "AEK Athens",
+              "apps": 20,
+              "starts": 10,
+              "minutes": 1028,
+              "goals": 1,
+              "assists": 1
+            },
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 105,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Kypello Elladas",
+              "category": "cup",
+              "team": "AEK Athens",
+              "apps": 5,
+              "starts": 3,
+              "minutes": 303,
+              "goals": 1,
+              "assists": 1
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 4,
+              "starts": 3,
+              "minutes": 279,
+              "goals": 2,
+              "assists": 1
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 106,
+              "goals": 1,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Super League 1",
+              "category": "league",
+              "team": "AEK Athens",
+              "apps": 2,
+              "starts": 0,
+              "minutes": 54,
+              "goals": 0,
+              "assists": 1
+            },
+            {
+              "name": "Kypello Elladas",
+              "category": "cup",
+              "team": "AEK Athens",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 70,
+              "goals": 1,
+              "assists": 1
+            },
+            {
+              "name": "UEFA Champions League",
+              "category": "europe",
+              "team": "AEK Athens",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 19,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "João Mário Naval da Costa Eduardo"
+    },
+    {
+      "name": "Moatasem Al-Musrati",
+      "club": "Al-Ahli",
+      "id": 6763120,
+      "seasons": {
+        "2025": {
+          "competitions": []
+        },
+        "2026": {
+          "competitions": []
+        }
+      },
+      "fullName": "Al Moatasembellah Ali Mohamed Al Musrati"
+    },
+    {
+      "name": "Amir Hadziahmetovic",
+      "club": "Ludogorets",
+      "id": 8051120,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Championship",
+              "category": "league",
+              "team": "Hull City",
+              "apps": 37,
+              "starts": 26,
+              "minutes": 2127,
+              "goals": 0,
+              "assists": 3
+            },
+            {
+              "name": "FA Cup",
+              "category": "cup",
+              "team": "Hull City",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 184,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 1,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 45,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 3,
+              "starts": 0,
+              "minutes": 45,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Amir Hadžiahmetović"
+    },
+    {
+      "name": "Göktuğ Baytekin",
+      "club": "Sakaryaspor",
+      "id": 54203380,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "1.Lig",
+              "category": "league",
+              "team": "Sakaryaspor",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 20,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Sakaryaspor",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 180,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "2.Lig Kirmizi",
+              "category": "league",
+              "team": "Sakaryaspor",
+              "apps": 6,
+              "starts": 6,
+              "minutes": 540,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Göktuğ Baytekin"
+    },
+    {
+      "name": "Salih Uçan",
+      "club": "Genclerbirligi",
+      "id": 5000492,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 19,
+              "starts": 5,
+              "minutes": 514,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 4,
+              "starts": 2,
+              "minutes": 176,
+              "goals": 1,
+              "assists": 1
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Genclerbirligi Ankara",
+              "apps": 6,
+              "starts": 0,
+              "minutes": 130,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Salih Uçan"
+    },
+    {
+      "name": "Tayyip Talha Sanuç",
+      "club": "Rizespor",
+      "id": 9981027,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Gaziantep FK",
+              "apps": 18,
+              "starts": 16,
+              "minutes": 1335,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 1,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Gaziantep FK",
+              "apps": 4,
+              "starts": 2,
+              "minutes": 164,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 1,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Caykur Rizespor",
+              "apps": 4,
+              "starts": 1,
+              "minutes": 79,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Tayyip Talha Sanuç"
+    },
+    {
+      "name": "Emrecan Terzi",
+      "club": "Igdir FK",
+      "id": 54203058,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "1.Lig",
+              "category": "league",
+              "team": "Sakaryaspor",
+              "apps": 8,
+              "starts": 2,
+              "minutes": 293,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 20,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "1.Lig",
+              "category": "league",
+              "team": "Serik Spor",
+              "apps": 17,
+              "starts": 17,
+              "minutes": 1336,
+              "goals": 2,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 22,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": []
+        }
+      },
+      "fullName": "Serkan Emrecan Terzi"
+    },
+    {
+      "name": "Ersin Destanoğlu",
+      "club": "Al-Jazira",
+      "id": 317485,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 25,
+              "starts": 25,
+              "minutes": 2250,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 6,
+              "starts": 6,
+              "minutes": 540,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "UAE Pro League",
+              "category": "league",
+              "team": "Al-Jazira Club",
+              "apps": 5,
+              "starts": 5,
+              "minutes": 450,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "AFC Champions League Two",
+              "category": "europe",
+              "team": "Al-Jazira Club",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 180,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Ersin Destanoğlu"
+    },
+    {
+      "name": "Devrim Şahin",
+      "club": "Bodrum FK",
+      "id": 85307453,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 4,
+              "starts": 2,
+              "minutes": 163,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "U19 Süper Lig",
+              "category": "league",
+              "team": "Besiktas JK U19",
+              "apps": 10,
+              "starts": 10,
+              "minutes": 801,
+              "goals": 5,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 116,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "1.Lig",
+              "category": "league",
+              "team": "Bodrum FK",
+              "apps": 5,
+              "starts": 2,
+              "minutes": 128,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Devrim Şahin"
+    },
+    {
+      "name": "Élan Ricardo",
+      "club": "ETO FC",
+      "id": 58735530,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Liga DIMAYOR Apertura",
+              "category": "league",
+              "team": "Deportes Tolima",
+              "apps": 9,
+              "starts": 2,
+              "minutes": 267,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Copa Libertadores",
+              "category": "europe",
+              "team": "Deportes Tolima",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 28,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Nemzeti Bajnokság",
+              "category": "league",
+              "team": "ETO FC",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Magyar Kupa",
+              "category": "cup",
+              "team": "ETO FC",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Élan Joshep Ricardo Ochoa"
+    },
+    {
+      "name": "Jean Onana",
+      "club": "Without Club",
+      "id": 6721582,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Serie A",
+              "category": "league",
+              "team": "Genoa CFC",
+              "apps": 3,
+              "starts": 0,
+              "minutes": 42,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Italy Cup",
+              "category": "cup",
+              "team": "Genoa CFC",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 19,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": []
+        }
+      },
+      "fullName": "Jean Emile Junior Onana Onana"
+    },
+    {
+      "name": "Yasin Özcan",
+      "club": "Aston Villa",
+      "id": 60542433,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 167,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Jupiler Pro League",
+              "category": "league",
+              "team": "RSC Anderlecht",
+              "apps": 4,
+              "starts": 1,
+              "minutes": 132,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Challenger Pro League",
+              "category": "league",
+              "team": "RSCA Futures",
+              "apps": 4,
+              "starts": 4,
+              "minutes": 327,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 179,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "Premier League International Cup U21",
+              "category": "europe",
+              "team": "RSCA Futures",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 1,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "RSC Anderlecht",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 64,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 0,
+              "minutes": 29,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Yasin Özcan"
+    },
+    {
+      "name": "Necip Uysal",
+      "club": "Retired",
+      "id": 321671,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 81,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 3,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": []
+        }
+      },
+      "fullName": "Necip Uysal"
+    }
+  ]
+}

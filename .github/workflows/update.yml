@@ -1,0 +1,45 @@
+name: Update stats
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Mondays 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: 'Override seasons, e.g. "2025,2024" (blank = current + previous)'
+        required: false
+  push:
+    branches: [main]
+    paths: [players.json]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch stats
+        run: node scripts/fetch.mjs
+        env:
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+          SEASONS: ${{ inputs.seasons }}
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add players.json docs/data.json
+          git diff --cached --quiet || git commit -m "Update stats $(date -u +%F)"
+          git push
