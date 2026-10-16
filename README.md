@@ -22,6 +22,21 @@ On the next run the fetcher searches the name, checks up to 3 matching candidate
 club, the run logs what it checked and the dashboard shows the error on that player — set `id` by hand.
 Removing a player = deleting the entry.
 
+### Finding an id by hand
+
+Automatic matching fails for nicknames (the API lists Rafa Silva only as "Rafa"), free agents, and
+very common names. Look the player up and set `id` yourself:
+
+```sh
+npm run find -- "Rafa"              # search: id, short name, full name (1 request)
+npm run find -- "Rafa" --clubs 3    # + recent clubs of the first 3 results (+1 request each)
+npm run find -- --id 92407          # recent clubs of one id (1 request)
+```
+
+The search is fuzzy and returns at most 10 results — if the player isn't there, try the nickname,
+the surname, or the full legal name. Then add `"id": 92407` to the entry and fetch just that player:
+`ONLY="Rafa Silva" npm run fetch`.
+
 ## Setup
 
 1. Push this repo to GitHub (public — Pages on free accounts requires it; the key stays a secret).

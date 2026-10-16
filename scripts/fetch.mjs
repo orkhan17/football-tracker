@@ -33,8 +33,9 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let lastCall = 0;
 let callCount = 0;
 let quota = null; // from RapidAPI rate-limit headers on the latest response
+export const getQuota = () => quota;
 
-async function api(endpoint, params = {}, attempt = 1) {
+export async function api(endpoint, params = {}, attempt = 1) {
   const wait = lastCall + DELAY_MS - Date.now();
   if (wait > 0) await sleep(wait);
   lastCall = Date.now();
@@ -139,13 +140,13 @@ export function clubMatches(a, b) {
   return Boolean(x && y) && (x.includes(y) || y.includes(x));
 }
 
-const latestClubs = (stats) => {
+export const latestClubs = (stats) => {
   const rows = stats.perCompetition ?? [];
   const latest = Math.max(...rows.map((r) => seasonStartYear(r.season) ?? -Infinity));
   return rows.filter((r) => seasonStartYear(r.season) >= latest - 1).map((r) => r.club);
 };
 
-async function getStats(id) {
+export async function getStats(id) {
   const res = await api(`/players/${id}/statistics`);
   return Array.isArray(res) ? res[0] : res;
 }

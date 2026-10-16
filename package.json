@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node scripts/serve.mjs",
     "fetch": "node --env-file=.env scripts/fetch.mjs",
+    "find": "node --env-file=.env scripts/find-player.mjs",
     "test": "node --test scripts/"
   }
 }
