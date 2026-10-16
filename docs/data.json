@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T22:11:08.518Z",
+  "generatedAt": "2026-10-16T22:38:22.024Z",
   "seasons": [
     2026,
     2025
@@ -1303,6 +1303,92 @@
         }
       },
       "fullName": "Necip Uysal"
+    },
+    {
+      "name": "Rafa Silva",
+      "club": "Benfica",
+      "id": 92407,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Liga Portugal",
+              "category": "league",
+              "team": "SL Benfica",
+              "apps": 16,
+              "starts": 11,
+              "minutes": 920,
+              "goals": 5,
+              "assists": 0
+            },
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 10,
+              "starts": 10,
+              "minutes": 820,
+              "goals": 5,
+              "assists": 1
+            },
+            {
+              "name": "UEFA Champions League",
+              "category": "europe",
+              "team": "SL Benfica",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 164,
+              "goals": 1,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 4,
+              "starts": 4,
+              "minutes": 360,
+              "goals": 0,
+              "assists": 2
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 180,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Liga Portugal",
+              "category": "league",
+              "team": "SL Benfica",
+              "apps": 8,
+              "starts": 8,
+              "minutes": 565,
+              "goals": 1,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "SL Benfica",
+              "apps": 6,
+              "starts": 5,
+              "minutes": 415,
+              "goals": 4,
+              "assists": 1
+            }
+          ]
+        }
+      },
+      "fullName": "Rafael Alexandre Fernandes Ferreira da Silva"
     }
   ]
 }

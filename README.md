@@ -39,6 +39,7 @@ npm start                           # dashboard at http://localhost:8000 (PORT=.
 npm run fetch                       # refresh docs/data.json (1 call per player; +2–4 to resolve a new one)
 npm test                            # unit tests
 SEASONS=2024,2023 npm run fetch     # override seasons (start years)
+ONLY="Rafa Silva" npm run fetch     # fetch just these players (comma-separated); others keep their data
 ```
 
 ## Notes

@@ -5,6 +5,7 @@
 // Env:
 //   RAPIDAPI_KEY       (required) RapidAPI key subscribed to Highlightly "All Sports"
 //   SEASONS            optional, start years, e.g. "2025,2024" (default: current + previous)
+//   ONLY               optional, comma-separated player names to fetch; others keep their last data
 //   REQUEST_DELAY_MS   optional, pause between calls (default 1500)
 //   API_BASE           optional, for testing against a mock
 
@@ -210,14 +211,22 @@ async function main() {
   const playersDoc = await readJson(PLAYERS_FILE, { players: [] });
   const previous = await readJson(DATA_FILE, { players: [] });
   const previousById = new Map(previous.players.filter((p) => p.id).map((p) => [p.id, p]));
+  // ONLY="Name A,Name B" fetches just those players; everyone else is copied from the last data.json.
+  const only = process.env.ONLY ? new Set(process.env.ONLY.split(',').map((n) => normalize(n))) : null;
 
   const out = [];
+  const fetched = [];
   let playersChanged = false;
   let stopReason = null;
 
   for (const player of playersDoc.players) {
+    if (only && !only.has(normalize(player.name))) {
+      out.push(previousById.get(player.id) ?? { name: player.name, club: player.club, id: player.id ?? null, seasons: {} });
+      continue;
+    }
     const entry = { name: player.name, club: player.club, id: player.id ?? null, seasons: {} };
     out.push(entry);
+    fetched.push(entry);
     if (stopReason) {
       entry.error = `Skipped: ${stopReason}`;
     } else {
@@ -257,12 +266,13 @@ async function main() {
     JSON.stringify({ generatedAt: new Date().toISOString(), seasons, players: out }, null, 2) + '\n',
   );
 
-  console.log(`Done: ${out.length} players, ${callCount} API calls.`);
+  if (only && fetched.length < only.size) console.warn(`ONLY matched ${fetched.length} of ${only.size} names in players.json.`);
+  console.log(`Done: ${fetched.length} of ${out.length} players fetched, ${callCount} API calls.`);
   if (quota) {
     const reset = new Date(Date.now() + quota.resetSeconds * 1000).toISOString().slice(0, 16).replace('T', ' ');
     console.log(`Quota: ${quota.remaining}/${quota.limit} requests left, resets ${reset} UTC.`);
   }
-  if (out.length && out.every((p) => p.error)) process.exit(1);
+  if (fetched.length && fetched.every((p) => p.error)) process.exit(1);
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
