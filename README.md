@@ -5,7 +5,8 @@ split by competition (league / cup / Europe) for the current and previous season
 
 - **Data:** [Highlightly](https://highlightly.net/) "All Sports" API via RapidAPI, free Basic plan
   (`GET /football/players/{id}/statistics` — one call per player returns every season and competition)
-- **Update:** GitHub Actions, Mondays 06:00 UTC, on manual dispatch, and on any push to `players.json`
+- **Update:** GitHub Actions, daily 06:00 UTC, on manual dispatch, and on any push to `players.json`.
+  A run only commits when stats actually changed (a timestamp-only change is skipped).
 - **Hosting:** GitHub Pages from `docs/`
 
 ## Managing players
@@ -42,7 +43,7 @@ SEASONS=2024,2023 npm run fetch     # override seasons (start years)
 
 ## Notes
 
-- Free plan: 100 requests/day. A weekly run for 20 players uses ~20.
+- Free plan: 100 requests/day. A daily run uses 1 per player (~23 now), so up to ~90 players fit.
 - Starts = games played − times substituted in.
 - Seasons are keyed by start year (`"26/27"` → 2026). Summer tournaments reported as a calendar year
   (e.g. the 2025 Club World Cup) count toward the season that was ending (2024/25), under Cups.

@@ -2,7 +2,7 @@ name: Update stats
 
 on:
   schedule:
-    - cron: '0 6 * * 1' # Mondays 06:00 UTC
+    - cron: '0 6 * * *' # daily 06:00 UTC (~1 request per player; free plan allows 100/day)
   workflow_dispatch:
     inputs:
       seasons:
@@ -41,5 +41,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add players.json docs/data.json
-          git diff --cached --quiet || git commit -m "Update stats $(date -u +%F)"
-          git push
+          # Skip the commit when only the timestamp changed (no new matches played).
+          if git diff --cached --quiet -I '"generatedAt":'; then
+            echo "No stat changes; nothing to commit."
+          else
+            git commit -m "Update stats $(date -u +%F)"
+            git push
+          fi

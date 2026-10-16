@@ -47,7 +47,9 @@ function totals(player, season = state.season, category = state.category) {
 
 function renderHeader() {
   const { generatedAt, seasons, seasonErrors } = state.data;
-  $('#updated').textContent = generatedAt ? `Updated ${new Date(generatedAt).toLocaleString()}` : 'Not updated yet';
+  $('#updated').textContent = generatedAt
+    ? `Stats last changed ${new Date(generatedAt).toLocaleString()} · checked daily`
+    : 'Not updated yet';
 
   $('#season-seg').innerHTML = seasons
     .map((s) => `<button data-season="${s}" aria-pressed="${s === state.season}">${seasonLabel(s)}</button>`)
