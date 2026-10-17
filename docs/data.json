@@ -1,9 +1,13 @@
 {
-  "generatedAt": "2026-10-17T09:42:52.030Z",
+  "generatedAt": "2026-10-17T09:58:11.155Z",
   "seasons": [
     2026,
     2025
   ],
+  "groupColors": {
+    "Current Beşiktaş": "#000000"
+  },
+  "changes": null,
   "players": [
     {
       "name": "Orkun Kökçü",

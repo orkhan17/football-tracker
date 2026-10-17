@@ -128,7 +128,9 @@ code { font-size: 12px; }
 .tag {
   display: inline-block; margin-left: 6px; padding: 0 6px; border-radius: 999px;
   background: var(--accent-soft); color: var(--text); font-size: 11px; line-height: 16px;
+  box-shadow: inset 0 0 0 1px rgb(127 127 127 / 0.25); /* keeps dark tags visible on dark backgrounds */
 }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
 
 input[type="search"] { min-width: 200px; }
 label.check { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }

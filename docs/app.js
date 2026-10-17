@@ -43,6 +43,38 @@ const normalize = (s) =>
 
 const groupsOf = (p) => p.groups ?? [];
 
+// Groups without a color in players.json "groupColors" take the next palette color, in group order.
+const GROUP_PALETTE = ['#2563eb', '#d97706', '#7c3aed', '#0d9488', '#db2777', '#65a30d'];
+
+function groupColor(name) {
+  const configured = state.data.groupColors ?? {};
+  if (configured[name]) return configured[name];
+  const auto = groupNames().filter((g) => !configured[g]);
+  return GROUP_PALETTE[Math.max(0, auto.indexOf(name)) % GROUP_PALETTE.length];
+}
+
+// WCAG relative luminance of a #rrggbb color: 0 (black) … 1 (white).
+function luminance(hex) {
+  const [r, g, b] = [1, 3, 5].map((i) => {
+    const c = parseInt(hex.slice(i, i + 2), 16) / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+
+// White or black text, whichever contrasts more with the background.
+const textOn = (hex) => (luminance(hex) > 0.179 ? '#000' : '#fff');
+
+// Section stripes and dots sit on the page background: a near-black group color would vanish in
+// dark mode, so draw it in the light text color there instead (black ↔ white, Beşiktaş-friendly).
+function markColor(name) {
+  const color = groupColor(name);
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  return dark && luminance(color) < 0.03 ? '#e7e9ee' : color;
+}
+
+const tagStyle = (g) => `background:${groupColor(g)};color:${textOn(groupColor(g))}`;
+
 function inGroup(p, group = state.group) {
   if (group === 'all') return true;
   if (group === 'none') return groupsOf(p).length === 0;
@@ -244,7 +276,7 @@ function playerCell(p, section) {
   const moved = team && p.club && !sameClub(team, p.club) ? `<span class="moved" title="Most recent appearances in the data">last played: ${esc(team)}</span>` : '';
   const tags = groupsOf(p)
     .filter((g) => g !== section)
-    .map((g) => `<span class="tag">${esc(g)}</span>`).join('');
+    .map((g) => `<span class="tag" style="${tagStyle(g)}">${esc(g)}</span>`).join('');
   const badge =
     status === 'pending'
       ? '<span class="badge" title="Will be fetched on the next run">no data yet</span>'
@@ -315,7 +347,10 @@ function renderTable() {
       .map(([name, ps]) => {
         const withData = ps.filter((p) => statusOf(p) !== 'pending');
         const total = sum(withData.flatMap((p) => competitionsOf(p)));
-        return `<tr class="section"><td class="sticky c0"></td><td class="sticky c1"><b>${esc(name)}</b> <span class="muted small">${ps.length}</span></td>${statCells(total, null)}</tr>${renderRows(ps, name)}`;
+        const color = name === 'Ungrouped' ? null : markColor(name);
+        const stripe = color ? ` style="box-shadow: inset 4px 0 0 ${color}"` : '';
+        const dot = color ? `<span class="dot" style="background:${color}"></span>` : '';
+        return `<tr class="section"><td class="sticky c0"${stripe}></td><td class="sticky c1">${dot}<b>${esc(name)}</b> <span class="muted small">${ps.length}</span></td>${statCells(total, null)}</tr>${renderRows(ps, name)}`;
       })
       .join('');
   } else {

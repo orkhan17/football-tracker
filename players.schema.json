@@ -5,6 +5,11 @@
   "required": ["players"],
   "properties": {
     "$schema": { "type": "string" },
+    "groupColors": {
+      "type": "object",
+      "description": "Tag color per group name, e.g. { \"Current Beşiktaş\": \"#000000\" }; other groups get a palette color",
+      "additionalProperties": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+    },
     "players": {
       "type": "array",
       "items": {

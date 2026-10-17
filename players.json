@@ -1,5 +1,8 @@
 {
   "$schema": "./players.schema.json",
+  "groupColors": {
+    "Current Beşiktaş": "#000000"
+  },
   "players": [
     {
       "name": "Orkun Kökçü",

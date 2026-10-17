@@ -309,7 +309,7 @@ async function main() {
     items.length || added.length ? { since: previous.generatedAt ?? null, until: now, items, added } : (previous.changes ?? null);
 
   if (playersChanged) await writeFile(PLAYERS_FILE, JSON.stringify(playersDoc, null, 2) + '\n');
-  await writeFile(DATA_FILE, JSON.stringify({ generatedAt: now, seasons, changes, players: out }, null, 2) + '\n');
+  await writeFile(DATA_FILE, JSON.stringify({ generatedAt: now, seasons, groupColors: playersDoc.groupColors ?? {}, changes, players: out }, null, 2) + '\n');
   if (items.length || added.length) console.log(`Changes: ${items.length} stat lines, ${added.length} newly added players.`);
 
   if (only && fetched.length < only.size) console.warn(`ONLY matched ${fetched.length} of ${only.size} names in players.json.`);
