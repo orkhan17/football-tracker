@@ -9,6 +9,11 @@
   --best: #15803d;
   --warn-bg: #fff7e6;
   --warn-border: #f5c26b;
+  /* Page background: a mown pitch. --bg stays the neutral shade used inside cards. */
+  --page: #2e7d32;
+  --page-stripe: #33873a;
+  --on-page: #ffffff;
+  --on-page-muted: rgb(255 255 255 / 0.8);
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -23,6 +28,8 @@
     --best: #4ade80;
     --warn-bg: #2b2210;
     --warn-border: #8a6420;
+    --page: #0f2a16;
+    --page-stripe: #12311a;
     color-scheme: dark;
   }
 }
@@ -31,7 +38,9 @@
 [hidden] { display: none !important; }
 body {
   margin: 0;
-  background: var(--bg);
+  background: repeating-linear-gradient(180deg, var(--page) 0 140px, var(--page-stripe) 140px 280px);
+  background-color: var(--page);
+  min-height: 100vh;
   color: var(--text);
   font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
@@ -154,3 +163,7 @@ ul.wn li { padding: 6px 0; border-bottom: 1px solid var(--border); }
   .player .name, .player .sub { overflow: hidden; text-overflow: ellipsis; }
   .table-wrap { max-height: 70vh; }
 }
+
+/* Text that sits directly on the pitch. */
+header h1, header label.check { color: var(--on-page); }
+header .muted { color: var(--on-page-muted); }
