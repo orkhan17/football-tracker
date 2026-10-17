@@ -1,11 +1,11 @@
 # Player Tracker
 
-Weekly-updated dashboard of appearances, starts, minutes, goals and assists for a group of players,
+Daily-updated dashboard of appearances, starts, minutes, goals and assists for a group of players,
 split by competition (league / cup / Europe) for the current and previous season.
 
 - **Data:** [Highlightly](https://highlightly.net/) "All Sports" API via RapidAPI, free Basic plan
   (`GET /football/players/{id}/statistics` — one call per player returns every season and competition)
-- **Update:** GitHub Actions, daily 06:00 UTC, on manual dispatch, and on any push to `players.json`.
+- **Update:** GitHub Actions, daily 06:17 UTC, on manual dispatch, and on any push to `players.json`.
   A run only commits when stats actually changed (a timestamp-only change is skipped).
 - **Hosting:** GitHub Pages from `docs/`
 
