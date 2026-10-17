@@ -1,45 +1,24 @@
+/* Always dark, whatever the system color scheme. */
 :root {
-  --bg: #f6f7f9;
-  --surface: #ffffff;
-  --text: #16181d;
-  --muted: #6b7280;
-  --border: #e3e6eb;
-  --accent: #2563eb;
-  --accent-soft: #dbe6fd;
-  --best: #15803d;
-  --warn-bg: #fff7e6;
-  --warn-border: #f5c26b;
-  /* Page background: a mown pitch. --bg stays the neutral shade used inside cards. */
-  --page: #2e7d32;
-  --page-stripe: #33873a;
-  --on-page: #ffffff;
-  --on-page-muted: rgb(255 255 255 / 0.8);
-  color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f1115;
-    --surface: #171a21;
-    --text: #e7e9ee;
-    --muted: #8b93a3;
-    --border: #2a2f3a;
-    --accent: #6d9bff;
-    --accent-soft: #23314f;
-    --best: #4ade80;
-    --warn-bg: #2b2210;
-    --warn-border: #8a6420;
-    --page: #0f2a16;
-    --page-stripe: #12311a;
-    color-scheme: dark;
-  }
+  --page: #0b0d11;
+  --bg: #0f1115;
+  --surface: #171a21;
+  --text: #e7e9ee;
+  --muted: #8b93a3;
+  --border: #2a2f3a;
+  --accent: #6d9bff;
+  --accent-soft: #23314f;
+  --best: #4ade80;
+  --warn-bg: #2b2210;
+  --warn-border: #8a6420;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 body {
   margin: 0;
-  background: repeating-linear-gradient(180deg, var(--page) 0 140px, var(--page-stripe) 140px 280px);
-  background-color: var(--page);
+  background: var(--page);
   min-height: 100vh;
   color: var(--text);
   font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -69,20 +48,7 @@ select, input[type="search"] {
   border: 1px solid var(--border); background: var(--surface); color: var(--text);
 }
 
-/* Cards are always dark on the pitch: they take the dark palette in both color schemes. */
 .card {
-  --bg: #0f1115;
-  --surface: #171a21;
-  --text: #e7e9ee;
-  --muted: #8b93a3;
-  --border: #2a2f3a;
-  --accent: #6d9bff;
-  --accent-soft: #23314f;
-  --best: #4ade80;
-  --warn-bg: #2b2210;
-  --warn-border: #8a6420;
-  color-scheme: dark;
-  color: var(--text);
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 12px; padding: 16px; margin-bottom: 16px;
 }
@@ -176,7 +142,3 @@ ul.wn li { padding: 6px 0; border-bottom: 1px solid var(--border); }
   .player .name, .player .sub { overflow: hidden; text-overflow: ellipsis; }
   .table-wrap { max-height: 70vh; }
 }
-
-/* Text that sits directly on the pitch. */
-header h1, header label.check { color: var(--on-page); }
-header .muted { color: var(--on-page-muted); }
