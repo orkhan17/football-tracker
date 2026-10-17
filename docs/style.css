@@ -69,7 +69,20 @@ select, input[type="search"] {
   border: 1px solid var(--border); background: var(--surface); color: var(--text);
 }
 
+/* Cards are always dark on the pitch: they take the dark palette in both color schemes. */
 .card {
+  --bg: #0f1115;
+  --surface: #171a21;
+  --text: #e7e9ee;
+  --muted: #8b93a3;
+  --border: #2a2f3a;
+  --accent: #6d9bff;
+  --accent-soft: #23314f;
+  --best: #4ade80;
+  --warn-bg: #2b2210;
+  --warn-border: #8a6420;
+  color-scheme: dark;
+  color: var(--text);
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 12px; padding: 16px; margin-bottom: 16px;
 }

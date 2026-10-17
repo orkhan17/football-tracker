@@ -65,12 +65,11 @@ function luminance(hex) {
 // White or black text, whichever contrasts more with the background.
 const textOn = (hex) => (luminance(hex) > 0.179 ? '#000' : '#fff');
 
-// Section stripes and dots sit on the page background: a near-black group color would vanish in
-// dark mode, so draw it in the light text color there instead (black ↔ white, Beşiktaş-friendly).
+// Section stripes and dots sit on the (always dark) card: a near-black group color would vanish,
+// so draw it in the light text color instead (black ↔ white, Beşiktaş-friendly).
 function markColor(name) {
   const color = groupColor(name);
-  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-  return dark && luminance(color) < 0.03 ? '#e7e9ee' : color;
+  return luminance(color) < 0.03 ? '#e7e9ee' : color;
 }
 
 const tagStyle = (g) => `background:${groupColor(g)};color:${textOn(groupColor(g))}`;
