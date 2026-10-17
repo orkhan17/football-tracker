@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T22:38:22.024Z",
+  "generatedAt": "2026-10-17T09:39:37.375Z",
   "seasons": [
     2026,
     2025
@@ -89,7 +89,10 @@
           ]
         }
       },
-      "fullName": "Orkun Kökçü"
+      "fullName": "Orkun Kökçü",
+      "groups": [
+        "Current Beşiktaş"
+      ]
     },
     {
       "name": "Cole Palmer",
@@ -165,7 +168,8 @@
           ]
         }
       },
-      "fullName": "Cole Jermaine Palmer"
+      "fullName": "Cole Jermaine Palmer",
+      "groups": []
     },
     {
       "name": "Ernest Muci",
@@ -271,7 +275,10 @@
           ]
         }
       },
-      "fullName": "Ernest Muçi"
+      "fullName": "Ernest Muçi",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Felix Uduokhai",
@@ -337,7 +344,10 @@
           ]
         }
       },
-      "fullName": "Ohis Felix Uduokhai"
+      "fullName": "Ohis Felix Uduokhai",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Gökhan Sazdağı",
@@ -393,7 +403,10 @@
           ]
         }
       },
-      "fullName": "Gokhan Sazdagi"
+      "fullName": "Gokhan Sazdagi",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Emre Bilgin",
@@ -418,7 +431,10 @@
           ]
         }
       },
-      "fullName": "Emre Bilgin"
+      "fullName": "Emre Bilgin",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Emrecan Uzunhan",
@@ -464,7 +480,10 @@
           ]
         }
       },
-      "fullName": "Emrecan Uzunhan"
+      "fullName": "Emrecan Uzunhan",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Fahri Ay",
@@ -499,7 +518,10 @@
           "competitions": []
         }
       },
-      "fullName": "Fahri Kerem Ay"
+      "fullName": "Fahri Kerem Ay",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Cumali Gürsel",
@@ -513,7 +535,10 @@
           "competitions": []
         }
       },
-      "fullName": null
+      "fullName": null,
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Arda Kılıç",
@@ -569,7 +594,10 @@
           ]
         }
       },
-      "fullName": "Yakup Arda Kılıç"
+      "fullName": "Yakup Arda Kılıç",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "João Mário",
@@ -675,7 +703,10 @@
           ]
         }
       },
-      "fullName": "João Mário Naval da Costa Eduardo"
+      "fullName": "João Mário Naval da Costa Eduardo",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Moatasem Al-Musrati",
@@ -689,7 +720,10 @@
           "competitions": []
         }
       },
-      "fullName": "Al Moatasembellah Ali Mohamed Al Musrati"
+      "fullName": "Al Moatasembellah Ali Mohamed Al Musrati",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Amir Hadziahmetovic",
@@ -755,7 +789,10 @@
           ]
         }
       },
-      "fullName": "Amir Hadžiahmetović"
+      "fullName": "Amir Hadžiahmetović",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Göktuğ Baytekin",
@@ -801,7 +838,10 @@
           ]
         }
       },
-      "fullName": "Göktuğ Baytekin"
+      "fullName": "Göktuğ Baytekin",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Salih Uçan",
@@ -847,7 +887,10 @@
           ]
         }
       },
-      "fullName": "Salih Uçan"
+      "fullName": "Salih Uçan",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Tayyip Talha Sanuç",
@@ -913,7 +956,10 @@
           ]
         }
       },
-      "fullName": "Tayyip Talha Sanuç"
+      "fullName": "Tayyip Talha Sanuç",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Emrecan Terzi",
@@ -968,7 +1014,10 @@
           "competitions": []
         }
       },
-      "fullName": "Serkan Emrecan Terzi"
+      "fullName": "Serkan Emrecan Terzi",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Ersin Destanoğlu",
@@ -1034,7 +1083,10 @@
           ]
         }
       },
-      "fullName": "Ersin Destanoğlu"
+      "fullName": "Ersin Destanoğlu",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Devrim Şahin",
@@ -1090,7 +1142,10 @@
           ]
         }
       },
-      "fullName": "Devrim Şahin"
+      "fullName": "Devrim Şahin",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Élan Ricardo",
@@ -1146,7 +1201,10 @@
           ]
         }
       },
-      "fullName": "Élan Joshep Ricardo Ochoa"
+      "fullName": "Élan Joshep Ricardo Ochoa",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Jean Onana",
@@ -1181,7 +1239,10 @@
           "competitions": []
         }
       },
-      "fullName": "Jean Emile Junior Onana Onana"
+      "fullName": "Jean Emile Junior Onana Onana",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Yasin Özcan",
@@ -1267,7 +1328,10 @@
           ]
         }
       },
-      "fullName": "Yasin Özcan"
+      "fullName": "Yasin Özcan",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Necip Uysal",
@@ -1302,7 +1366,10 @@
           "competitions": []
         }
       },
-      "fullName": "Necip Uysal"
+      "fullName": "Necip Uysal",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     },
     {
       "name": "Rafa Silva",
@@ -1388,7 +1455,10 @@
           ]
         }
       },
-      "fullName": "Rafael Alexandre Fernandes Ferreira da Silva"
+      "fullName": "Rafael Alexandre Fernandes Ferreira da Silva",
+      "groups": [
+        "Former Beşiktaş"
+      ]
     }
   ]
 }

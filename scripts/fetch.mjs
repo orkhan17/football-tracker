@@ -6,6 +6,7 @@
 //   RAPIDAPI_KEY       (required) RapidAPI key subscribed to Highlightly "All Sports"
 //   SEASONS            optional, start years, e.g. "2025,2024" (default: current + previous)
 //   ONLY               optional, comma-separated player names to fetch; others keep their last data
+//   NEW_ONLY           optional, fetch only players missing from data.json (used when players.json is pushed)
 //   REQUEST_DELAY_MS   optional, pause between calls (default 1500)
 //   API_BASE           optional, for testing against a mock
 
@@ -212,8 +213,10 @@ async function main() {
   const playersDoc = await readJson(PLAYERS_FILE, { players: [] });
   const previous = await readJson(DATA_FILE, { players: [] });
   const previousById = new Map(previous.players.filter((p) => p.id).map((p) => [p.id, p]));
-  // ONLY="Name A,Name B" fetches just those players; everyone else is copied from the last data.json.
+  // ONLY="Name A,Name B" fetches just those players; NEW_ONLY=1 fetches just players with no data yet.
+  // Everyone else is copied from the last data.json, with name/club/groups refreshed from players.json.
   const only = process.env.ONLY ? new Set(process.env.ONLY.split(',').map((n) => normalize(n))) : null;
+  const newOnly = Boolean(process.env.NEW_ONLY);
 
   const out = [];
   const fetched = [];
@@ -221,11 +224,14 @@ async function main() {
   let stopReason = null;
 
   for (const player of playersDoc.players) {
-    if (only && !only.has(normalize(player.name))) {
-      out.push(previousById.get(player.id) ?? { name: player.name, club: player.club, id: player.id ?? null, seasons: {} });
+    const meta = { name: player.name, club: player.club, groups: player.groups ?? [] };
+    const old = previousById.get(player.id);
+    const skip = only ? !only.has(normalize(player.name)) : newOnly && Boolean(old);
+    if (skip) {
+      out.push({ ...(old ?? { id: player.id ?? null, seasons: {} }), ...meta });
       continue;
     }
-    const entry = { name: player.name, club: player.club, id: player.id ?? null, seasons: {} };
+    const entry = { ...meta, id: player.id ?? null, seasons: {} };
     out.push(entry);
     fetched.push(entry);
     if (stopReason) {
@@ -252,12 +258,12 @@ async function main() {
     }
 
     // Keep last good data when this run couldn't fetch the player.
-    const old = previousById.get(entry.id);
-    if (entry.error && old) {
+    const last = previousById.get(entry.id);
+    if (entry.error && last) {
       for (const season of seasons) {
-        if (old.seasons?.[season]) entry.seasons[season] = { ...old.seasons[season], stale: true };
+        if (last.seasons?.[season]) entry.seasons[season] = { ...last.seasons[season], stale: true };
       }
-      entry.fullName ??= old.fullName;
+      entry.fullName ??= last.fullName;
     }
   }
 

@@ -22,6 +22,18 @@ On the next run the fetcher searches the name, checks up to 3 matching candidate
 club, the run logs what it checked and the dashboard shows the error on that player — set `id` by hand.
 Removing a player = deleting the entry.
 
+### Groups
+
+Tag players with one or more groups; the dashboard gets a group filter (plus "Ungrouped" for the rest):
+
+```json
+{ "name": "Rafa Silva", "club": "Benfica", "id": 92407, "groups": ["Former Beşiktaş"] }
+```
+
+Pushing `players.json` runs the fetcher with `NEW_ONLY=1`: only players without data yet are fetched;
+everyone else is copied with their name, club and groups refreshed. So regrouping, renaming or removing
+costs no API requests, and adding a player costs only that player's lookup.
+
 ### Finding an id by hand
 
 Automatic matching fails for nicknames (the API lists Rafa Silva only as "Rafa"), free agents, and
@@ -55,6 +67,7 @@ npm run fetch                       # refresh docs/data.json (1 call per player;
 npm test                            # unit tests
 SEASONS=2024,2023 npm run fetch     # override seasons (start years)
 ONLY="Rafa Silva" npm run fetch     # fetch just these players (comma-separated); others keep their data
+NEW_ONLY=1 npm run fetch            # fetch only players missing from data.json (0 requests after regrouping)
 ```
 
 ## Notes

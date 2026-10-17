@@ -14,7 +14,13 @@
         "properties": {
           "name": { "type": "string", "minLength": 2, "description": "Full name, e.g. \"Bukayo Saka\"" },
           "club": { "type": "string", "minLength": 3, "description": "Current club, e.g. \"Arsenal\"" },
-          "id": { "type": "integer", "description": "Highlightly player id; filled in automatically on first run" }
+          "id": { "type": "integer", "description": "Highlightly player id; filled in automatically on first run" },
+          "groups": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true,
+            "description": "Dashboard groups this player belongs to, e.g. [\"Former Beşiktaş\"]"
+          }
         }
       }
     }

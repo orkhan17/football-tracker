@@ -19,6 +19,7 @@ const state = {
   data: null,
   season: null,
   category: 'club',
+  group: 'all', // 'all' | 'none' (ungrouped) | a group name
   sort: { key: 'ga', desc: true },
   selected: new Set(),
   expanded: new Set(),
@@ -40,6 +41,14 @@ function inCategory(c, category) {
   return category === 'club' ? CLUB_CATEGORIES.includes(c.category) : c.category === category;
 }
 
+const groupsOf = (p) => p.groups ?? [];
+
+function inGroup(p, group = state.group) {
+  if (group === 'all') return true;
+  if (group === 'none') return groupsOf(p).length === 0;
+  return groupsOf(p).includes(group);
+}
+
 function totals(player, season = state.season, category = state.category) {
   const s = player.seasons?.[season];
   return { ...sum((s?.competitions ?? []).filter((c) => inCategory(c, category))), stale: s?.stale, missing: !s };
@@ -59,12 +68,25 @@ function renderHeader() {
     ([s, msg]) => `<div class="notice"><strong>${seasonLabel(s)} unavailable from the API:</strong> ${esc(msg)}</div>`,
   );
   $('#notices').innerHTML = notices.join('');
+
+  // Group options in first-seen order from players.json; hidden when nobody is grouped.
+  const players = state.data.players;
+  const names = [...new Set(players.flatMap(groupsOf))];
+  const count = (g) => players.filter((p) => inGroup(p, g)).length;
+  const options = [['all', 'All players'], ...names.map((n) => [n, n])];
+  if (names.length && count('none')) options.push(['none', 'Ungrouped']);
+  const select = $('#group');
+  select.hidden = names.length === 0;
+  select.innerHTML = options
+    .map(([v, label]) => `<option value="${esc(v)}"${v === state.group ? ' selected' : ''}>${esc(label)} (${count(v)})</option>`)
+    .join('');
 }
 
 function playerCell(p) {
   const sub = [p.club, p.position].filter(Boolean).map(esc).join(' · ');
+  const tags = groupsOf(p).map((g) => `<span class="tag">${esc(g)}</span>`).join('');
   const err = p.error ? `<div class="err">${esc(p.error)}</div>` : '';
-  return `<div class="player"><div>${esc(p.name)}</div><div class="sub">${sub}</div>${err}</div>`;
+  return `<div class="player"><div>${esc(p.name)}</div><div class="sub">${sub}${tags}</div>${err}</div>`;
 }
 
 function renderTable() {
@@ -78,7 +100,7 @@ function renderTable() {
     }).join('')}
   </tr>`;
 
-  const rows = state.data.players.map((p) => ({ p, t: totals(p) }));
+  const rows = state.data.players.filter((p) => inGroup(p)).map((p) => ({ p, t: totals(p) }));
   rows.sort((a, b) => {
     if (key === 'name') return desc ? b.p.name.localeCompare(a.p.name) : a.p.name.localeCompare(b.p.name);
     const av = a.t[key] ?? -1;
@@ -176,6 +198,10 @@ function bindEvents() {
   $('#category').addEventListener('change', (e) => {
     state.category = e.target.value;
     render();
+  });
+  $('#group').addEventListener('change', (e) => {
+    state.group = e.target.value;
+    renderTable(); // compare keeps its selection across groups
   });
   $('#overview thead').addEventListener('click', (e) => {
     const key = e.target.closest('th')?.dataset.sort;

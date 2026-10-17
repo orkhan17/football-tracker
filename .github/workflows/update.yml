@@ -35,6 +35,8 @@ jobs:
         env:
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
           SEASONS: ${{ inputs.seasons }}
+          # A players.json push only needs the new players; regrouping or removing costs no requests.
+          NEW_ONLY: ${{ github.event_name == 'push' && '1' || '' }}
 
       - name: Commit changes
         run: |

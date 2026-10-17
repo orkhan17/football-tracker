@@ -105,3 +105,7 @@ tbody tr.detail td { background: var(--bg); padding: 12px 16px; text-align: left
 input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent); }
 button.link { border: 0; background: none; color: var(--accent); cursor: pointer; font: inherit; padding: 0; }
 code { font-size: 12px; }
+.tag {
+  display: inline-block; margin-left: 6px; padding: 0 6px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--text); font-size: 11px; line-height: 16px;
+}
