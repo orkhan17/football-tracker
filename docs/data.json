@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-10-17T09:58:11.155Z",
+  "generatedAt": "2026-10-17T09:59:43.604Z",
   "seasons": [
     2026,
     2025
   ],
   "groupColors": {
-    "Current Beşiktaş": "#000000"
+    "Current Beşiktaş": "#000000",
+    "Former Beşiktaş": "#c8102e"
   },
   "changes": null,
   "players": [
