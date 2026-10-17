@@ -1,7 +1,7 @@
 {
   "$schema": "./players.schema.json",
   "groupColors": {
-    "Current Beşiktaş": "#000000",
+    "Current Beşiktaş": "#ffffff",
     "Former Beşiktaş": "#c8102e"
   },
   "players": [

@@ -54,7 +54,7 @@ the surname, or the full legal name. Then add `"id": 92407` to the entry and fet
 - **What's new:** per-competition changes from the latest run that found new stats (goals, assists,
   appearances), plus players added since. Follows the group and search filters.
 - **Search** by player name, listed club, or the club they last played for.
-- **Group colors:** set per group in `players.json` → `"groupColors": { "Current Beşiktaş": "#000000" }`; others get palette colors.
+- **Group colors:** set per group in `players.json` → `"groupColors": { "Current Beşiktaş": "#ffffff" }`; others get palette colors.
 - **Group filter**; "All players" is one list sorted across groups, or with **Split by group** one section per group with group totals.
 - **Played only** hides players with no appearances for the selected season and competitions.
 - **▲/▼** next to per-90 values compare with last season (both seasons need 270+ minutes).
