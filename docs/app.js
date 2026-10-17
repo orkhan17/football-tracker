@@ -23,6 +23,7 @@ const state = {
   group: 'all', // 'all' | 'none' (ungrouped) | a group name
   query: '',
   playedOnly: false,
+  split: false, // "All players" as one list (sorts across groups) or one section per group
   sort: { key: 'ga', desc: true },
   selected: new Set(),
   expanded: new Set(),
@@ -131,6 +132,7 @@ function readUrl() {
   if (q.get('group')) state.group = q.get('group');
   state.query = q.get('q') ?? '';
   state.playedOnly = q.get('played') === '1';
+  state.split = q.get('split') === '1';
   if (q.get('sort')) state.sort = { key: q.get('sort'), desc: q.get('dir') !== 'asc' };
   for (const id of (q.get('compare') ?? '').split(',').filter(Boolean)) state.selected.add(id);
 }
@@ -142,6 +144,7 @@ function writeUrl() {
   if (state.group !== 'all') q.set('group', state.group);
   if (state.query) q.set('q', state.query);
   if (state.playedOnly) q.set('played', '1');
+  if (state.split) q.set('split', '1');
   if (state.sort.key !== 'ga' || !state.sort.desc) {
     q.set('sort', state.sort.key);
     q.set('dir', state.sort.desc ? 'desc' : 'asc');
@@ -165,6 +168,7 @@ function renderHeader() {
   $('#category').value = state.category;
   $('#search').value = state.query;
   $('#played').checked = state.playedOnly;
+  $('#split').checked = state.split;
 
   const notices = Object.entries(seasonErrors ?? {}).map(
     ([s, msg]) => `<div class="notice"><strong>${seasonLabel(s)} unavailable from the API:</strong> ${esc(msg)}</div>`,
@@ -180,6 +184,7 @@ function renderHeader() {
   if (!options.some(([v]) => v === state.group)) state.group = 'all';
   const select = $('#group');
   select.hidden = names.length === 0;
+  $('#split-label').hidden = names.length === 0 || state.group !== 'all';
   select.innerHTML = options
     .map(([v, label]) => `<option value="${esc(v)}"${v === state.group ? ' selected' : ''}>${esc(label)} (${count(v)})</option>`)
     .join('');
@@ -301,7 +306,7 @@ function renderTable() {
   const players = visiblePlayers();
   const names = groupNames();
   let html;
-  if (state.group === 'all' && names.length) {
+  if (state.split && state.group === 'all' && names.length) {
     // One section per group (a player in two groups appears in both), then ungrouped players.
     const sections = names.map((g) => [g, players.filter((p) => groupsOf(p).includes(g))]);
     sections.push(['Ungrouped', players.filter((p) => !groupsOf(p).length)]);
@@ -405,6 +410,10 @@ function bindEvents() {
     renderWhatsNew();
     renderTable();
     writeUrl();
+  });
+  $('#split').addEventListener('change', (e) => {
+    state.split = e.target.checked;
+    render();
   });
   $('#played').addEventListener('change', (e) => {
     state.playedOnly = e.target.checked;
