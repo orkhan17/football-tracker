@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T09:39:37.375Z",
+  "generatedAt": "2026-10-17T09:42:52.030Z",
   "seasons": [
     2026,
     2025
@@ -1458,6 +1458,326 @@
       "fullName": "Rafael Alexandre Fernandes Ferreira da Silva",
       "groups": [
         "Former Beşiktaş"
+      ]
+    },
+    {
+      "id": 64393,
+      "seasons": {},
+      "name": "Alexander Nübel",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 320061,
+      "seasons": {},
+      "name": "Rıdvan Yılmaz",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 8057560,
+      "seasons": {},
+      "name": "Emirhan Topçu",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 238273,
+      "seasons": {},
+      "name": "Tiago Djaló",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 478807,
+      "seasons": {},
+      "name": "Amir Murillo",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 3994081,
+      "seasons": {},
+      "name": "Salih Özcan",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "name": "Leandro Trossard",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 313460,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Premier League",
+              "category": "league",
+              "team": "Arsenal FC",
+              "apps": 31,
+              "starts": 21,
+              "minutes": 2008,
+              "goals": 6,
+              "assists": 6
+            },
+            {
+              "name": "FA Cup",
+              "category": "cup",
+              "team": "Arsenal FC",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 66,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "EFL Cup",
+              "category": "cup",
+              "team": "Arsenal FC",
+              "apps": 6,
+              "starts": 2,
+              "minutes": 217,
+              "goals": 1,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Champions League",
+              "category": "europe",
+              "team": "Arsenal FC",
+              "apps": 11,
+              "starts": 8,
+              "minutes": 631,
+              "goals": 1,
+              "assists": 5
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 6,
+              "starts": 6,
+              "minutes": 475,
+              "goals": 1,
+              "assists": 1
+            },
+            {
+              "name": "UEFA Europa League",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 96,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Leandro Trossard"
+    },
+    {
+      "id": 29271242,
+      "seasons": {},
+      "name": "Fabio Miretti",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 88543,
+      "seasons": {},
+      "name": "Václav Černý",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "name": "Dušan Vlahović",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 4896969,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Serie A",
+              "category": "league",
+              "team": "Juventus FC",
+              "apps": 19,
+              "starts": 11,
+              "minutes": 970,
+              "goals": 7,
+              "assists": 1
+            },
+            {
+              "name": "UEFA Champions League",
+              "category": "europe",
+              "team": "Juventus FC",
+              "apps": 4,
+              "starts": 2,
+              "minutes": 192,
+              "goals": 3,
+              "assists": 1
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 5,
+              "starts": 4,
+              "minutes": 369,
+              "goals": 6,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 1,
+              "minutes": 95,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Dušan Vlahović"
+    },
+    {
+      "id": 8066898,
+      "seasons": {},
+      "name": "Doğan Alemdar",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 21746102,
+      "seasons": {},
+      "name": "Emmanuel Agbadou",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 53635211,
+      "seasons": {},
+      "name": "Kassoum Ouattara",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 63540897,
+      "seasons": {},
+      "name": "Taylan Bulut",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 51021698,
+      "seasons": {},
+      "name": "Junior Olaitan",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 71938818,
+      "seasons": {},
+      "name": "İlhan Fakılı",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 321832,
+      "seasons": {},
+      "name": "Kartal Kayra Yılmaz",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 3024700,
+      "seasons": {},
+      "name": "Wilfred Ndidi",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 50367394,
+      "seasons": {},
+      "name": "Ernest Poku",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ]
+    },
+    {
+      "id": 5588464,
+      "seasons": {},
+      "name": "Hyeon-gyu Oh",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
       ]
     }
   ]
