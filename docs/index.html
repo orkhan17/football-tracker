@@ -13,20 +13,30 @@
       <p id="updated" class="muted"></p>
     </div>
     <div class="controls">
+      <input id="search" type="search" placeholder="Search player or club" aria-label="Search player or club" autocomplete="off">
       <select id="group" aria-label="Group" hidden></select>
-      <div class="seg" id="season-seg" role="group" aria-label="Season"></div>
       <select id="category" aria-label="Competition">
         <option value="club">All club competitions</option>
         <option value="league">League</option>
         <option value="cup">Cups</option>
         <option value="europe">Europe</option>
       </select>
+      <div class="seg" id="season-seg" role="group" aria-label="Season"></div>
+      <label class="check"><input id="played" type="checkbox"> Played only</label>
     </div>
   </header>
 
   <div id="notices"></div>
 
   <main>
+    <section class="card" id="whatsnew" hidden>
+      <div class="card-head">
+        <h2>What's new</h2>
+        <span id="whatsnew-range" class="muted small"></span>
+      </div>
+      <div id="whatsnew-body"></div>
+    </section>
+
     <section class="card">
       <div class="card-head">
         <h2>Overview</h2>
@@ -38,7 +48,7 @@
           <tbody></tbody>
         </table>
       </div>
-      <p id="empty" class="muted" hidden>No players yet — add some to <code>players.json</code>.</p>
+      <p id="empty" class="muted" hidden></p>
     </section>
 
     <section class="card" id="compare" hidden>

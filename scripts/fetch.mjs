@@ -175,6 +175,40 @@ async function resolvePlayer(player) {
   );
 }
 
+const COUNTS = ['apps', 'starts', 'minutes', 'goals', 'assists'];
+const hasData = (p) => Object.values(p?.seasons ?? {}).some((s) => !s.stale);
+
+// What changed between two data.json player lists: per-competition deltas for players that had
+// data before, and the names of players that got data for the first time. Stale entries are skipped.
+export function diffPlayers(before, after, seasons) {
+  const prevById = new Map(before.filter((p) => p.id).map((p) => [p.id, p]));
+  const items = [];
+  const added = [];
+  for (const p of after) {
+    if (!hasData(p)) continue;
+    const prev = prevById.get(p.id);
+    if (!hasData(prev)) {
+      added.push(p.name);
+      continue;
+    }
+    for (const season of seasons) {
+      const now = p.seasons[season];
+      const was = prev.seasons[season];
+      if (!now || now.stale || was?.stale) continue;
+      const key = (c) => `${c.name}|${c.team}`;
+      const old = new Map((was?.competitions ?? []).map((c) => [key(c), c]));
+      for (const c of now.competitions) {
+        const o = old.get(key(c));
+        const delta = Object.fromEntries(COUNTS.map((k) => [k, c[k] - (o?.[k] ?? 0)]));
+        if (COUNTS.some((k) => delta[k] !== 0)) {
+          items.push({ id: p.id, name: p.name, season, competition: c.name, team: c.team, category: c.category, ...delta });
+        }
+      }
+    }
+  }
+  return { items, added };
+}
+
 export function toSeasons(stats, seasons) {
   const out = Object.fromEntries(seasons.map((s) => [s, { competitions: [] }]));
   for (const row of stats?.perCompetition ?? []) {
@@ -267,11 +301,16 @@ async function main() {
     }
   }
 
+  // A run with no new stats keeps the previous change list, so data.json differs only in
+  // generatedAt and the workflow skips the commit.
+  const now = new Date().toISOString();
+  const { items, added } = diffPlayers(previous.players, out, seasons);
+  const changes =
+    items.length || added.length ? { since: previous.generatedAt ?? null, until: now, items, added } : (previous.changes ?? null);
+
   if (playersChanged) await writeFile(PLAYERS_FILE, JSON.stringify(playersDoc, null, 2) + '\n');
-  await writeFile(
-    DATA_FILE,
-    JSON.stringify({ generatedAt: new Date().toISOString(), seasons, players: out }, null, 2) + '\n',
-  );
+  await writeFile(DATA_FILE, JSON.stringify({ generatedAt: now, seasons, changes, players: out }, null, 2) + '\n');
+  if (items.length || added.length) console.log(`Changes: ${items.length} stat lines, ${added.length} newly added players.`);
 
   if (only && fetched.length < only.size) console.warn(`ONLY matched ${fetched.length} of ${only.size} names in players.json.`);
   console.log(`Done: ${fetched.length} of ${out.length} players fetched, ${callCount} API calls.`);

@@ -49,6 +49,19 @@ The search is fuzzy and returns at most 10 results — if the player isn't there
 the surname, or the full legal name. Then add `"id": 92407` to the entry and fetch just that player:
 `ONLY="Rafa Silva" npm run fetch`.
 
+## Dashboard
+
+- **What's new:** per-competition changes from the latest run that found new stats (goals, assists,
+  appearances), plus players added since. Follows the group and search filters.
+- **Search** by player name, listed club, or the club they last played for.
+- **Group filter**; with "All players" the table is split into group sections with group totals.
+- **Played only** hides players with no appearances for the selected season and competitions.
+- **▲/▼** next to per-90 values compare with last season (both seasons need 270+ minutes).
+- **Badges:** "no data yet" (not fetched), "no stats in API" (fetched, empty), "stale" (last fetch failed);
+  "last played: X" when the data shows a different club than `players.json`.
+- **Shareable URLs:** filters, sort and compared players are kept in the address, e.g.
+  `?group=Former+Beşiktaş&season=2025&played=1&compare=92407,585872`.
+
 ## Setup
 
 1. Push this repo to GitHub (public — Pages on free accounts requires it; the key stays a secret).

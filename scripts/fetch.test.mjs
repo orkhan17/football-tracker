@@ -70,3 +70,26 @@ test('toSeasons maps rows, derives starts, drops empty rows', () => {
   assert.equal(out[2026].competitions[0].starts, 5);
   assert.equal(out[2025].competitions.length, 0);
 });
+
+test('diffPlayers reports per-competition deltas and newly added players', async () => {
+  const { diffPlayers } = await import('./fetch.mjs');
+  const comp = (name, apps, goals) => ({ name, team: 'Beşiktaş JK', category: 'league', apps, starts: apps, minutes: apps * 90, goals, assists: 0 });
+  const before = [
+    { id: 1, name: 'A', seasons: { 2026: { competitions: [comp('Süper Lig', 5, 2)] } } },
+    { id: 2, name: 'B', seasons: {} },
+    { id: 3, name: 'C', seasons: { 2026: { competitions: [comp('Süper Lig', 5, 2)] } } },
+  ];
+  const after = [
+    { id: 1, name: 'A', seasons: { 2026: { competitions: [comp('Süper Lig', 6, 3), comp('UEFA Europa League', 1, 0)] } } },
+    { id: 2, name: 'B', seasons: { 2026: { competitions: [comp('Süper Lig', 1, 0)] } } },
+    { id: 3, name: 'C', seasons: { 2026: { competitions: [comp('Süper Lig', 9, 9)], stale: true } } },
+  ];
+  const { items, added } = diffPlayers(before, after, [2026]);
+  assert.deepEqual(added, ['B']);
+  assert.equal(items.length, 2);
+  assert.deepEqual(
+    items.map((i) => [i.name, i.competition, i.apps, i.goals, i.minutes]),
+    [['A', 'Süper Lig', 1, 1, 90], ['A', 'UEFA Europa League', 1, 0, 90]],
+  );
+  assert.deepEqual(diffPlayers(after, after, [2026]), { items: [], added: [] });
+});

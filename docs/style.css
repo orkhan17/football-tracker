@@ -54,7 +54,7 @@ main, #notices { max-width: 1200px; margin: 0 auto; padding: 8px 16px 24px; }
 }
 .seg button + button { border-left: 1px solid var(--border); }
 .seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
-select {
+select, input[type="search"] {
   font: inherit; padding: 6px 8px; border-radius: 8px;
   border: 1px solid var(--border); background: var(--surface); color: var(--text);
 }
@@ -69,23 +69,42 @@ select {
   border-radius: 8px; padding: 8px 12px; margin-bottom: 8px;
 }
 
-.table-wrap { overflow-x: auto; }
+/* Scrolls both ways so the header row and the player column can stay pinned. */
+.table-wrap { overflow: auto; max-height: 75vh; border-radius: 8px; }
 table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 th, td { padding: 8px 10px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--border); }
 th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
-thead th { font-weight: 600; color: var(--muted); font-size: 12px; cursor: pointer; user-select: none; }
+thead th {
+  font-weight: 600; color: var(--muted); font-size: 12px; cursor: pointer; user-select: none;
+  position: sticky; top: 0; z-index: 2; background: var(--surface);
+}
+.sticky { position: sticky; background: var(--surface); z-index: 1; }
+.sticky.c0 { left: 0; width: 36px; min-width: 36px; }
+.sticky.c1 { left: 36px; box-shadow: inset -1px 0 0 var(--border); }
+thead th.sticky { z-index: 3; }
 thead th.sorted { color: var(--text); }
 thead th.sorted::after { content: " ▾"; }
 thead th.sorted.asc::after { content: " ▴"; }
 th.group-start, td.group-start { border-left: 1px solid var(--border); }
 tbody tr.row { cursor: pointer; }
-tbody tr.row:hover { background: var(--accent-soft); }
+tbody tr.row:hover, tbody tr.row:hover .sticky { background: var(--accent-soft); }
+tbody tr.section td { background: var(--bg); font-weight: 600; border-top: 2px solid var(--border); }
+tbody tr.section td.sticky { background: var(--bg); }
+td.dim { color: var(--muted); }
 tbody tr.detail td { background: var(--bg); padding: 12px 16px; text-align: left; white-space: normal; }
 
 .player .sub { color: var(--muted); font-size: 12px; }
+.moved { margin-left: 6px; font-style: italic; }
+.badge {
+  display: inline-block; margin-left: 6px; padding: 0 6px; border-radius: 4px;
+  border: 1px solid var(--border); color: var(--muted); font-size: 11px; line-height: 16px; font-weight: 400;
+}
+.badge.warn { border-color: var(--warn-border); background: var(--warn-bg); color: var(--text); }
+.trend { font-size: 10px; }
+.trend.up { color: var(--best); }
+.trend.down { color: #dc2626; }
 .err { color: #dc2626; font-size: 12px; }
 .lowmin { color: var(--muted); }
-.stale { color: var(--muted); font-size: 11px; margin-left: 4px; }
 
 .breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
 .breakdown h3 { font-size: 13px; margin: 0 0 6px; }
@@ -108,4 +127,27 @@ code { font-size: 12px; }
 .tag {
   display: inline-block; margin-left: 6px; padding: 0 6px; border-radius: 999px;
   background: var(--accent-soft); color: var(--text); font-size: 11px; line-height: 16px;
+}
+
+input[type="search"] { min-width: 200px; }
+label.check { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+
+ul.wn { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 8px 24px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+ul.wn li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+.wn-name { font-weight: 600; }
+
+@media (max-width: 640px) {
+  body { font-size: 13px; }
+  header { padding-top: 14px; }
+  .controls, .controls > * { width: 100%; }
+  .controls .seg { width: auto; }
+  .controls label.check { width: auto; }
+  input[type="search"] { min-width: 0; }
+  .card { padding: 12px; border-radius: 10px; }
+  th, td { padding: 6px 8px; }
+  .player .sub .tag, .moved, .player .badge { display: none; }
+  /* Narrow pinned column so a few stat columns fit next to it. */
+  .sticky.c1 { max-width: 140px; }
+  .player .name, .player .sub { overflow: hidden; text-overflow: ellipsis; }
+  .table-wrap { max-height: 70vh; }
 }
