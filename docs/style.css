@@ -62,7 +62,9 @@ select, input[type="search"] {
 .table-wrap { overflow: auto; max-height: 75vh; border-radius: 8px; }
 table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 th, td { padding: 8px 10px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--border); }
-th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+/* Left-align the checkbox + player columns of the main table, and the competition name in breakdowns. */
+#overview > thead > tr > th:nth-child(-n+2), #overview > tbody > tr > td:nth-child(-n+2),
+.breakdown th:first-child, .breakdown td:first-child { text-align: left; }
 thead th {
   font-weight: 600; color: var(--muted); font-size: 12px; cursor: pointer; user-select: none;
   position: sticky; top: 0; z-index: 2; background: var(--surface);
@@ -80,7 +82,7 @@ tbody tr.row:hover, tbody tr.row:hover .sticky { background: var(--accent-soft);
 tbody tr.section td { background: var(--bg); font-weight: 600; border-top: 2px solid var(--border); }
 tbody tr.section td.sticky { background: var(--bg); }
 td.dim { color: var(--muted); }
-tbody tr.detail td { background: var(--bg); padding: 12px 16px; text-align: left; white-space: normal; }
+tbody tr.detail > td { background: var(--bg); padding: 12px 16px; text-align: left; white-space: normal; }
 
 .player .sub { color: var(--muted); font-size: 12px; }
 .moved { margin-left: 6px; font-style: italic; }

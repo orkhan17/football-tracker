@@ -362,8 +362,9 @@ function renderTable() {
   empty.textContent = state.data.players.length ? 'No players match the current filters.' : 'No players yet — add some to players.json.';
 }
 
+// Per-competition detail for the selected season (follows the season switch like the table).
 function breakdown(p) {
-  return `<div class="breakdown">${state.data.seasons
+  return `<div class="breakdown">${[state.season]
     .map((season) => {
       const s = p.seasons?.[season];
       if (!s || !s.competitions.length) return `<div><h3>${seasonLabel(season)}</h3><p class="muted">No appearances.</p></div>`;
