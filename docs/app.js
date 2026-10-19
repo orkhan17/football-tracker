@@ -611,6 +611,16 @@ function bindEvents() {
       state.player = null;
       render({ push: true });
     }
+    // The title returns to the default view in place (no page load, so no browser caching quirks).
+    if (e.target.closest('a.home') && !e.metaKey && !e.ctrlKey) {
+      e.preventDefault();
+      history.pushState(null, '', location.pathname);
+      readUrl();
+      state.expanded.clear();
+      state.whatsNewAll = false;
+      render();
+      scrollTo(0, 0);
+    }
   }, true);
   addEventListener('popstate', () => {
     readUrl();
