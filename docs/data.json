@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T13:07:30.199Z",
+  "generatedAt": "2026-10-19T19:08:22.129Z",
   "seasons": [
     2026,
     2025
@@ -9,89 +9,12 @@
     "Former Beşiktaş": "#c8102e"
   },
   "changes": {
-    "since": "2026-10-18T12:22:13.704Z",
-    "until": "2026-10-19T13:07:30.199Z",
-    "items": [
-      {
-        "id": 24630256,
-        "name": "Cole Palmer",
-        "season": 2026,
-        "competition": "Premier League",
-        "team": "Chelsea FC",
-        "category": "league",
-        "apps": 0,
-        "starts": 0,
-        "minutes": 28,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 4090520,
-        "name": "Felix Uduokhai",
-        "season": 2026,
-        "competition": "Bundesliga",
-        "team": "1.FC Union Berlin",
-        "category": "league",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 90,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 20757562,
-        "name": "Emrecan Uzunhan",
-        "season": 2026,
-        "competition": "1.Lig",
-        "team": "Istanbulspor",
-        "category": "league",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 128,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 54203380,
-        "name": "Göktuğ Baytekin",
-        "season": 2026,
-        "competition": "2.Lig Kirmizi",
-        "team": "Sakaryaspor",
-        "category": "league",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 90,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 5000492,
-        "name": "Salih Uçan",
-        "season": 2026,
-        "competition": "Süper Lig",
-        "team": "Genclerbirligi Ankara",
-        "category": "league",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 72,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 317485,
-        "name": "Ersin Destanoğlu",
-        "season": 2026,
-        "competition": "UAE Pro League",
-        "team": "Al-Jazira Club",
-        "category": "league",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 90,
-        "goals": 0,
-        "assists": 0
-      }
-    ],
-    "added": []
+    "since": "2026-10-19T19:07:56.712Z",
+    "until": "2026-10-19T19:08:22.129Z",
+    "items": [],
+    "added": [
+      "Azem Yortaç"
+    ]
   },
   "players": [
     {
@@ -3137,6 +3060,436 @@
         }
       },
       "fullName": "Hyeon-Gyu Oh"
+    },
+    {
+      "name": "Emir Yaşar",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 63469735,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "U19 Süper Lig",
+              "category": "league",
+              "team": "Besiktas JK U19",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 180,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": []
+        }
+      },
+      "fullName": "Emir Yaşar"
+    },
+    {
+      "name": "Ümit Akdağ",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 59189711,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Alanyaspor",
+              "apps": 30,
+              "starts": 30,
+              "minutes": 2624,
+              "goals": 1,
+              "assists": 2
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Alanyaspor",
+              "apps": 6,
+              "starts": 3,
+              "minutes": 330,
+              "goals": 0,
+              "assists": 1
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Alanyaspor",
+              "apps": 3,
+              "starts": 3,
+              "minutes": 270,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 1,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Ümit Akdağ"
+    },
+    {
+      "name": "Azem Yortaç",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 76965399,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "U19 Süper Lig",
+              "category": "league",
+              "team": "Besiktas JK U19",
+              "apps": 29,
+              "starts": 29,
+              "minutes": 2492,
+              "goals": 2,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "U19 Süper Lig",
+              "category": "league",
+              "team": "Besiktas JK U19",
+              "apps": 4,
+              "starts": 2,
+              "minutes": 168,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": null
+    },
+    {
+      "name": "Milot Rashica",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 4077318,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 25,
+              "starts": 8,
+              "minutes": 975,
+              "goals": 1,
+              "assists": 3
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 5,
+              "starts": 4,
+              "minutes": 315,
+              "goals": 0,
+              "assists": 3
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 2,
+              "minutes": 174,
+              "goals": 1,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 60,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 0,
+              "minutes": 21,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 5,
+              "starts": 0,
+              "minutes": 94,
+              "goals": 1,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Milot Rashica"
+    },
+    {
+      "name": "Can Keleş",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 20761909,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Kocaelispor",
+              "apps": 24,
+              "starts": 9,
+              "minutes": 852,
+              "goals": 0,
+              "assists": 1
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Kocaelispor",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 45,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": []
+        }
+      },
+      "fullName": "Can Keles"
+    },
+    {
+      "name": "Semih Kılıçsoy",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 54187441,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Serie A",
+              "category": "league",
+              "team": "Cagliari Calcio",
+              "apps": 22,
+              "starts": 11,
+              "minutes": 975,
+              "goals": 4,
+              "assists": 0
+            },
+            {
+              "name": "Italy Cup",
+              "category": "cup",
+              "team": "Cagliari Calcio",
+              "apps": 3,
+              "starts": 2,
+              "minutes": 114,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 0,
+              "minutes": 35,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 63,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 5,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 3,
+              "starts": 0,
+              "minutes": 66,
+              "goals": 1,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Semih Kılıçsoy"
+    },
+    {
+      "name": "Mustafa Hekimoğlu",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 70224973,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "Süper Lig",
+              "category": "league",
+              "team": "Beşiktaş JK",
+              "apps": 17,
+              "starts": 3,
+              "minutes": 375,
+              "goals": 1,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 3,
+              "starts": 0,
+              "minutes": 91,
+              "goals": 0,
+              "assists": 0
+            },
+            {
+              "name": "UEFA Conference League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 3,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 2,
+              "starts": 0,
+              "minutes": 7,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Mustafa Erhan Hekimoğlu"
+    },
+    {
+      "name": "Ahmet Sami Bircan",
+      "club": "Besiktas",
+      "groups": [
+        "Current Beşiktaş"
+      ],
+      "id": 101513874,
+      "seasons": {
+        "2025": {
+          "competitions": [
+            {
+              "name": "U19 Süper Lig",
+              "category": "league",
+              "team": "Besiktas JK U19",
+              "apps": 25,
+              "starts": 22,
+              "minutes": 1823,
+              "goals": 10,
+              "assists": 0
+            },
+            {
+              "name": "Türkiye Kupasi",
+              "category": "cup",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 6,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        },
+        "2026": {
+          "competitions": [
+            {
+              "name": "UEFA Europa League Qualifying",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 0,
+              "minutes": 4,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
+        }
+      },
+      "fullName": "Sami Bircan Ahmet"
     }
   ]
 }
