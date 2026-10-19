@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add players.json docs/data.json docs/history.json
+          git add players.json docs/data.json docs/history.json docs/profiles.json
           # Skip the commit when only the timestamp changed (no new matches played).
           if git diff --cached --quiet -I '"generatedAt":'; then
             echo "No stat changes; nothing to commit."

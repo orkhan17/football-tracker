@@ -30,6 +30,7 @@ const COLUMNS = [
 const state = {
   data: null,
   history: {}, // history.json: { season: { id: [[date, { category: [apps, starts, min, g, a] }], ...] } }
+  profiles: {}, // profiles.json: { id: { birthDate, citizenship, height, foot, club, joinedAt, contractExpiry, ... } }
   season: null, // a season start year, or LAST30
   category: 'club',
   group: 'all', // 'all' | 'none' (ungrouped) | a group name
@@ -364,7 +365,8 @@ function playerCell(p, section) {
         : '';
   const stale = state.data.players && totals(p).stale ? '<span class="badge warn" title="Last update failed; showing previous data">stale</span>' : '';
   const err = p.error ? `<div class="err">${esc(p.error)}</div>` : '';
-  const sub = [p.club, p.position].filter(Boolean).map(esc).join(' · ');
+  const age = ageOf(p);
+  const sub = [p.club, p.position, age != null && `${age}`].filter(Boolean).map(esc).join(' · ');
   return `<div class="player"><div class="name"><a class="plink" href="?player=${esc(keyOf(p))}" data-player="${esc(keyOf(p))}">${esc(p.name)}</a>${badge}${stale}</div>
     <div class="sub">${sub}${moved}${tags}</div>${err}</div>`;
 }
@@ -504,6 +506,53 @@ function formChart(p) {
     <span class="muted">· ${seasonLabel(latestSeason())}, cumulative</span></div>`;
 }
 
+// --- profiles -------------------------------------------------------------------
+
+const MONTHS = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
+
+// Profile dates look like "May 17, 1993"; parsed by hand since Date.parse on that format varies by browser.
+function parseProfileDate(s) {
+  const m = /^([A-Za-z]{3})[a-z]*\.? (\d{1,2}), (\d{4})$/.exec(s ?? '');
+  if (!m || !(m[1].toLowerCase() in MONTHS)) return null;
+  return new Date(Date.UTC(Number(m[3]), MONTHS[m[1].toLowerCase()], Number(m[2])));
+}
+
+const profileOf = (p) => state.profiles[p.id] ?? null;
+
+function ageOf(p) {
+  const born = parseProfileDate(profileOf(p)?.birthDate);
+  if (!born) return null;
+  const now = new Date();
+  let age = now.getUTCFullYear() - born.getUTCFullYear();
+  if (now.getUTCMonth() < born.getUTCMonth() || (now.getUTCMonth() === born.getUTCMonth() && now.getUTCDate() < born.getUTCDate())) age--;
+  return age;
+}
+
+const fmtProfileDate = (s) =>
+  parseProfileDate(s)?.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) ?? s;
+
+// Facts row on the player page; months left on the contract are shown when it ends within a year.
+function profileFacts(p) {
+  const pr = profileOf(p);
+  if (!pr) return '';
+  const age = ageOf(p);
+  const expiry = parseProfileDate(pr.contractExpiry);
+  const monthsLeft = expiry ? Math.round((expiry - Date.now()) / (30.44 * 864e5)) : null;
+  const facts = [
+    age != null && ['Age', `${age}${pr.birthDate ? ` (born ${fmtProfileDate(pr.birthDate)})` : ''}`],
+    pr.citizenship && ['Nationality', pr.citizenship],
+    pr.height && ['Height', pr.height],
+    pr.foot && ['Foot', pr.foot],
+    pr.club && ['Club', `${pr.club}${pr.joinedAt ? ` since ${fmtProfileDate(pr.joinedAt)}` : ''}`],
+    pr.contractExpiry && [
+      'Contract until',
+      `${fmtProfileDate(pr.contractExpiry)}${monthsLeft != null && monthsLeft >= 0 && monthsLeft <= 12 ? ` · ${monthsLeft} month${monthsLeft === 1 ? '' : 's'} left` : ''}`,
+    ],
+  ].filter(Boolean);
+  if (!facts.length) return '';
+  return `<dl class="facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
+}
+
 function renderPlayer() {
   const card = $('#player');
   const p = state.player && state.data.players.find((x) => keyOf(x) === state.player);
@@ -534,6 +583,7 @@ function renderPlayer() {
     <h2 class="player-title">${esc(p.name)}</h2>
     <p class="muted">${[p.fullName !== p.name && p.fullName, p.club, p.position].filter(Boolean).map(esc).join(' · ')}
       ${team && p.club && !sameClub(team, p.club) ? `<span class="moved">last played: ${esc(team)}</span>` : ''} ${tags}</p>
+    ${profileFacts(p)}
     ${next ? `<p class="small">Next: <b>${esc(next.home)}</b> vs <b>${esc(next.away)}</b> · ${esc(next.competition ?? '')} · ${fmtKickoff(next.date)}</p>` : ''}
     <div class="table-wrap player-summary"><table>${head}${rows}</table></div>
     <h3>Form</h3>
@@ -698,9 +748,10 @@ async function loadJson(file) {
 }
 
 async function init() {
-  const [data, hist] = await Promise.all([loadJson('data.json'), loadJson('history.json')]);
+  const [data, hist, profiles] = await Promise.all([loadJson('data.json'), loadJson('history.json'), loadJson('profiles.json')]);
   state.data = data ?? { seasons: [], players: [] };
   state.history = hist ?? {};
+  state.profiles = profiles ?? {};
   readUrl();
   bindEvents();
   render();

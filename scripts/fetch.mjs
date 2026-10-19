@@ -7,7 +7,7 @@
 //   SEASONS            optional, start years, e.g. "2025,2024" (default: current + previous)
 //   ONLY               optional, comma-separated player names to fetch; others keep their last data
 //   NEW_ONLY           optional, fetch only players missing from data.json (used when players.json is pushed)
-//   MAX_PROFILES       optional, profile lookups per run for players without a position (default 30)
+//   MAX_PROFILES       optional, profile lookups per run (missing or older than 90 days; default 30)
 //   NEXT_MATCHES       optional, "1" fetches next matches even on ONLY/NEW_ONLY runs (full runs always do)
 //   REQUEST_DELAY_MS   optional, pause between calls (default 1500)
 //   API_BASE           optional, for testing against a mock
@@ -20,6 +20,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PLAYERS_FILE = path.join(ROOT, 'players.json');
 const DATA_FILE = path.join(ROOT, 'docs', 'data.json');
 const HISTORY_FILE = path.join(ROOT, 'docs', 'history.json');
+const PROFILES_FILE = path.join(ROOT, 'docs', 'profiles.json');
+const PROFILE_MAX_AGE_DAYS = 90;
 
 const API_BASE = process.env.API_BASE ?? 'https://sport-highlights-api.p.rapidapi.com/football';
 const API_KEY = process.env.RAPIDAPI_KEY;
@@ -223,6 +225,26 @@ export function nextChanges(previous, { items, added }, { partial, now }) {
   return { since: previous.generatedAt ?? null, until: now, items, added };
 }
 
+// The profile fields the dashboard uses, from GET /players/{id} "profile". `null` profile → empty
+// entry, so players the API knows nothing about aren't looked up again until the refresh.
+export function toProfile(profile, today) {
+  const clean = (v) => (typeof v === 'string' && v.trim() ? v.trim() : null);
+  return {
+    fetchedAt: today,
+    birthDate: clean(profile?.birthDate),
+    citizenship: clean(profile?.citizenship),
+    height: clean(profile?.height),
+    foot: clean(profile?.foot),
+    position: clean(profile?.position?.main),
+    club: clean(profile?.club?.current),
+    joinedAt: clean(profile?.club?.joinedAt),
+    contractExpiry: clean(profile?.club?.contractExpiry),
+  };
+}
+
+export const profileDue = (entry, today) =>
+  !entry || (Date.parse(today) - Date.parse(entry.fetchedAt)) / 864e5 >= PROFILE_MAX_AGE_DAYS;
+
 // Season totals per category as [apps, starts, minutes, goals, assists]: one history point.
 export function categoryTotals(player, season) {
   const totals = {};
@@ -362,26 +384,38 @@ async function main() {
     }
   }
 
-  // Positions come from the player profile, looked up once and saved to players.json like ids.
-  // An empty string marks "profile has no position" so it isn't looked up again.
-  let profiles = 0;
+  // Profiles (age, nationality, contract, position...) go to docs/profiles.json: looked up for players
+  // without one, and refreshed after PROFILE_MAX_AGE_DAYS since contracts and clubs change. A missing
+  // position in players.json is filled from the profile ("" = profile has none).
+  const profiles = await readJson(PROFILES_FILE, {});
+  let profileCalls = 0;
   const maxProfiles = Number(process.env.MAX_PROFILES ?? 30);
-  for (const player of playersDoc.players) {
-    if (stopReason || profiles >= maxProfiles || !player.id || player.position != null) continue;
+  const today = new Date().toISOString().slice(0, 10);
+  const due = playersDoc.players
+    .filter((p) => p.id && profileDue(profiles[p.id], today))
+    .sort((a, b) => (profiles[a.id]?.fetchedAt ?? '').localeCompare(profiles[b.id]?.fetchedAt ?? '')); // missing first
+  for (const player of due) {
+    if (stopReason || profileCalls >= maxProfiles) break;
     try {
-      profiles++;
+      profileCalls++;
       const res = await api(`/players/${player.id}`);
-      const profile = (Array.isArray(res) ? res[0] : res)?.profile;
-      player.position = profile?.position?.main ?? '';
-      playersChanged = true;
-      const entry = out.find((p) => p.id === player.id);
-      if (entry) entry.position = player.position;
+      profiles[player.id] = toProfile((Array.isArray(res) ? res[0] : res)?.profile, today);
     } catch (err) {
       if (err.kind === 'quota') stopReason = 'request quota reached';
       console.error(`${player.name} (profile): ${err.message}`);
     }
   }
-  if (profiles) console.log(`Positions: looked up ${profiles} profile(s).`);
+  for (const player of playersDoc.players) {
+    if (player.position != null || !profiles[player.id]) continue;
+    player.position = profiles[player.id].position ?? '';
+    playersChanged = true;
+    const entry = out.find((p) => p.id === player.id);
+    if (entry) entry.position = player.position;
+  }
+  if (profileCalls) {
+    await writeFile(PROFILES_FILE, JSON.stringify(profiles, null, 2) + '\n');
+    console.log(`Profiles: looked up ${profileCalls}; ${due.length - profileCalls} still due.`);
+  }
 
   // Next match per team in players.json "nextMatchTeams": on full runs, or with NEXT_MATCHES=1.
   const nextMatches = { ...(previous.nextMatches ?? {}) };

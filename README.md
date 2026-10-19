@@ -96,8 +96,9 @@ NEW_ONLY=1 npm run fetch            # fetch only players missing from data.json 
 - Seasons are keyed by start year (`"26/27"` → 2026). Summer tournaments reported as a calendar year
   (e.g. the 2025 Club World Cup) count toward the season that was ending (2024/25), under Cups.
 - National-team games aren't provided by the API; reserve and youth teams (U19/U21, Futures, Jong, II…) aren't counted.
-- Positions are looked up once per player from the API profile (up to `MAX_PROFILES`=30 per run) and saved in
-  `players.json`; set `"position"` by hand to override.
+- Profiles (age, nationality, height, foot, club since, contract until) are looked up from the API into
+  `docs/profiles.json`: up to `MAX_PROFILES`=30 per run, refreshed after 90 days. A missing `"position"` in
+  `players.json` is filled from the profile; set it by hand to override.
 - `docs/history.json` gets a point per player only when their season totals change.
 - Per-90 values are greyed out under 270 minutes.
 - If a run fails for a player, their last good data is kept and marked "stale".

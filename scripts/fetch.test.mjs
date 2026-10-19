@@ -139,3 +139,18 @@ test('nextChanges keeps, extends or replaces the change list', async () => {
     since: 'T1', until: 'T2', items: [], added: ['B'],
   });
 });
+
+test('toProfile and profileDue', async () => {
+  const { toProfile, profileDue } = await import('./fetch.mjs');
+  const p = toProfile(
+    { birthDate: 'Jan 28, 2000', citizenship: 'Serbia', height: '1,90 m', foot: 'left', position: { main: 'Centre-Forward' }, club: { current: 'Besiktas', joinedAt: 'Jul 1, 2026', contractExpiry: '' } },
+    '2026-10-20',
+  );
+  assert.equal(p.birthDate, 'Jan 28, 2000');
+  assert.equal(p.position, 'Centre-Forward');
+  assert.equal(p.contractExpiry, null);
+  assert.equal(toProfile(null, '2026-10-20').position, null);
+  assert.ok(profileDue(undefined, '2026-10-20'));
+  assert.ok(!profileDue({ fetchedAt: '2026-08-01' }, '2026-10-20'));
+  assert.ok(profileDue({ fetchedAt: '2026-07-01' }, '2026-10-20'));
+});
