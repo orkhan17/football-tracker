@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T12:22:13.704Z",
+  "generatedAt": "2026-10-19T13:07:30.199Z",
   "seasons": [
     2026,
     2025
@@ -9,8 +9,8 @@
     "Former Beşiktaş": "#c8102e"
   },
   "changes": {
-    "since": "2026-10-17T10:04:03.510Z",
-    "until": "2026-10-18T11:00:43.012Z",
+    "since": "2026-10-18T12:22:13.704Z",
+    "until": "2026-10-19T13:07:30.199Z",
     "items": [
       {
         "id": 24630256,
@@ -19,18 +19,70 @@
         "competition": "Premier League",
         "team": "Chelsea FC",
         "category": "league",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 62,
+        "apps": 0,
+        "starts": 0,
+        "minutes": 28,
         "goals": 0,
         "assists": 0
       },
       {
-        "id": 44289644,
-        "name": "Emre Bilgin",
+        "id": 4090520,
+        "name": "Felix Uduokhai",
+        "season": 2026,
+        "competition": "Bundesliga",
+        "team": "1.FC Union Berlin",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 20757562,
+        "name": "Emrecan Uzunhan",
+        "season": 2026,
+        "competition": "1.Lig",
+        "team": "Istanbulspor",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 128,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 54203380,
+        "name": "Göktuğ Baytekin",
+        "season": 2026,
+        "competition": "2.Lig Kirmizi",
+        "team": "Sakaryaspor",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 5000492,
+        "name": "Salih Uçan",
         "season": 2026,
         "competition": "Süper Lig",
-        "team": "Eyüpspor",
+        "team": "Genclerbirligi Ankara",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 72,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 317485,
+        "name": "Ersin Destanoğlu",
+        "season": 2026,
+        "competition": "UAE Pro League",
+        "team": "Al-Jazira Club",
         "category": "league",
         "apps": 1,
         "starts": 1,
@@ -39,26 +91,7 @@
         "assists": 0
       }
     ],
-    "added": [
-      "Alexander Nübel",
-      "Rıdvan Yılmaz",
-      "Emirhan Topçu",
-      "Tiago Djaló",
-      "Amir Murillo",
-      "Salih Özcan",
-      "Fabio Miretti",
-      "Václav Černý",
-      "Doğan Alemdar",
-      "Emmanuel Agbadou",
-      "Kassoum Ouattara",
-      "Taylan Bulut",
-      "Junior Olaitan",
-      "İlhan Fakılı",
-      "Kartal Kayra Yılmaz",
-      "Wilfred Ndidi",
-      "Ernest Poku",
-      "Hyeon-gyu Oh"
-    ]
+    "added": []
   },
   "players": [
     {
@@ -208,7 +241,7 @@
               "team": "Chelsea FC",
               "apps": 7,
               "starts": 7,
-              "minutes": 593,
+              "minutes": 621,
               "goals": 2,
               "assists": 3
             },
@@ -394,9 +427,9 @@
               "name": "Bundesliga",
               "category": "league",
               "team": "1.FC Union Berlin",
-              "apps": 4,
-              "starts": 4,
-              "minutes": 360,
+              "apps": 5,
+              "starts": 5,
+              "minutes": 450,
               "goals": 0,
               "assists": 0
             }
@@ -530,9 +563,9 @@
               "name": "1.Lig",
               "category": "league",
               "team": "Istanbulspor",
-              "apps": 5,
-              "starts": 5,
-              "minutes": 403,
+              "apps": 6,
+              "starts": 6,
+              "minutes": 531,
               "goals": 0,
               "assists": 0
             }
@@ -888,9 +921,9 @@
               "name": "2.Lig Kirmizi",
               "category": "league",
               "team": "Sakaryaspor",
-              "apps": 6,
-              "starts": 6,
-              "minutes": 540,
+              "apps": 7,
+              "starts": 7,
+              "minutes": 630,
               "goals": 0,
               "assists": 0
             }
@@ -937,9 +970,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Genclerbirligi Ankara",
-              "apps": 6,
-              "starts": 0,
-              "minutes": 130,
+              "apps": 7,
+              "starts": 1,
+              "minutes": 202,
               "goals": 0,
               "assists": 0
             }
@@ -1123,9 +1156,9 @@
               "name": "UAE Pro League",
               "category": "league",
               "team": "Al-Jazira Club",
-              "apps": 5,
-              "starts": 5,
-              "minutes": 450,
+              "apps": 6,
+              "starts": 6,
+              "minutes": 540,
               "goals": 0,
               "assists": 0
             },
