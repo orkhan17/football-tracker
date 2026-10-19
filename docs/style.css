@@ -144,3 +144,23 @@ ul.wn li { padding: 6px 0; border-bottom: 1px solid var(--border); }
   .player .name, .player .sub { overflow: hidden; text-overflow: ellipsis; }
   .table-wrap { max-height: 70vh; }
 }
+
+/* Player links and page */
+a.plink { color: inherit; text-decoration: none; }
+a.plink:hover { text-decoration: underline; color: var(--accent); }
+#next-matches:empty { display: none; }
+#next-matches span + span::before { content: " · "; }
+#player h3 { font-size: 13px; margin: 20px 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.player-title { font-size: 20px; margin: 4px 0 2px; }
+.player-summary { max-height: none; }
+.player-summary td:first-child, .player-summary th:first-child { text-align: left; }
+
+/* Form chart */
+svg.chart { width: 100%; height: auto; max-width: 720px; display: block; }
+svg.chart text { fill: var(--muted); font-size: 11px; }
+svg.chart .grid { stroke: var(--border); stroke-width: 1; }
+svg.chart .line { fill: none; stroke-width: 2.5; stroke-linejoin: round; }
+svg.chart .goals, .legend .key.goals { stroke: #4ade80; background: #4ade80; }
+svg.chart .assists, .legend .key.assists { stroke: #fbbf24; background: #fbbf24; }
+.legend { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+.legend .key { display: inline-block; width: 14px; height: 3px; border-radius: 2px; margin-left: 8px; }

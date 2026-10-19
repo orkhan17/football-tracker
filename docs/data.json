@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T19:08:22.129Z",
+  "generatedAt": "2026-10-19T19:13:56.435Z",
   "seasons": [
     2026,
     2025
@@ -8,11 +8,105 @@
     "Current Beşiktaş": "#ffffff",
     "Former Beşiktaş": "#c8102e"
   },
+  "nextMatches": {
+    "Besiktas": {
+      "date": "2026-10-22T19:00:00.000Z",
+      "home": "Besiktas",
+      "away": "Crystal Palace",
+      "competition": "UEFA Europa League"
+    }
+  },
   "changes": {
-    "since": "2026-10-19T19:07:56.712Z",
-    "until": "2026-10-19T19:08:22.129Z",
-    "items": [],
+    "since": "2026-10-18T12:22:13.704Z",
+    "until": "2026-10-19T19:13:56.435Z",
+    "items": [
+      {
+        "id": 24630256,
+        "name": "Cole Palmer",
+        "season": 2026,
+        "competition": "Premier League",
+        "team": "Chelsea FC",
+        "category": "league",
+        "apps": 0,
+        "starts": 0,
+        "minutes": 28,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 4090520,
+        "name": "Felix Uduokhai",
+        "season": 2026,
+        "competition": "Bundesliga",
+        "team": "1.FC Union Berlin",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 20757562,
+        "name": "Emrecan Uzunhan",
+        "season": 2026,
+        "competition": "1.Lig",
+        "team": "Istanbulspor",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 128,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 54203380,
+        "name": "Göktuğ Baytekin",
+        "season": 2026,
+        "competition": "2.Lig Kirmizi",
+        "team": "Sakaryaspor",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 5000492,
+        "name": "Salih Uçan",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Genclerbirligi Ankara",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 72,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 317485,
+        "name": "Ersin Destanoğlu",
+        "season": 2026,
+        "competition": "UAE Pro League",
+        "team": "Al-Jazira Club",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      }
+    ],
     "added": [
+      "Emir Yaşar",
+      "Ümit Akdağ",
+      "Milot Rashica",
+      "Can Keleş",
+      "Semih Kılıçsoy",
+      "Mustafa Hekimoğlu",
+      "Ahmet Sami Bircan",
       "Azem Yortaç"
     ]
   },
@@ -104,7 +198,8 @@
           ]
         }
       },
-      "fullName": "Orkun Kökçü"
+      "fullName": "Orkun Kökçü",
+      "position": "Central Midfield"
     },
     {
       "name": "Cole Palmer",
@@ -181,7 +276,8 @@
           ]
         }
       },
-      "fullName": "Cole Jermaine Palmer"
+      "fullName": "Cole Jermaine Palmer",
+      "position": "Attacking Midfield"
     },
     {
       "name": "Ernest Muci",
@@ -290,7 +386,8 @@
           ]
         }
       },
-      "fullName": "Ernest Muçi"
+      "fullName": "Ernest Muçi",
+      "position": "Attacking Midfield"
     },
     {
       "name": "Felix Uduokhai",
@@ -359,7 +456,8 @@
           ]
         }
       },
-      "fullName": "Ohis Felix Uduokhai"
+      "fullName": "Ohis Felix Uduokhai",
+      "position": "Centre-Back"
     },
     {
       "name": "Gökhan Sazdağı",
@@ -418,7 +516,8 @@
           ]
         }
       },
-      "fullName": "Gokhan Sazdagi"
+      "fullName": "Gokhan Sazdagi",
+      "position": "Right-Back"
     },
     {
       "name": "Emre Bilgin",
@@ -446,7 +545,8 @@
           ]
         }
       },
-      "fullName": "Emre Bilgin"
+      "fullName": "Emre Bilgin",
+      "position": "Goalkeeper"
     },
     {
       "name": "Emrecan Uzunhan",
@@ -495,7 +595,8 @@
           ]
         }
       },
-      "fullName": "Emrecan Uzunhan"
+      "fullName": "Emrecan Uzunhan",
+      "position": "Centre-Back"
     },
     {
       "name": "Fahri Ay",
@@ -533,7 +634,8 @@
           "competitions": []
         }
       },
-      "fullName": "Fahri Kerem Ay"
+      "fullName": "Fahri Kerem Ay",
+      "position": "Central Midfield"
     },
     {
       "name": "Cumali Gürsel",
@@ -550,7 +652,8 @@
           "competitions": []
         }
       },
-      "fullName": null
+      "fullName": null,
+      "position": ""
     },
     {
       "name": "Arda Kılıç",
@@ -609,7 +712,8 @@
           ]
         }
       },
-      "fullName": "Yakup Arda Kılıç"
+      "fullName": "Yakup Arda Kılıç",
+      "position": "Left Winger"
     },
     {
       "name": "João Mário",
@@ -718,7 +822,8 @@
           ]
         }
       },
-      "fullName": "João Mário Naval da Costa Eduardo"
+      "fullName": "João Mário Naval da Costa Eduardo",
+      "position": "Attacking Midfield"
     },
     {
       "name": "Moatasem Al-Musrati",
@@ -735,7 +840,8 @@
           "competitions": []
         }
       },
-      "fullName": "Al Moatasembellah Ali Mohamed Al Musrati"
+      "fullName": "Al Moatasembellah Ali Mohamed Al Musrati",
+      "position": ""
     },
     {
       "name": "Amir Hadziahmetovic",
@@ -804,7 +910,8 @@
           ]
         }
       },
-      "fullName": "Amir Hadžiahmetović"
+      "fullName": "Amir Hadžiahmetović",
+      "position": "Defensive Midfield"
     },
     {
       "name": "Göktuğ Baytekin",
@@ -853,7 +960,8 @@
           ]
         }
       },
-      "fullName": "Göktuğ Baytekin"
+      "fullName": "Göktuğ Baytekin",
+      "position": "Goalkeeper"
     },
     {
       "name": "Salih Uçan",
@@ -902,7 +1010,8 @@
           ]
         }
       },
-      "fullName": "Salih Uçan"
+      "fullName": "Salih Uçan",
+      "position": "Central Midfield"
     },
     {
       "name": "Tayyip Talha Sanuç",
@@ -971,7 +1080,8 @@
           ]
         }
       },
-      "fullName": "Tayyip Talha Sanuç"
+      "fullName": "Tayyip Talha Sanuç",
+      "position": "Centre-Back"
     },
     {
       "name": "Emrecan Terzi",
@@ -1029,7 +1139,8 @@
           "competitions": []
         }
       },
-      "fullName": "Serkan Emrecan Terzi"
+      "fullName": "Serkan Emrecan Terzi",
+      "position": "Left-Back"
     },
     {
       "name": "Ersin Destanoğlu",
@@ -1098,7 +1209,8 @@
           ]
         }
       },
-      "fullName": "Ersin Destanoğlu"
+      "fullName": "Ersin Destanoğlu",
+      "position": "Goalkeeper"
     },
     {
       "name": "Devrim Şahin",
@@ -1118,16 +1230,6 @@
               "starts": 2,
               "minutes": 163,
               "goals": 0,
-              "assists": 0
-            },
-            {
-              "name": "U19 Süper Lig",
-              "category": "league",
-              "team": "Besiktas JK U19",
-              "apps": 10,
-              "starts": 10,
-              "minutes": 801,
-              "goals": 5,
               "assists": 0
             },
             {
@@ -1157,7 +1259,8 @@
           ]
         }
       },
-      "fullName": "Devrim Şahin"
+      "fullName": "Devrim Şahin",
+      "position": "Left Winger"
     },
     {
       "name": "Élan Ricardo",
@@ -1216,7 +1319,8 @@
           ]
         }
       },
-      "fullName": "Élan Joshep Ricardo Ochoa"
+      "fullName": "Élan Joshep Ricardo Ochoa",
+      "position": "Central Midfield"
     },
     {
       "name": "Jean Onana",
@@ -1254,7 +1358,8 @@
           "competitions": []
         }
       },
-      "fullName": "Jean Emile Junior Onana Onana"
+      "fullName": "Jean Emile Junior Onana Onana",
+      "position": "Defensive Midfield"
     },
     {
       "name": "Yasin Özcan",
@@ -1287,16 +1392,6 @@
               "assists": 0
             },
             {
-              "name": "Challenger Pro League",
-              "category": "league",
-              "team": "RSCA Futures",
-              "apps": 4,
-              "starts": 4,
-              "minutes": 327,
-              "goals": 0,
-              "assists": 0
-            },
-            {
               "name": "Türkiye Kupasi",
               "category": "cup",
               "team": "Beşiktaş JK",
@@ -1304,16 +1399,6 @@
               "starts": 2,
               "minutes": 179,
               "goals": 0,
-              "assists": 0
-            },
-            {
-              "name": "Premier League International Cup U21",
-              "category": "europe",
-              "team": "RSCA Futures",
-              "apps": 1,
-              "starts": 1,
-              "minutes": 90,
-              "goals": 1,
               "assists": 0
             },
             {
@@ -1343,7 +1428,8 @@
           ]
         }
       },
-      "fullName": "Yasin Özcan"
+      "fullName": "Yasin Özcan",
+      "position": "Centre-Back"
     },
     {
       "name": "Necip Uysal",
@@ -1381,7 +1467,8 @@
           "competitions": []
         }
       },
-      "fullName": "Necip Uysal"
+      "fullName": "Necip Uysal",
+      "position": "Defensive Midfield"
     },
     {
       "name": "Rafa Silva",
@@ -1470,7 +1557,8 @@
           ]
         }
       },
-      "fullName": "Rafael Alexandre Fernandes Ferreira da Silva"
+      "fullName": "Rafael Alexandre Fernandes Ferreira da Silva",
+      "position": "Right Winger"
     },
     {
       "name": "Alexander Nübel",
@@ -1549,7 +1637,8 @@
           ]
         }
       },
-      "fullName": "Alexander Nübel"
+      "fullName": "Alexander Nübel",
+      "position": "Goalkeeper"
     },
     {
       "name": "Rıdvan Yılmaz",
@@ -1618,7 +1707,8 @@
           ]
         }
       },
-      "fullName": "Rıdvan Yılmaz"
+      "fullName": "Rıdvan Yılmaz",
+      "position": "Left-Back"
     },
     {
       "name": "Emirhan Topçu",
@@ -1707,7 +1797,8 @@
           ]
         }
       },
-      "fullName": "Emirhan Topçu"
+      "fullName": "Emirhan Topçu",
+      "position": "Centre-Back"
     },
     {
       "name": "Tiago Djaló",
@@ -1776,7 +1867,8 @@
           ]
         }
       },
-      "fullName": "Tiago Emanuel Embaló Djaló"
+      "fullName": "Tiago Emanuel Embaló Djaló",
+      "position": "Centre-Back"
     },
     {
       "name": "Amir Murillo",
@@ -1885,7 +1977,8 @@
           ]
         }
       },
-      "fullName": "Michael Amir Murillo Bermúdez"
+      "fullName": "Michael Amir Murillo Bermúdez",
+      "position": "Right-Back"
     },
     {
       "name": "Salih Özcan",
@@ -1954,7 +2047,8 @@
           ]
         }
       },
-      "fullName": "Salih Özcan"
+      "fullName": "Salih Özcan",
+      "position": "Defensive Midfield"
     },
     {
       "name": "Leandro Trossard",
@@ -2043,7 +2137,8 @@
           ]
         }
       },
-      "fullName": "Leandro Trossard"
+      "fullName": "Leandro Trossard",
+      "position": "Left Winger"
     },
     {
       "name": "Fabio Miretti",
@@ -2112,7 +2207,8 @@
           ]
         }
       },
-      "fullName": "Fabio Miretti"
+      "fullName": "Fabio Miretti",
+      "position": "Central Midfield"
     },
     {
       "name": "Václav Černý",
@@ -2201,7 +2297,8 @@
           ]
         }
       },
-      "fullName": "Václav Černý"
+      "fullName": "Václav Černý",
+      "position": "Right Winger"
     },
     {
       "name": "Dušan Vlahović",
@@ -2270,7 +2367,8 @@
           ]
         }
       },
-      "fullName": "Dušan Vlahović"
+      "fullName": "Dušan Vlahović",
+      "position": "Centre-Forward"
     },
     {
       "name": "Doğan Alemdar",
@@ -2298,7 +2396,8 @@
           "competitions": []
         }
       },
-      "fullName": "Doğan Alemdar"
+      "fullName": "Doğan Alemdar",
+      "position": "Goalkeeper"
     },
     {
       "name": "Emmanuel Agbadou",
@@ -2387,7 +2486,8 @@
           ]
         }
       },
-      "fullName": "Emmanuel Elysee Djedje Agbadou Badobre"
+      "fullName": "Emmanuel Elysee Djedje Agbadou Badobre",
+      "position": "Centre-Back"
     },
     {
       "name": "Kassoum Ouattara",
@@ -2466,7 +2566,8 @@
           ]
         }
       },
-      "fullName": "Kassoum Ouattara"
+      "fullName": "Kassoum Ouattara",
+      "position": "Left-Back"
     },
     {
       "name": "Taylan Bulut",
@@ -2545,7 +2646,8 @@
           ]
         }
       },
-      "fullName": "Taylan Bulut"
+      "fullName": "Taylan Bulut",
+      "position": "Right-Back"
     },
     {
       "name": "Junior Olaitan",
@@ -2634,7 +2736,8 @@
           ]
         }
       },
-      "fullName": "Junior Olaitan Ishola"
+      "fullName": "Junior Olaitan Ishola",
+      "position": "Central Midfield"
     },
     {
       "name": "İlhan Fakılı",
@@ -2703,7 +2806,8 @@
           ]
         }
       },
-      "fullName": "Ilhan Fakili"
+      "fullName": "Ilhan Fakili",
+      "position": "Left Winger"
     },
     {
       "name": "Kartal Kayra Yılmaz",
@@ -2782,7 +2886,8 @@
           ]
         }
       },
-      "fullName": "Kartal Kayra Yılmaz"
+      "fullName": "Kartal Kayra Yılmaz",
+      "position": "Defensive Midfield"
     },
     {
       "name": "Wilfred Ndidi",
@@ -2861,7 +2966,8 @@
           ]
         }
       },
-      "fullName": "Onyinye Wilfred Ndidi"
+      "fullName": "Onyinye Wilfred Ndidi",
+      "position": "Defensive Midfield"
     },
     {
       "name": "Ernest Poku",
@@ -2950,7 +3056,8 @@
           ]
         }
       },
-      "fullName": "Ernest Poku"
+      "fullName": "Ernest Poku",
+      "position": "Right Winger"
     },
     {
       "name": "Hyeon-gyu Oh",
@@ -3059,7 +3166,8 @@
           ]
         }
       },
-      "fullName": "Hyeon-Gyu Oh"
+      "fullName": "Hyeon-Gyu Oh",
+      "position": "Centre-Forward"
     },
     {
       "name": "Emir Yaşar",
@@ -3070,24 +3178,14 @@
       "id": 63469735,
       "seasons": {
         "2025": {
-          "competitions": [
-            {
-              "name": "U19 Süper Lig",
-              "category": "league",
-              "team": "Besiktas JK U19",
-              "apps": 2,
-              "starts": 2,
-              "minutes": 180,
-              "goals": 0,
-              "assists": 0
-            }
-          ]
+          "competitions": []
         },
         "2026": {
           "competitions": []
         }
       },
-      "fullName": "Emir Yaşar"
+      "fullName": "Emir Yaşar",
+      "position": "Goalkeeper"
     },
     {
       "name": "Ümit Akdağ",
@@ -3146,7 +3244,8 @@
           ]
         }
       },
-      "fullName": "Ümit Akdağ"
+      "fullName": "Ümit Akdağ",
+      "position": "Centre-Back"
     },
     {
       "name": "Azem Yortaç",
@@ -3157,35 +3256,14 @@
       "id": 76965399,
       "seasons": {
         "2025": {
-          "competitions": [
-            {
-              "name": "U19 Süper Lig",
-              "category": "league",
-              "team": "Besiktas JK U19",
-              "apps": 29,
-              "starts": 29,
-              "minutes": 2492,
-              "goals": 2,
-              "assists": 0
-            }
-          ]
+          "competitions": []
         },
         "2026": {
-          "competitions": [
-            {
-              "name": "U19 Süper Lig",
-              "category": "league",
-              "team": "Besiktas JK U19",
-              "apps": 4,
-              "starts": 2,
-              "minutes": 168,
-              "goals": 0,
-              "assists": 0
-            }
-          ]
+          "competitions": []
         }
       },
-      "fullName": null
+      "fullName": null,
+      "position": "Centre-Back"
     },
     {
       "name": "Milot Rashica",
@@ -3264,7 +3342,8 @@
           ]
         }
       },
-      "fullName": "Milot Rashica"
+      "fullName": "Milot Rashica",
+      "position": "Right Winger"
     },
     {
       "name": "Can Keleş",
@@ -3302,7 +3381,8 @@
           "competitions": []
         }
       },
-      "fullName": "Can Keles"
+      "fullName": "Can Keles",
+      "position": "Right Winger"
     },
     {
       "name": "Semih Kılıçsoy",
@@ -3381,7 +3461,8 @@
           ]
         }
       },
-      "fullName": "Semih Kılıçsoy"
+      "fullName": "Semih Kılıçsoy",
+      "position": "Centre-Forward"
     },
     {
       "name": "Mustafa Hekimoğlu",
@@ -3440,7 +3521,8 @@
           ]
         }
       },
-      "fullName": "Mustafa Erhan Hekimoğlu"
+      "fullName": "Mustafa Erhan Hekimoğlu",
+      "position": "Centre-Forward"
     },
     {
       "name": "Ahmet Sami Bircan",
@@ -3452,16 +3534,6 @@
       "seasons": {
         "2025": {
           "competitions": [
-            {
-              "name": "U19 Süper Lig",
-              "category": "league",
-              "team": "Besiktas JK U19",
-              "apps": 25,
-              "starts": 22,
-              "minutes": 1823,
-              "goals": 10,
-              "assists": 0
-            },
             {
               "name": "Türkiye Kupasi",
               "category": "cup",
@@ -3489,7 +3561,8 @@
           ]
         }
       },
-      "fullName": "Sami Bircan Ahmet"
+      "fullName": "Sami Bircan Ahmet",
+      "position": "Centre-Forward"
     }
   ]
 }

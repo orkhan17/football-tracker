@@ -93,3 +93,49 @@ test('diffPlayers reports per-competition deltas and newly added players', async
   );
   assert.deepEqual(diffPlayers(after, after, [2026]), { items: [], added: [] });
 });
+
+test('isYouthOrReserve', async () => {
+  const { isYouthOrReserve } = await import('./fetch.mjs');
+  assert.ok(isYouthOrReserve({ club: 'Besiktas JK U19', league: 'U19 Süper Lig' }));
+  assert.ok(isYouthOrReserve({ club: 'RSCA Futures', league: 'Challenger Pro League' }));
+  assert.ok(isYouthOrReserve({ club: 'Chelsea FC', league: 'Premier League International Cup U21' }));
+  assert.ok(isYouthOrReserve({ club: 'Jong Ajax', league: 'Eerste Divisie' }));
+  assert.ok(!isYouthOrReserve({ club: 'Beşiktaş JK', league: 'Süper Lig' }));
+  assert.ok(!isYouthOrReserve({ club: 'Bayer 04 Leverkusen', league: 'Bundesliga' }));
+  assert.ok(!isYouthOrReserve({ club: 'ETO FC', league: 'Nemzeti Bajnokság' }));
+  assert.ok(!isYouthOrReserve({ club: 'FC Schalke 04', league: '2. Bundesliga' }));
+});
+
+test('updateHistory adds a point only when totals change', async () => {
+  const { updateHistory } = await import('./fetch.mjs');
+  const player = (goals) => ({
+    id: 7,
+    seasons: { 2026: { competitions: [{ category: 'league', apps: 5, starts: 5, minutes: 450, goals, assists: 1 }] } },
+  });
+  const h = {};
+  assert.equal(updateHistory(h, [player(2)], 2026, '2026-10-18'), true);
+  assert.equal(updateHistory(h, [player(2)], 2026, '2026-10-19'), false);
+  assert.equal(updateHistory(h, [player(3)], 2026, '2026-10-20'), true);
+  assert.equal(updateHistory(h, [player(4)], 2026, '2026-10-20'), true); // same day: replaced
+  assert.deepEqual(h[2026][7], [
+    ['2026-10-18', { league: [5, 5, 450, 2, 1] }],
+    ['2026-10-20', { league: [5, 5, 450, 4, 1] }],
+  ]);
+  assert.equal(updateHistory(h, [{ ...player(9), error: 'x' }], 2026, '2026-10-21'), false);
+});
+
+test('nextChanges keeps, extends or replaces the change list', async () => {
+  const { nextChanges } = await import('./fetch.mjs');
+  const previous = { generatedAt: 'T1', changes: { since: 'T0', until: 'T1', items: [{ id: 1 }], added: ['A'] } };
+  const none = { items: [], added: [] };
+  assert.equal(nextChanges(previous, none, { partial: false, now: 'T2' }), previous.changes);
+  assert.deepEqual(nextChanges(previous, { items: [], added: ['B'] }, { partial: true, now: 'T2' }), {
+    since: 'T0', until: 'T2', items: [{ id: 1 }], added: ['A', 'B'],
+  });
+  assert.deepEqual(nextChanges(previous, { items: [{ id: 2 }], added: [] }, { partial: false, now: 'T2' }), {
+    since: 'T1', until: 'T2', items: [{ id: 2 }], added: [],
+  });
+  assert.deepEqual(nextChanges({ generatedAt: 'T1' }, { items: [], added: ['B'] }, { partial: true, now: 'T2' }), {
+    since: 'T1', until: 'T2', items: [], added: ['B'],
+  });
+});

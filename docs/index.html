@@ -11,10 +11,18 @@
     <div>
       <h1>Player Tracker</h1>
       <p id="updated" class="muted"></p>
+      <p id="next-matches" class="muted small"></p>
     </div>
     <div class="controls">
       <input id="search" type="search" placeholder="Search player or club" aria-label="Search player or club" autocomplete="off">
       <select id="group" aria-label="Group" hidden></select>
+      <select id="position" aria-label="Position">
+        <option value="all">All positions</option>
+        <option value="gk">Goalkeepers</option>
+        <option value="def">Defenders</option>
+        <option value="mid">Midfielders</option>
+        <option value="fwd">Forwards</option>
+      </select>
       <select id="category" aria-label="Competition">
         <option value="club">All club competitions</option>
         <option value="league">League</option>
@@ -30,6 +38,8 @@
   <div id="notices"></div>
 
   <main>
+    <section class="card" id="player" hidden></section>
+
     <section class="card" id="whatsnew" hidden>
       <div class="card-head">
         <h2>What's new</h2>
@@ -38,7 +48,7 @@
       <div id="whatsnew-body"></div>
     </section>
 
-    <section class="card">
+    <section class="card" id="overview-card">
       <div class="card-head">
         <h2>Overview</h2>
         <span class="muted small">Click a row for the competition breakdown · tick 2–4 players to compare ·

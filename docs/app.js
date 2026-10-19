@@ -3,6 +3,17 @@ const CLUB_CATEGORIES = ['league', 'cup', 'europe'];
 const LOW_MINUTES = 270; // below this, per-90 numbers are noisy
 const MAX_COMPARE = 4;
 const WHATSNEW_LIMIT = 8;
+const LAST30 = 'last30'; // pseudo-season: change over the last 30 days, from history.json
+const WINDOW_DAYS = 30;
+
+// Broad position groups for filtering, from Transfermarkt-style positions ("Right Winger", ...).
+const POSITION_GROUPS = [
+  ['gk', 'Goalkeepers', /goalkeeper/i],
+  ['def', 'Defenders', /back|defen|sweeper/i],
+  ['mid', 'Midfielders', /midfield/i],
+  ['fwd', 'Forwards', /wing|forward|striker/i],
+];
+const positionGroup = (p) => POSITION_GROUPS.find(([, , re]) => re.test(p.position ?? ''))?.[0] ?? null;
 
 const COLUMNS = [
   { key: 'apps', label: 'Apps', title: 'Appearances' },
@@ -18,9 +29,11 @@ const COLUMNS = [
 
 const state = {
   data: null,
-  season: null,
+  history: {}, // history.json: { season: { id: [[date, { category: [apps, starts, min, g, a] }], ...] } }
+  season: null, // a season start year, or LAST30
   category: 'club',
   group: 'all', // 'all' | 'none' (ungrouped) | a group name
+  position: 'all', // 'all' | a POSITION_GROUPS key
   query: '',
   playedOnly: false,
   split: false, // "All players" as one list (sorts across groups) or one section per group
@@ -28,13 +41,16 @@ const state = {
   selected: new Set(),
   expanded: new Set(),
   whatsNewAll: false,
+  player: null, // id of the player page being shown
 };
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
-const seasonLabel = (s) => `${s}/${String((Number(s) + 1) % 100).padStart(2, '0')}`;
+const seasonLabel = (s) => (s === LAST30 ? 'Last 30 days' : `${s}/${String((Number(s) + 1) % 100).padStart(2, '0')}`);
 const fmt90 = (v) => (v == null ? '–' : v.toFixed(2));
 const fmtDate = (iso) => new Date(iso).toLocaleDateString(undefined, { day: 'numeric', month: 'short' });
+const fmtKickoff = (iso) =>
+  new Date(iso).toLocaleString(undefined, { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
 const keyOf = (p) => String(p.id ?? p.name);
 const normalize = (s) =>
   String(s ?? '').normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/ı/g, 'i').toLowerCase();
@@ -132,7 +148,45 @@ function competitionsOf(p, season = state.season, category = state.category) {
 }
 
 function totals(p, season = state.season, category = state.category) {
+  if (season === LAST30) return windowTotals(p, category);
   return { ...sum(competitionsOf(p, season, category)), stale: p.seasons?.[season]?.stale };
+}
+
+// --- history (form over time) ------------------------------------------------
+
+const latestSeason = () => state.data.seasons[0];
+const pointsOf = (p) => state.history[latestSeason()]?.[p.id] ?? [];
+const isoDay = (d) => d.toISOString().slice(0, 10);
+
+// Counts for one history point, summed over the categories in the competition filter.
+function pointCounts(point, category = state.category) {
+  const t = { apps: 0, starts: 0, minutes: 0, goals: 0, assists: 0 };
+  for (const [cat, v] of Object.entries(point?.[1] ?? {})) {
+    if (!inCategory({ category: cat }, category)) continue;
+    ['apps', 'starts', 'minutes', 'goals', 'assists'].forEach((k, i) => (t[k] += v[i]));
+  }
+  return t;
+}
+
+// First day the "last 30 days" view can count from: 30 days ago, or when history starts if later.
+function windowStart() {
+  const cutoff = isoDay(new Date(Date.now() - WINDOW_DAYS * 864e5));
+  const first = Object.values(state.history[latestSeason()] ?? {})
+    .map((pts) => pts[0]?.[0])
+    .filter(Boolean)
+    .sort()[0];
+  return first && first > cutoff ? first : cutoff;
+}
+
+// Change since the window start: latest point minus the last point on or before the start.
+// Points are only stored when totals change, so "no point before the start" means "unchanged since".
+function windowTotals(p, category = state.category) {
+  const pts = pointsOf(p);
+  const start = windowStart();
+  const base = [...pts].reverse().find(([d]) => d <= start) ?? pts[0];
+  const now = pointCounts(pts.at(-1), category);
+  const was = pointCounts(base, category);
+  return sum([Object.fromEntries(Object.keys(now).map((k) => [k, now[k] - was[k]]))]);
 }
 
 // ▲/▼ against last season, only when viewing the latest season and both have enough minutes.
@@ -150,29 +204,42 @@ function trend(p, key, t) {
 }
 
 function visiblePlayers() {
-  return state.data.players.filter((p) => inGroup(p) && matchesQuery(p) && (!state.playedOnly || totals(p).apps > 0));
+  return state.data.players.filter(
+    (p) =>
+      inGroup(p) &&
+      matchesQuery(p) &&
+      (state.position === 'all' || positionGroup(p) === state.position) &&
+      (!state.playedOnly || totals(p).apps > 0),
+  );
 }
 
 // --- URL state ----------------------------------------------------------------
 
+// Rebuilds the view state from the URL (also on back/forward), falling back to defaults.
 function readUrl() {
   const q = new URLSearchParams(location.search);
-  const season = Number(q.get('season'));
-  if (state.data.seasons.includes(season)) state.season = season;
-  if (['club', 'league', 'cup', 'europe'].includes(q.get('comp'))) state.category = q.get('comp');
-  if (q.get('group')) state.group = q.get('group');
+  const season = q.get('season') === LAST30 ? LAST30 : Number(q.get('season'));
+  state.season = season === LAST30 || state.data.seasons.includes(season) ? season : latestSeason();
+  state.category = ['club', 'league', 'cup', 'europe'].includes(q.get('comp')) ? q.get('comp') : 'club';
+  state.group = q.get('group') ?? 'all';
+  state.position = POSITION_GROUPS.some(([k]) => k === q.get('pos')) ? q.get('pos') : 'all';
   state.query = q.get('q') ?? '';
   state.playedOnly = q.get('played') === '1';
   state.split = q.get('split') === '1';
-  if (q.get('sort')) state.sort = { key: q.get('sort'), desc: q.get('dir') !== 'asc' };
-  for (const id of (q.get('compare') ?? '').split(',').filter(Boolean)) state.selected.add(id);
+  state.sort = q.get('sort') ? { key: q.get('sort'), desc: q.get('dir') !== 'asc' } : { key: 'ga', desc: true };
+  state.selected = new Set((q.get('compare') ?? '').split(',').filter(Boolean));
+  state.player = q.get('player');
 }
 
-function writeUrl() {
+// Filters update the URL in place; opening or closing a player page adds a history entry,
+// so the browser's back button returns to the list.
+function writeUrl({ push = false } = {}) {
   const q = new URLSearchParams();
-  if (state.season !== state.data.seasons[0]) q.set('season', state.season);
+  if (state.player) q.set('player', state.player);
+  if (state.season !== latestSeason()) q.set('season', state.season);
   if (state.category !== 'club') q.set('comp', state.category);
   if (state.group !== 'all') q.set('group', state.group);
+  if (state.position !== 'all') q.set('pos', state.position);
   if (state.query) q.set('q', state.query);
   if (state.playedOnly) q.set('played', '1');
   if (state.split) q.set('split', '1');
@@ -182,7 +249,7 @@ function writeUrl() {
   }
   if (state.selected.size) q.set('compare', [...state.selected].join(','));
   const qs = q.toString();
-  history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+  history[push ? 'pushState' : 'replaceState'](null, '', qs ? `?${qs}` : location.pathname);
 }
 
 // --- rendering ----------------------------------------------------------------
@@ -193,10 +260,23 @@ function renderHeader() {
     ? `Stats last changed ${new Date(generatedAt).toLocaleString()} · checked daily`
     : 'Not updated yet';
 
-  $('#season-seg').innerHTML = seasons
-    .map((s) => `<button data-season="${s}" aria-pressed="${s === state.season}">${seasonLabel(s)}</button>`)
+  const hasHistory = Object.keys(state.history[latestSeason()] ?? {}).length > 0;
+  const since = hasHistory ? windowStart() : null;
+  $('#season-seg').innerHTML = [...seasons, ...(hasHistory ? [LAST30] : [])]
+    .map((s) => {
+      const label = s === LAST30 ? '30 days' : seasonLabel(s);
+      const title = s === LAST30 ? ` title="Change since ${fmtDate(since)} (history starts ${fmtDate(since)} if that's later than 30 days ago)"` : '';
+      return `<button data-season="${s}" aria-pressed="${s === state.season}"${title}>${label}</button>`;
+    })
     .join('');
   $('#category').value = state.category;
+  $('#position').value = state.position;
+
+  // Upcoming matches for players.json "nextMatchTeams".
+  $('#next-matches').innerHTML = Object.values(state.data.nextMatches ?? {})
+    .filter(Boolean)
+    .map((m) => `<span>Next: <b>${esc(m.home)}</b> vs <b>${esc(m.away)}</b> · ${esc(m.competition ?? '')} · ${fmtKickoff(m.date)}</span>`)
+    .join('');
   $('#search').value = state.query;
   $('#played').checked = state.playedOnly;
   $('#split').checked = state.split;
@@ -257,7 +337,7 @@ function renderWhatsNew() {
           return `${bits.join(' · ')} <span class="muted">${esc(i.competition)}</span>`;
         })
         .join('<br>');
-      return `<li><span class="wn-name">${esc(lines[0].name)}</span> <span class="muted small">${esc(lines[0].team)}</span><div>${parts}</div></li>`;
+      return `<li><a class="wn-name plink" href="?player=${esc(lines[0].id)}" data-player="${esc(lines[0].id)}">${esc(lines[0].name)}</a> <span class="muted small">${esc(lines[0].team)}</span><div>${parts}</div></li>`;
     })
     .join('');
   const more =
@@ -284,8 +364,9 @@ function playerCell(p, section) {
         : '';
   const stale = state.data.players && totals(p).stale ? '<span class="badge warn" title="Last update failed; showing previous data">stale</span>' : '';
   const err = p.error ? `<div class="err">${esc(p.error)}</div>` : '';
-  return `<div class="player"><div class="name">${esc(p.name)}${badge}${stale}</div>
-    <div class="sub">${esc(p.club ?? '')}${moved}${tags}</div>${err}</div>`;
+  const sub = [p.club, p.position].filter(Boolean).map(esc).join(' · ');
+  return `<div class="player"><div class="name"><a class="plink" href="?player=${esc(keyOf(p))}" data-player="${esc(keyOf(p))}">${esc(p.name)}</a>${badge}${stale}</div>
+    <div class="sub">${sub}${moved}${tags}</div>${err}</div>`;
 }
 
 function statCells(t, p, { dim = false } = {}) {
@@ -345,7 +426,7 @@ function renderTable() {
       .filter(([, ps]) => ps.length)
       .map(([name, ps]) => {
         const withData = ps.filter((p) => statusOf(p) !== 'pending');
-        const total = sum(withData.flatMap((p) => competitionsOf(p)));
+        const total = sum(withData.map((p) => totals(p)));
         const color = name === 'Ungrouped' ? null : markColor(name);
         const stripe = color ? ` style="box-shadow: inset 4px 0 0 ${color}"` : '';
         const dot = color ? `<span class="dot" style="background:${color}"></span>` : '';
@@ -363,8 +444,9 @@ function renderTable() {
 }
 
 // Per-competition detail for the selected season (follows the season switch like the table).
-function breakdown(p) {
-  return `<div class="breakdown">${[state.season]
+// History has no per-competition split, so the 30-day view shows the current season's detail.
+function breakdown(p, seasons = [state.season === LAST30 ? latestSeason() : state.season]) {
+  return `<div class="breakdown">${seasons
     .map((season) => {
       const s = p.seasons?.[season];
       if (!s || !s.competitions.length) return `<div><h3>${seasonLabel(season)}</h3><p class="muted">No appearances.</p></div>`;
@@ -392,7 +474,76 @@ function breakdown(p) {
     .join('')}</div>`;
 }
 
+// Cumulative goals and assists this season from history.json, as step lines (counts only change
+// on match days). Follows the competition filter.
+function formChart(p) {
+  const pts = pointsOf(p).map(([date, v]) => ({ date, ...pointCounts([date, v]) }));
+  if (pts.length < 2) {
+    return `<p class="muted small">The form chart fills in as match days are recorded${pts.length ? ` (tracking since ${fmtDate(pts[0].date)})` : ''}.</p>`;
+  }
+  const W = 640, H = 170, L = 28, R = 12, T = 12, B = 22;
+  const t0 = Date.parse(pts[0].date);
+  const t1 = Math.max(Date.parse(pts.at(-1).date), Date.parse(isoDay(new Date())));
+  const max = Math.max(1, ...pts.map((d) => Math.max(d.goals, d.assists)));
+  const x = (date) => L + ((Date.parse(date) - t0) / Math.max(1, t1 - t0)) * (W - L - R);
+  const y = (v) => T + (1 - v / max) * (H - T - B);
+  const series = (key) => {
+    let d = '';
+    pts.forEach((pt, i) => (d += i ? ` H${x(pt.date)} V${y(pt[key])}` : `M${x(pt.date)} ${y(pt[key])}`));
+    return d + ` H${x(isoDay(new Date(t1)))}`;
+  };
+  const ticks = [...new Set([0, Math.round(max / 2), max])];
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Cumulative goals and assists this season">
+    ${ticks.map((v) => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" class="grid"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`).join('')}
+    <path d="${series('goals')}" class="line goals"/>
+    <path d="${series('assists')}" class="line assists"/>
+    <text x="${L}" y="${H - 6}">${fmtDate(pts[0].date)}</text>
+    <text x="${W - R}" y="${H - 6}" text-anchor="end">${fmtDate(new Date(t1).toISOString())}</text>
+  </svg>
+  <div class="legend small"><span class="key goals"></span>Goals <span class="key assists"></span>Assists
+    <span class="muted">· ${seasonLabel(latestSeason())}, cumulative</span></div>`;
+}
+
+function renderPlayer() {
+  const card = $('#player');
+  const p = state.player && state.data.players.find((x) => keyOf(x) === state.player);
+  card.hidden = !p;
+  for (const id of ['#whatsnew', '#overview-card', '#compare']) if (p) $(id).hidden = true;
+  if (!p) {
+    $('#overview-card').hidden = false;
+    return;
+  }
+
+  const team = lastTeam(p);
+  const tags = groupsOf(p).map((g) => `<span class="tag" style="${tagStyle(g)}">${esc(g)}</span>`).join('');
+  const next = Object.entries(state.data.nextMatches ?? {}).find(([t, m]) => m && (sameClub(t, p.club ?? '') || sameClub(t, team ?? '')))?.[1];
+  const periods = [...state.data.seasons, ...(pointsOf(p).length ? [LAST30] : [])];
+  const head = `<tr><th>Period</th>${COLUMNS.map((c) => `<th title="${c.title}">${c.label}</th>`).join('')}</tr>`;
+  const rows = periods
+    .map((s) => {
+      const label = s === LAST30 ? `Since ${fmtDate(windowStart())}` : seasonLabel(s);
+      return `<tr><td>${label}</td>${statCells(totals(p, s), null)}</tr>`;
+    })
+    .join('');
+
+  card.innerHTML = `
+    <div class="card-head">
+      <button class="link" id="player-back">← All players</button>
+      <span class="muted small">${esc(CATEGORY_LABELS[state.category] ?? 'All club competitions')}</span>
+    </div>
+    <h2 class="player-title">${esc(p.name)}</h2>
+    <p class="muted">${[p.fullName !== p.name && p.fullName, p.club, p.position].filter(Boolean).map(esc).join(' · ')}
+      ${team && p.club && !sameClub(team, p.club) ? `<span class="moved">last played: ${esc(team)}</span>` : ''} ${tags}</p>
+    ${next ? `<p class="small">Next: <b>${esc(next.home)}</b> vs <b>${esc(next.away)}</b> · ${esc(next.competition ?? '')} · ${fmtKickoff(next.date)}</p>` : ''}
+    <div class="table-wrap player-summary"><table>${head}${rows}</table></div>
+    <h3>Form</h3>
+    ${formChart(p)}
+    <h3>By competition</h3>
+    ${breakdown(p, state.data.seasons)}`;
+}
+
 function renderCompare() {
+  if (state.player) return; // the player page hides the compare card
   const players = state.data.players.filter((p) => state.selected.has(keyOf(p)));
   $('#compare').hidden = players.length < 2;
   if (players.length < 2) return;
@@ -414,12 +565,23 @@ function renderCompare() {
   </div>`;
 }
 
-function render() {
+function render({ push = false } = {}) {
   renderHeader();
-  renderWhatsNew();
-  renderTable();
-  renderCompare();
-  writeUrl();
+  if (state.player) {
+    renderPlayer();
+  } else {
+    renderPlayer(); // hides the player card and shows the overview again
+    renderWhatsNew();
+    renderTable();
+    renderCompare();
+  }
+  writeUrl({ push });
+}
+
+function openPlayer(id) {
+  state.player = id;
+  render({ push: true });
+  scrollTo(0, 0);
 }
 
 // --- events -------------------------------------------------------------------
@@ -428,9 +590,31 @@ function bindEvents() {
   $('#season-seg').addEventListener('click', (e) => {
     const s = e.target.closest('button')?.dataset.season;
     if (s) {
-      state.season = Number(s);
+      state.season = s === LAST30 ? LAST30 : Number(s);
       render();
     }
+  });
+  $('#position').addEventListener('change', (e) => {
+    state.position = e.target.value;
+    render();
+  });
+  // Player names (table and What's new) open the player page; the back link and the
+  // browser's back button return to the list.
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('.plink');
+    if (link && !e.metaKey && !e.ctrlKey) {
+      e.preventDefault();
+      e.stopPropagation();
+      openPlayer(link.dataset.player);
+    }
+    if (e.target.id === 'player-back') {
+      state.player = null;
+      render({ push: true });
+    }
+  }, true);
+  addEventListener('popstate', () => {
+    readUrl();
+    render();
   });
   $('#category').addEventListener('change', (e) => {
     state.category = e.target.value;
@@ -494,15 +678,19 @@ function bindEvents() {
   });
 }
 
-async function init() {
+async function loadJson(file) {
   try {
-    const res = await fetch('data.json', { cache: 'no-cache' });
-    state.data = res.ok ? await res.json() : null;
+    const res = await fetch(file, { cache: 'no-cache' });
+    return res.ok ? await res.json() : null;
   } catch {
-    state.data = null;
+    return null;
   }
-  state.data ??= { seasons: [], players: [] };
-  state.season = state.data.seasons[0] ?? null;
+}
+
+async function init() {
+  const [data, hist] = await Promise.all([loadJson('data.json'), loadJson('history.json')]);
+  state.data = data ?? { seasons: [], players: [] };
+  state.history = hist ?? {};
   readUrl();
   bindEvents();
   render();

@@ -4,6 +4,9 @@
     "Current Beşiktaş": "#ffffff",
     "Former Beşiktaş": "#c8102e"
   },
+  "nextMatchTeams": [
+    "Besiktas"
+  ],
   "players": [
     {
       "name": "Orkun Kökçü",
@@ -11,12 +14,14 @@
       "id": 5982109,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Central Midfield"
     },
     {
       "name": "Cole Palmer",
       "club": "Chelsea",
-      "id": 24630256
+      "id": 24630256,
+      "position": "Attacking Midfield"
     },
     {
       "name": "Ernest Muci",
@@ -24,7 +29,8 @@
       "id": 585872,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Attacking Midfield"
     },
     {
       "name": "Felix Uduokhai",
@@ -32,7 +38,8 @@
       "id": 4090520,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Centre-Back"
     },
     {
       "name": "Gökhan Sazdağı",
@@ -40,7 +47,8 @@
       "id": 88692639,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Right-Back"
     },
     {
       "name": "Emre Bilgin",
@@ -48,7 +56,8 @@
       "id": 44289644,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Goalkeeper"
     },
     {
       "name": "Emrecan Uzunhan",
@@ -56,7 +65,8 @@
       "id": 20757562,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Centre-Back"
     },
     {
       "name": "Fahri Ay",
@@ -64,7 +74,8 @@
       "id": 58185071,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Central Midfield"
     },
     {
       "name": "Cumali Gürsel",
@@ -72,7 +83,8 @@
       "id": 107480695,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": ""
     },
     {
       "name": "Arda Kılıç",
@@ -80,7 +92,8 @@
       "id": 71800841,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Left Winger"
     },
     {
       "name": "João Mário",
@@ -88,7 +101,8 @@
       "id": 33320,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Attacking Midfield"
     },
     {
       "name": "Moatasem Al-Musrati",
@@ -96,7 +110,8 @@
       "id": 6763120,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": ""
     },
     {
       "name": "Amir Hadziahmetovic",
@@ -104,7 +119,8 @@
       "id": 8051120,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Defensive Midfield"
     },
     {
       "name": "Göktuğ Baytekin",
@@ -112,7 +128,8 @@
       "id": 54203380,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Goalkeeper"
     },
     {
       "name": "Salih Uçan",
@@ -120,7 +137,8 @@
       "id": 5000492,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Central Midfield"
     },
     {
       "name": "Tayyip Talha Sanuç",
@@ -128,7 +146,8 @@
       "id": 9981027,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Centre-Back"
     },
     {
       "name": "Emrecan Terzi",
@@ -136,7 +155,8 @@
       "id": 54203058,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Left-Back"
     },
     {
       "name": "Ersin Destanoğlu",
@@ -144,7 +164,8 @@
       "id": 317485,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Goalkeeper"
     },
     {
       "name": "Devrim Şahin",
@@ -152,7 +173,8 @@
       "id": 85307453,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Left Winger"
     },
     {
       "name": "Élan Ricardo",
@@ -160,7 +182,8 @@
       "id": 58735530,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Central Midfield"
     },
     {
       "name": "Jean Onana",
@@ -168,7 +191,8 @@
       "id": 6721582,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Defensive Midfield"
     },
     {
       "name": "Yasin Özcan",
@@ -176,7 +200,8 @@
       "id": 60542433,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Centre-Back"
     },
     {
       "name": "Necip Uysal",
@@ -184,7 +209,8 @@
       "id": 321671,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Defensive Midfield"
     },
     {
       "name": "Rafa Silva",
@@ -192,7 +218,8 @@
       "id": 92407,
       "groups": [
         "Former Beşiktaş"
-      ]
+      ],
+      "position": "Right Winger"
     },
     {
       "name": "Alexander Nübel",
@@ -200,7 +227,8 @@
       "id": 64393,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Goalkeeper"
     },
     {
       "name": "Rıdvan Yılmaz",
@@ -208,7 +236,8 @@
       "id": 320061,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Left-Back"
     },
     {
       "name": "Emirhan Topçu",
@@ -216,7 +245,8 @@
       "id": 8057560,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Centre-Back"
     },
     {
       "name": "Tiago Djaló",
@@ -224,7 +254,8 @@
       "id": 238273,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Centre-Back"
     },
     {
       "name": "Amir Murillo",
@@ -232,7 +263,8 @@
       "id": 478807,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Right-Back"
     },
     {
       "name": "Salih Özcan",
@@ -240,7 +272,8 @@
       "id": 3994081,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Defensive Midfield"
     },
     {
       "name": "Leandro Trossard",
@@ -248,7 +281,8 @@
       "id": 313460,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Left Winger"
     },
     {
       "name": "Fabio Miretti",
@@ -256,7 +290,8 @@
       "id": 29271242,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Central Midfield"
     },
     {
       "name": "Václav Černý",
@@ -264,7 +299,8 @@
       "id": 88543,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Right Winger"
     },
     {
       "name": "Dušan Vlahović",
@@ -272,7 +308,8 @@
       "id": 4896969,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Centre-Forward"
     },
     {
       "name": "Doğan Alemdar",
@@ -280,7 +317,8 @@
       "id": 8066898,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Goalkeeper"
     },
     {
       "name": "Emmanuel Agbadou",
@@ -288,7 +326,8 @@
       "id": 21746102,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Centre-Back"
     },
     {
       "name": "Kassoum Ouattara",
@@ -296,7 +335,8 @@
       "id": 53635211,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Left-Back"
     },
     {
       "name": "Taylan Bulut",
@@ -304,7 +344,8 @@
       "id": 63540897,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Right-Back"
     },
     {
       "name": "Junior Olaitan",
@@ -312,7 +353,8 @@
       "id": 51021698,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Central Midfield"
     },
     {
       "name": "İlhan Fakılı",
@@ -320,7 +362,8 @@
       "id": 71938818,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Left Winger"
     },
     {
       "name": "Kartal Kayra Yılmaz",
@@ -328,7 +371,8 @@
       "id": 321832,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Defensive Midfield"
     },
     {
       "name": "Wilfred Ndidi",
@@ -336,7 +380,8 @@
       "id": 3024700,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Defensive Midfield"
     },
     {
       "name": "Ernest Poku",
@@ -344,7 +389,8 @@
       "id": 50367394,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Right Winger"
     },
     {
       "name": "Hyeon-gyu Oh",
@@ -352,7 +398,8 @@
       "id": 5588464,
       "groups": [
         "Current Beşiktaş"
-      ]
+      ],
+      "position": "Centre-Forward"
     },
     {
       "name": "Emir Yaşar",
@@ -360,7 +407,8 @@
       "groups": [
         "Current Beşiktaş"
       ],
-      "id": 63469735
+      "id": 63469735,
+      "position": "Goalkeeper"
     },
     {
       "name": "Ümit Akdağ",
@@ -368,7 +416,8 @@
       "groups": [
         "Current Beşiktaş"
       ],
-      "id": 59189711
+      "id": 59189711,
+      "position": "Centre-Back"
     },
     {
       "name": "Azem Yortaç",
@@ -376,7 +425,8 @@
       "groups": [
         "Current Beşiktaş"
       ],
-      "id": 76965399
+      "id": 76965399,
+      "position": "Centre-Back"
     },
     {
       "name": "Milot Rashica",
@@ -384,7 +434,8 @@
       "groups": [
         "Current Beşiktaş"
       ],
-      "id": 4077318
+      "id": 4077318,
+      "position": "Right Winger"
     },
     {
       "name": "Can Keleş",
@@ -392,7 +443,8 @@
       "groups": [
         "Current Beşiktaş"
       ],
-      "id": 20761909
+      "id": 20761909,
+      "position": "Right Winger"
     },
     {
       "name": "Semih Kılıçsoy",
@@ -400,7 +452,8 @@
       "groups": [
         "Current Beşiktaş"
       ],
-      "id": 54187441
+      "id": 54187441,
+      "position": "Centre-Forward"
     },
     {
       "name": "Mustafa Hekimoğlu",
@@ -408,7 +461,8 @@
       "groups": [
         "Current Beşiktaş"
       ],
-      "id": 70224973
+      "id": 70224973,
+      "position": "Centre-Forward"
     },
     {
       "name": "Ahmet Sami Bircan",
@@ -416,7 +470,8 @@
       "groups": [
         "Current Beşiktaş"
       ],
-      "id": 101513874
+      "id": 101513874,
+      "position": "Centre-Forward"
     }
   ]
 }

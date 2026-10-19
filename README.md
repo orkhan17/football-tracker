@@ -53,6 +53,11 @@ the surname, or the full legal name. Then add `"id": 92407` to the entry and fet
 
 - **What's new:** per-competition changes from the latest run that found new stats (goals, assists,
   appearances), plus players added since. Follows the group and search filters.
+- **Player page** (click a name, or link `?player=<id>`): seasons, last 30 days, a cumulative goals/assists
+  form chart from `docs/history.json`, next match, and per-competition breakdowns.
+- **30 days** view: change over the last 30 days (or since history starts), from `docs/history.json`.
+- **Positions** under each name and a position filter (goalkeepers / defenders / midfielders / forwards).
+- **Next match** for teams in `players.json` → `"nextMatchTeams": ["Besiktas"]` (2 requests per team per daily run).
 - **Search** by player name, listed club, or the club they last played for.
 - **Group colors:** set per group in `players.json` → `"groupColors": { "Current Beşiktaş": "#ffffff" }`; others get palette colors.
 - **Group filter**; "All players" is one list sorted across groups, or with **Split by group** one section per group with group totals.
@@ -86,10 +91,13 @@ NEW_ONLY=1 npm run fetch            # fetch only players missing from data.json 
 
 ## Notes
 
-- Free plan: 100 requests/day. A daily run uses 1 per player (~23 now), so up to ~90 players fit.
+- Free plan: 100 requests/day. A daily run uses 1 per player + 2 per next-match team (54 now).
 - Starts = games played − times substituted in.
 - Seasons are keyed by start year (`"26/27"` → 2026). Summer tournaments reported as a calendar year
   (e.g. the 2025 Club World Cup) count toward the season that was ending (2024/25), under Cups.
-- National-team games aren't provided by the API.
+- National-team games aren't provided by the API; reserve and youth teams (U19/U21, Futures, Jong, II…) aren't counted.
+- Positions are looked up once per player from the API profile (up to `MAX_PROFILES`=30 per run) and saved in
+  `players.json`; set `"position"` by hand to override.
+- `docs/history.json` gets a point per player only when their season totals change.
 - Per-90 values are greyed out under 270 minutes.
 - If a run fails for a player, their last good data is kept and marked "stale".

@@ -1,12 +1,14 @@
 #!/usr/bin/env node
-// Weekly stats fetcher: reads players.json, pulls per-competition stats from
-// Highlightly (via RapidAPI), and writes docs/data.json for the static dashboard.
+// Daily stats fetcher: reads players.json, pulls per-competition stats from Highlightly
+// (via RapidAPI), and writes docs/data.json (+ docs/history.json) for the static dashboard.
 //
 // Env:
 //   RAPIDAPI_KEY       (required) RapidAPI key subscribed to Highlightly "All Sports"
 //   SEASONS            optional, start years, e.g. "2025,2024" (default: current + previous)
 //   ONLY               optional, comma-separated player names to fetch; others keep their last data
 //   NEW_ONLY           optional, fetch only players missing from data.json (used when players.json is pushed)
+//   MAX_PROFILES       optional, profile lookups per run for players without a position (default 30)
+//   NEXT_MATCHES       optional, "1" fetches next matches even on ONLY/NEW_ONLY runs (full runs always do)
 //   REQUEST_DELAY_MS   optional, pause between calls (default 1500)
 //   API_BASE           optional, for testing against a mock
 
@@ -17,6 +19,7 @@ import path from 'node:path';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PLAYERS_FILE = path.join(ROOT, 'players.json');
 const DATA_FILE = path.join(ROOT, 'docs', 'data.json');
+const HISTORY_FILE = path.join(ROOT, 'docs', 'history.json');
 
 const API_BASE = process.env.API_BASE ?? 'https://sport-highlights-api.p.rapidapi.com/football';
 const API_KEY = process.env.RAPIDAPI_KEY;
@@ -209,12 +212,70 @@ export function diffPlayers(before, after, seasons) {
   return { items, added };
 }
 
+// The change list to store: unchanged when nothing changed, extended by partial runs, replaced
+// by full runs.
+export function nextChanges(previous, { items, added }, { partial, now }) {
+  const prev = previous.changes ?? null;
+  if (!items.length && !added.length) return prev;
+  if (partial && prev) {
+    return { since: prev.since, until: now, items: [...prev.items, ...items], added: [...new Set([...prev.added, ...added])] };
+  }
+  return { since: previous.generatedAt ?? null, until: now, items, added };
+}
+
+// Season totals per category as [apps, starts, minutes, goals, assists]: one history point.
+export function categoryTotals(player, season) {
+  const totals = {};
+  for (const c of player.seasons?.[season]?.competitions ?? []) {
+    const t = (totals[c.category] ??= [0, 0, 0, 0, 0]);
+    COUNTS.forEach((k, i) => (t[i] += c[k]));
+  }
+  return totals;
+}
+
+// history.json: { "<season>": { "<player id>": [[date, totals], ...] } }. A point is added only when
+// a player's totals changed (so the file stays small); a second change on the same day replaces it.
+export function updateHistory(history, players, season, date) {
+  const bySeason = (history[season] ??= {});
+  let changed = false;
+  for (const p of players) {
+    const s = p.seasons?.[season];
+    if (!p.id || !s || s.stale || p.error) continue;
+    const totals = categoryTotals(p, season);
+    const points = (bySeason[p.id] ??= []);
+    const last = points.at(-1);
+    if (last && JSON.stringify(last[1]) === JSON.stringify(totals)) continue;
+    if (last?.[0] === date) points[points.length - 1] = [date, totals];
+    else points.push([date, totals]);
+    changed = true;
+  }
+  return changed;
+}
+
+// Earliest upcoming match for a team name, searching its home and away fixtures.
+async function nextMatch(team, season) {
+  const now = Date.now();
+  // Sequential, so api() keeps its spacing between calls.
+  const lists = [await api('/matches', { homeTeamName: team, season }), await api('/matches', { awayTeamName: team, season })];
+  const upcoming = lists
+    .flatMap((r) => r.data ?? [])
+    .filter((m) => Date.parse(m.date) > now && /not started|scheduled/i.test(m.state?.description ?? 'not started'))
+    .sort((a, b) => a.date.localeCompare(b.date));
+  const m = upcoming[0];
+  return m ? { date: m.date, home: m.homeTeam?.name, away: m.awayTeam?.name, competition: m.league?.name ?? null } : null;
+}
+
+// Reserve and youth football ("Besiktas JK U19", "RSCA Futures", "U19 Süper Lig", ...) isn't counted.
+const YOUTH_TEAM_RE = /\bU-?(1[5-9]|2[0-3])\b|\bfutures\b|\bjong\b|\breserves?\b|\bII\b|\bB$|\bacademy\b|\byouth\b|\bprimavera\b/i;
+const YOUTH_LEAGUE_RE = /\bU-?(1[5-9]|2[0-3])\b|\byouth\b|\breserves?\b|\bprimavera\b|\bpremier league 2\b/i;
+export const isYouthOrReserve = (row) => YOUTH_TEAM_RE.test(row.club ?? row.team ?? '') || YOUTH_LEAGUE_RE.test(row.league ?? row.name ?? '');
+
 export function toSeasons(stats, seasons) {
   const out = Object.fromEntries(seasons.map((s) => [s, { competitions: [] }]));
   for (const row of stats?.perCompetition ?? []) {
     const season = seasonStartYear(row.season);
     const category = categorize(row);
-    if (!out[season] || !category || !row.gamesPlayed) continue;
+    if (!out[season] || !category || !row.gamesPlayed || isYouthOrReserve(row)) continue;
     out[season].competitions.push({
       name: row.league,
       category,
@@ -258,7 +319,7 @@ async function main() {
   let stopReason = null;
 
   for (const player of playersDoc.players) {
-    const meta = { name: player.name, club: player.club, groups: player.groups ?? [] };
+    const meta = { name: player.name, club: player.club, position: player.position ?? null, groups: player.groups ?? [] };
     const old = previousById.get(player.id);
     const skip = only ? !only.has(normalize(player.name)) : newOnly && Boolean(old);
     if (skip) {
@@ -301,15 +362,63 @@ async function main() {
     }
   }
 
+  // Positions come from the player profile, looked up once and saved to players.json like ids.
+  // An empty string marks "profile has no position" so it isn't looked up again.
+  let profiles = 0;
+  const maxProfiles = Number(process.env.MAX_PROFILES ?? 30);
+  for (const player of playersDoc.players) {
+    if (stopReason || profiles >= maxProfiles || !player.id || player.position != null) continue;
+    try {
+      profiles++;
+      const res = await api(`/players/${player.id}`);
+      const profile = (Array.isArray(res) ? res[0] : res)?.profile;
+      player.position = profile?.position?.main ?? '';
+      playersChanged = true;
+      const entry = out.find((p) => p.id === player.id);
+      if (entry) entry.position = player.position;
+    } catch (err) {
+      if (err.kind === 'quota') stopReason = 'request quota reached';
+      console.error(`${player.name} (profile): ${err.message}`);
+    }
+  }
+  if (profiles) console.log(`Positions: looked up ${profiles} profile(s).`);
+
+  // Next match per team in players.json "nextMatchTeams": on full runs, or with NEXT_MATCHES=1.
+  const nextMatches = { ...(previous.nextMatches ?? {}) };
+  if ((!only && !newOnly) || process.env.NEXT_MATCHES === '1') {
+    for (const team of playersDoc.nextMatchTeams ?? []) {
+      if (stopReason) break;
+      try {
+        nextMatches[team] = await nextMatch(team, seasons[0]);
+      } catch (err) {
+        if (err.kind === 'quota') stopReason = 'request quota reached';
+        console.error(`Next match for ${team}: ${err.message}`);
+      }
+    }
+  }
+  for (const team of Object.keys(nextMatches)) if (!(playersDoc.nextMatchTeams ?? []).includes(team)) delete nextMatches[team];
+
   // A run with no new stats keeps the previous change list, so data.json differs only in
-  // generatedAt and the workflow skips the commit.
+  // generatedAt and the workflow skips the commit. Partial runs (ONLY / NEW_ONLY, e.g. after adding
+  // a player) add to the current list instead of replacing the daily run's changes.
   const now = new Date().toISOString();
   const { items, added } = diffPlayers(previous.players, out, seasons);
-  const changes =
-    items.length || added.length ? { since: previous.generatedAt ?? null, until: now, items, added } : (previous.changes ?? null);
+  const changes = nextChanges(previous, { items, added }, { partial: Boolean(only || newOnly), now });
+
+  const history = await readJson(HISTORY_FILE, {});
+  if (updateHistory(history, out, seasons[0], now.slice(0, 10))) {
+    await writeFile(HISTORY_FILE, JSON.stringify(history) + '\n');
+  }
 
   if (playersChanged) await writeFile(PLAYERS_FILE, JSON.stringify(playersDoc, null, 2) + '\n');
-  await writeFile(DATA_FILE, JSON.stringify({ generatedAt: now, seasons, groupColors: playersDoc.groupColors ?? {}, changes, players: out }, null, 2) + '\n');
+  await writeFile(
+    DATA_FILE,
+    JSON.stringify(
+      { generatedAt: now, seasons, groupColors: playersDoc.groupColors ?? {}, nextMatches, changes, players: out },
+      null,
+      2,
+    ) + '\n',
+  );
   if (items.length || added.length) console.log(`Changes: ${items.length} stat lines, ${added.length} newly added players.`);
 
   if (only && fetched.length < only.size) console.warn(`ONLY matched ${fetched.length} of ${only.size} names in players.json.`);

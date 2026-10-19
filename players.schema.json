@@ -10,6 +10,11 @@
       "description": "Tag color per group name, e.g. { \"Current Beşiktaş\": \"#000000\" }; other groups get a palette color",
       "additionalProperties": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
     },
+    "nextMatchTeams": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Team names (as the API spells them, e.g. \"Besiktas\") whose next match is shown on the dashboard; 2 requests per team per daily run"
+    },
     "players": {
       "type": "array",
       "items": {
@@ -20,6 +25,10 @@
           "name": { "type": "string", "minLength": 2, "description": "Full name, e.g. \"Bukayo Saka\"" },
           "club": { "type": "string", "minLength": 3, "description": "Current club, e.g. \"Arsenal\"" },
           "id": { "type": "integer", "description": "Highlightly player id; filled in automatically on first run" },
+          "position": {
+            "type": "string",
+            "description": "Main position, e.g. \"Centre-Forward\"; looked up from the player profile when missing (\"\" = profile has none)"
+          },
           "groups": {
             "type": "array",
             "items": { "type": "string", "minLength": 1 },
