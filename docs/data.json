@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T19:13:56.435Z",
+  "generatedAt": "2026-10-20T11:33:24.494Z",
   "seasons": [
     2026,
     2025
@@ -17,103 +17,264 @@
     }
   },
   "changes": {
-    "since": "2026-10-18T12:22:13.704Z",
-    "until": "2026-10-19T19:13:56.435Z",
+    "since": "2026-10-19T19:13:56.435Z",
+    "until": "2026-10-20T11:33:24.494Z",
     "items": [
       {
-        "id": 24630256,
-        "name": "Cole Palmer",
-        "season": 2026,
-        "competition": "Premier League",
-        "team": "Chelsea FC",
-        "category": "league",
-        "apps": 0,
-        "starts": 0,
-        "minutes": 28,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 4090520,
-        "name": "Felix Uduokhai",
-        "season": 2026,
-        "competition": "Bundesliga",
-        "team": "1.FC Union Berlin",
-        "category": "league",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 90,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 20757562,
-        "name": "Emrecan Uzunhan",
-        "season": 2026,
-        "competition": "1.Lig",
-        "team": "Istanbulspor",
-        "category": "league",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 128,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 54203380,
-        "name": "Göktuğ Baytekin",
-        "season": 2026,
-        "competition": "2.Lig Kirmizi",
-        "team": "Sakaryaspor",
-        "category": "league",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 90,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 5000492,
-        "name": "Salih Uçan",
+        "id": 585872,
+        "name": "Ernest Muci",
         "season": 2026,
         "competition": "Süper Lig",
-        "team": "Genclerbirligi Ankara",
+        "team": "Trabzonspor",
         "category": "league",
         "apps": 1,
         "starts": 1,
-        "minutes": 72,
+        "minutes": 89,
         "goals": 0,
         "assists": 0
       },
       {
-        "id": 317485,
-        "name": "Ersin Destanoğlu",
+        "id": 88692639,
+        "name": "Gökhan Sazdağı",
         "season": 2026,
-        "competition": "UAE Pro League",
-        "team": "Al-Jazira Club",
+        "competition": "Süper Lig",
+        "team": "Corum FK",
         "category": "league",
         "apps": 1,
         "starts": 1,
         "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 58735530,
+        "name": "Élan Ricardo",
+        "season": 2026,
+        "competition": "Nemzeti Bajnokság",
+        "team": "ETO FC",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 65,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 64393,
+        "name": "Alexander Nübel",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 320061,
+        "name": "Rıdvan Yılmaz",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 77,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 8057560,
+        "name": "Emirhan Topçu",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 478807,
+        "name": "Amir Murillo",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 3994081,
+        "name": "Salih Özcan",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 313460,
+        "name": "Leandro Trossard",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 29271242,
+        "name": "Fabio Miretti",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 77,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 88543,
+        "name": "Václav Černý",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 77,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 4896969,
+        "name": "Dušan Vlahović",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 21746102,
+        "name": "Emmanuel Agbadou",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 53635211,
+        "name": "Kassoum Ouattara",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 13,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 51021698,
+        "name": "Junior Olaitan",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 85,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 71938818,
+        "name": "İlhan Fakılı",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 13,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 321832,
+        "name": "Kartal Kayra Yılmaz",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 1,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 3024700,
+        "name": "Wilfred Ndidi",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 5,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 5588464,
+        "name": "Hyeon-gyu Oh",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 13,
         "goals": 0,
         "assists": 0
       }
     ],
-    "added": [
-      "Emir Yaşar",
-      "Ümit Akdağ",
-      "Milot Rashica",
-      "Can Keleş",
-      "Semih Kılıçsoy",
-      "Mustafa Hekimoğlu",
-      "Ahmet Sami Bircan",
-      "Azem Yortaç"
-    ]
+    "added": []
   },
   "players": [
     {
       "name": "Orkun Kökçü",
       "club": "Besiktas",
+      "position": "Central Midfield",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -198,12 +359,12 @@
           ]
         }
       },
-      "fullName": "Orkun Kökçü",
-      "position": "Central Midfield"
+      "fullName": "Orkun Kökçü"
     },
     {
       "name": "Cole Palmer",
       "club": "Chelsea",
+      "position": "Attacking Midfield",
       "groups": [],
       "id": 24630256,
       "seasons": {
@@ -276,12 +437,12 @@
           ]
         }
       },
-      "fullName": "Cole Jermaine Palmer",
-      "position": "Attacking Midfield"
+      "fullName": "Cole Jermaine Palmer"
     },
     {
       "name": "Ernest Muci",
       "club": "Trabzonspor",
+      "position": "Attacking Midfield",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -357,9 +518,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Trabzonspor",
-              "apps": 6,
-              "starts": 6,
-              "minutes": 377,
+              "apps": 7,
+              "starts": 7,
+              "minutes": 466,
               "goals": 2,
               "assists": 2
             },
@@ -386,12 +547,12 @@
           ]
         }
       },
-      "fullName": "Ernest Muçi",
-      "position": "Attacking Midfield"
+      "fullName": "Ernest Muçi"
     },
     {
       "name": "Felix Uduokhai",
       "club": "Union Berlin",
+      "position": "Centre-Back",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -456,12 +617,12 @@
           ]
         }
       },
-      "fullName": "Ohis Felix Uduokhai",
-      "position": "Centre-Back"
+      "fullName": "Ohis Felix Uduokhai"
     },
     {
       "name": "Gökhan Sazdağı",
       "club": "Corum FK",
+      "position": "Right-Back",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -507,21 +668,21 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Corum FK",
-              "apps": 7,
-              "starts": 7,
-              "minutes": 603,
+              "apps": 8,
+              "starts": 8,
+              "minutes": 693,
               "goals": 0,
               "assists": 2
             }
           ]
         }
       },
-      "fullName": "Gokhan Sazdagi",
-      "position": "Right-Back"
+      "fullName": "Gokhan Sazdagi"
     },
     {
       "name": "Emre Bilgin",
       "club": "Eyüpspor",
+      "position": "Goalkeeper",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -545,12 +706,12 @@
           ]
         }
       },
-      "fullName": "Emre Bilgin",
-      "position": "Goalkeeper"
+      "fullName": "Emre Bilgin"
     },
     {
       "name": "Emrecan Uzunhan",
       "club": "Istanbulspor",
+      "position": "Centre-Back",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -595,12 +756,12 @@
           ]
         }
       },
-      "fullName": "Emrecan Uzunhan",
-      "position": "Centre-Back"
+      "fullName": "Emrecan Uzunhan"
     },
     {
       "name": "Fahri Ay",
       "club": "Corlu 1947",
+      "position": "Central Midfield",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -634,12 +795,12 @@
           "competitions": []
         }
       },
-      "fullName": "Fahri Kerem Ay",
-      "position": "Central Midfield"
+      "fullName": "Fahri Kerem Ay"
     },
     {
       "name": "Cumali Gürsel",
       "club": "Bandirma Spor",
+      "position": "",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -652,12 +813,12 @@
           "competitions": []
         }
       },
-      "fullName": null,
-      "position": ""
+      "fullName": null
     },
     {
       "name": "Arda Kılıç",
       "club": "Kirklarelispor",
+      "position": "Left Winger",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -712,12 +873,12 @@
           ]
         }
       },
-      "fullName": "Yakup Arda Kılıç",
-      "position": "Left Winger"
+      "fullName": "Yakup Arda Kılıç"
     },
     {
       "name": "João Mário",
       "club": "AEK Athens",
+      "position": "Attacking Midfield",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -822,12 +983,12 @@
           ]
         }
       },
-      "fullName": "João Mário Naval da Costa Eduardo",
-      "position": "Attacking Midfield"
+      "fullName": "João Mário Naval da Costa Eduardo"
     },
     {
       "name": "Moatasem Al-Musrati",
       "club": "Al-Ahli",
+      "position": "",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -840,12 +1001,12 @@
           "competitions": []
         }
       },
-      "fullName": "Al Moatasembellah Ali Mohamed Al Musrati",
-      "position": ""
+      "fullName": "Al Moatasembellah Ali Mohamed Al Musrati"
     },
     {
       "name": "Amir Hadziahmetovic",
       "club": "Ludogorets",
+      "position": "Defensive Midfield",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -910,12 +1071,12 @@
           ]
         }
       },
-      "fullName": "Amir Hadžiahmetović",
-      "position": "Defensive Midfield"
+      "fullName": "Amir Hadžiahmetović"
     },
     {
       "name": "Göktuğ Baytekin",
       "club": "Sakaryaspor",
+      "position": "Goalkeeper",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -960,12 +1121,12 @@
           ]
         }
       },
-      "fullName": "Göktuğ Baytekin",
-      "position": "Goalkeeper"
+      "fullName": "Göktuğ Baytekin"
     },
     {
       "name": "Salih Uçan",
       "club": "Genclerbirligi",
+      "position": "Central Midfield",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -1010,12 +1171,12 @@
           ]
         }
       },
-      "fullName": "Salih Uçan",
-      "position": "Central Midfield"
+      "fullName": "Salih Uçan"
     },
     {
       "name": "Tayyip Talha Sanuç",
       "club": "Rizespor",
+      "position": "Centre-Back",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -1080,12 +1241,12 @@
           ]
         }
       },
-      "fullName": "Tayyip Talha Sanuç",
-      "position": "Centre-Back"
+      "fullName": "Tayyip Talha Sanuç"
     },
     {
       "name": "Emrecan Terzi",
       "club": "Igdir FK",
+      "position": "Left-Back",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -1139,12 +1300,12 @@
           "competitions": []
         }
       },
-      "fullName": "Serkan Emrecan Terzi",
-      "position": "Left-Back"
+      "fullName": "Serkan Emrecan Terzi"
     },
     {
       "name": "Ersin Destanoğlu",
       "club": "Al-Jazira",
+      "position": "Goalkeeper",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -1209,12 +1370,12 @@
           ]
         }
       },
-      "fullName": "Ersin Destanoğlu",
-      "position": "Goalkeeper"
+      "fullName": "Ersin Destanoğlu"
     },
     {
       "name": "Devrim Şahin",
       "club": "Bodrum FK",
+      "position": "Left Winger",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -1259,12 +1420,12 @@
           ]
         }
       },
-      "fullName": "Devrim Şahin",
-      "position": "Left Winger"
+      "fullName": "Devrim Şahin"
     },
     {
       "name": "Élan Ricardo",
       "club": "ETO FC",
+      "position": "Central Midfield",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -1300,9 +1461,9 @@
               "name": "Nemzeti Bajnokság",
               "category": "league",
               "team": "ETO FC",
-              "apps": 2,
-              "starts": 1,
-              "minutes": 90,
+              "apps": 3,
+              "starts": 2,
+              "minutes": 155,
               "goals": 0,
               "assists": 0
             },
@@ -1319,12 +1480,12 @@
           ]
         }
       },
-      "fullName": "Élan Joshep Ricardo Ochoa",
-      "position": "Central Midfield"
+      "fullName": "Élan Joshep Ricardo Ochoa"
     },
     {
       "name": "Jean Onana",
       "club": "Without Club",
+      "position": "Defensive Midfield",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -1358,12 +1519,12 @@
           "competitions": []
         }
       },
-      "fullName": "Jean Emile Junior Onana Onana",
-      "position": "Defensive Midfield"
+      "fullName": "Jean Emile Junior Onana Onana"
     },
     {
       "name": "Yasin Özcan",
       "club": "Besiktas",
+      "position": "Centre-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -1428,12 +1589,12 @@
           ]
         }
       },
-      "fullName": "Yasin Özcan",
-      "position": "Centre-Back"
+      "fullName": "Yasin Özcan"
     },
     {
       "name": "Necip Uysal",
       "club": "Retired",
+      "position": "Defensive Midfield",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -1467,12 +1628,12 @@
           "competitions": []
         }
       },
-      "fullName": "Necip Uysal",
-      "position": "Defensive Midfield"
+      "fullName": "Necip Uysal"
     },
     {
       "name": "Rafa Silva",
       "club": "Benfica",
+      "position": "Right Winger",
       "groups": [
         "Former Beşiktaş"
       ],
@@ -1557,12 +1718,12 @@
           ]
         }
       },
-      "fullName": "Rafael Alexandre Fernandes Ferreira da Silva",
-      "position": "Right Winger"
+      "fullName": "Rafael Alexandre Fernandes Ferreira da Silva"
     },
     {
       "name": "Alexander Nübel",
       "club": "Besiktas",
+      "position": "Goalkeeper",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -1608,9 +1769,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 7,
-              "starts": 7,
-              "minutes": 630,
+              "apps": 8,
+              "starts": 8,
+              "minutes": 720,
               "goals": 0,
               "assists": 0
             },
@@ -1637,12 +1798,12 @@
           ]
         }
       },
-      "fullName": "Alexander Nübel",
-      "position": "Goalkeeper"
+      "fullName": "Alexander Nübel"
     },
     {
       "name": "Rıdvan Yılmaz",
       "club": "Besiktas",
+      "position": "Left-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -1678,9 +1839,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 6,
-              "starts": 6,
-              "minutes": 441,
+              "apps": 7,
+              "starts": 7,
+              "minutes": 518,
               "goals": 1,
               "assists": 0
             },
@@ -1707,12 +1868,12 @@
           ]
         }
       },
-      "fullName": "Rıdvan Yılmaz",
-      "position": "Left-Back"
+      "fullName": "Rıdvan Yılmaz"
     },
     {
       "name": "Emirhan Topçu",
       "club": "Besiktas",
+      "position": "Centre-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -1768,9 +1929,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 5,
-              "starts": 4,
-              "minutes": 373,
+              "apps": 6,
+              "starts": 5,
+              "minutes": 463,
               "goals": 1,
               "assists": 0
             },
@@ -1797,12 +1958,12 @@
           ]
         }
       },
-      "fullName": "Emirhan Topçu",
-      "position": "Centre-Back"
+      "fullName": "Emirhan Topçu"
     },
     {
       "name": "Tiago Djaló",
       "club": "Besiktas",
+      "position": "Centre-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -1867,12 +2028,12 @@
           ]
         }
       },
-      "fullName": "Tiago Emanuel Embaló Djaló",
-      "position": "Centre-Back"
+      "fullName": "Tiago Emanuel Embaló Djaló"
     },
     {
       "name": "Amir Murillo",
       "club": "Besiktas",
+      "position": "Right-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -1948,9 +2109,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 6,
-              "starts": 5,
-              "minutes": 451,
+              "apps": 7,
+              "starts": 6,
+              "minutes": 541,
               "goals": 1,
               "assists": 1
             },
@@ -1977,12 +2138,12 @@
           ]
         }
       },
-      "fullName": "Michael Amir Murillo Bermúdez",
-      "position": "Right-Back"
+      "fullName": "Michael Amir Murillo Bermúdez"
     },
     {
       "name": "Salih Özcan",
       "club": "Besiktas",
+      "position": "Defensive Midfield",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2018,9 +2179,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 7,
-              "starts": 7,
-              "minutes": 547,
+              "apps": 8,
+              "starts": 8,
+              "minutes": 637,
               "goals": 0,
               "assists": 0
             },
@@ -2047,12 +2208,12 @@
           ]
         }
       },
-      "fullName": "Salih Özcan",
-      "position": "Defensive Midfield"
+      "fullName": "Salih Özcan"
     },
     {
       "name": "Leandro Trossard",
       "club": "Besiktas",
+      "position": "Left Winger",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2108,9 +2269,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 6,
-              "starts": 6,
-              "minutes": 475,
+              "apps": 7,
+              "starts": 7,
+              "minutes": 565,
               "goals": 1,
               "assists": 1
             },
@@ -2137,12 +2298,12 @@
           ]
         }
       },
-      "fullName": "Leandro Trossard",
-      "position": "Left Winger"
+      "fullName": "Leandro Trossard"
     },
     {
       "name": "Fabio Miretti",
       "club": "Besiktas",
+      "position": "Central Midfield",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2188,9 +2349,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 3,
-              "starts": 1,
-              "minutes": 148,
+              "apps": 4,
+              "starts": 2,
+              "minutes": 225,
               "goals": 0,
               "assists": 0
             },
@@ -2207,12 +2368,12 @@
           ]
         }
       },
-      "fullName": "Fabio Miretti",
-      "position": "Central Midfield"
+      "fullName": "Fabio Miretti"
     },
     {
       "name": "Václav Černý",
       "club": "Besiktas",
+      "position": "Right Winger",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2268,9 +2429,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 7,
-              "starts": 6,
-              "minutes": 468,
+              "apps": 8,
+              "starts": 7,
+              "minutes": 545,
               "goals": 2,
               "assists": 1
             },
@@ -2297,12 +2458,12 @@
           ]
         }
       },
-      "fullName": "Václav Černý",
-      "position": "Right Winger"
+      "fullName": "Václav Černý"
     },
     {
       "name": "Dušan Vlahović",
       "club": "Besiktas",
+      "position": "Centre-Forward",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2338,9 +2499,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 5,
-              "starts": 4,
-              "minutes": 369,
+              "apps": 6,
+              "starts": 5,
+              "minutes": 459,
               "goals": 6,
               "assists": 0
             },
@@ -2367,12 +2528,12 @@
           ]
         }
       },
-      "fullName": "Dušan Vlahović",
-      "position": "Centre-Forward"
+      "fullName": "Dušan Vlahović"
     },
     {
       "name": "Doğan Alemdar",
       "club": "Besiktas",
+      "position": "Goalkeeper",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2396,12 +2557,12 @@
           "competitions": []
         }
       },
-      "fullName": "Doğan Alemdar",
-      "position": "Goalkeeper"
+      "fullName": "Doğan Alemdar"
     },
     {
       "name": "Emmanuel Agbadou",
       "club": "Besiktas",
+      "position": "Centre-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2457,9 +2618,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 7,
-              "starts": 6,
-              "minutes": 548,
+              "apps": 8,
+              "starts": 7,
+              "minutes": 638,
               "goals": 0,
               "assists": 1
             },
@@ -2486,12 +2647,12 @@
           ]
         }
       },
-      "fullName": "Emmanuel Elysee Djedje Agbadou Badobre",
-      "position": "Centre-Back"
+      "fullName": "Emmanuel Elysee Djedje Agbadou Badobre"
     },
     {
       "name": "Kassoum Ouattara",
       "club": "Besiktas",
+      "position": "Left-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2537,9 +2698,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 5,
+              "apps": 6,
               "starts": 1,
-              "minutes": 189,
+              "minutes": 202,
               "goals": 0,
               "assists": 0
             },
@@ -2566,12 +2727,12 @@
           ]
         }
       },
-      "fullName": "Kassoum Ouattara",
-      "position": "Left-Back"
+      "fullName": "Kassoum Ouattara"
     },
     {
       "name": "Taylan Bulut",
       "club": "Besiktas",
+      "position": "Right-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2646,12 +2807,12 @@
           ]
         }
       },
-      "fullName": "Taylan Bulut",
-      "position": "Right-Back"
+      "fullName": "Taylan Bulut"
     },
     {
       "name": "Junior Olaitan",
       "club": "Besiktas",
+      "position": "Central Midfield",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2707,9 +2868,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 6,
-              "starts": 5,
-              "minutes": 422,
+              "apps": 7,
+              "starts": 6,
+              "minutes": 507,
               "goals": 0,
               "assists": 2
             },
@@ -2736,12 +2897,12 @@
           ]
         }
       },
-      "fullName": "Junior Olaitan Ishola",
-      "position": "Central Midfield"
+      "fullName": "Junior Olaitan Ishola"
     },
     {
       "name": "İlhan Fakılı",
       "club": "Besiktas",
+      "position": "Left Winger",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2777,9 +2938,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 7,
+              "apps": 8,
               "starts": 1,
-              "minutes": 238,
+              "minutes": 251,
               "goals": 2,
               "assists": 1
             },
@@ -2806,12 +2967,12 @@
           ]
         }
       },
-      "fullName": "Ilhan Fakili",
-      "position": "Left Winger"
+      "fullName": "Ilhan Fakili"
     },
     {
       "name": "Kartal Kayra Yılmaz",
       "club": "Besiktas",
+      "position": "Defensive Midfield",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2867,9 +3028,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 2,
+              "apps": 3,
               "starts": 0,
-              "minutes": 26,
+              "minutes": 27,
               "goals": 0,
               "assists": 0
             },
@@ -2886,12 +3047,12 @@
           ]
         }
       },
-      "fullName": "Kartal Kayra Yılmaz",
-      "position": "Defensive Midfield"
+      "fullName": "Kartal Kayra Yılmaz"
     },
     {
       "name": "Wilfred Ndidi",
       "club": "Besiktas",
+      "position": "Defensive Midfield",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -2937,9 +3098,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 6,
+              "apps": 7,
               "starts": 1,
-              "minutes": 162,
+              "minutes": 167,
               "goals": 0,
               "assists": 0
             },
@@ -2966,12 +3127,12 @@
           ]
         }
       },
-      "fullName": "Onyinye Wilfred Ndidi",
-      "position": "Defensive Midfield"
+      "fullName": "Onyinye Wilfred Ndidi"
     },
     {
       "name": "Ernest Poku",
       "club": "Besiktas",
+      "position": "Right Winger",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3056,12 +3217,12 @@
           ]
         }
       },
-      "fullName": "Ernest Poku",
-      "position": "Right Winger"
+      "fullName": "Ernest Poku"
     },
     {
       "name": "Hyeon-gyu Oh",
       "club": "Besiktas",
+      "position": "Centre-Forward",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3137,9 +3298,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 6,
+              "apps": 7,
               "starts": 2,
-              "minutes": 209,
+              "minutes": 222,
               "goals": 0,
               "assists": 1
             },
@@ -3166,12 +3327,12 @@
           ]
         }
       },
-      "fullName": "Hyeon-Gyu Oh",
-      "position": "Centre-Forward"
+      "fullName": "Hyeon-Gyu Oh"
     },
     {
       "name": "Emir Yaşar",
       "club": "Besiktas",
+      "position": "Goalkeeper",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3184,12 +3345,12 @@
           "competitions": []
         }
       },
-      "fullName": "Emir Yaşar",
-      "position": "Goalkeeper"
+      "fullName": "Emir Yaşar"
     },
     {
       "name": "Ümit Akdağ",
       "club": "Besiktas",
+      "position": "Centre-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3244,12 +3405,12 @@
           ]
         }
       },
-      "fullName": "Ümit Akdağ",
-      "position": "Centre-Back"
+      "fullName": "Ümit Akdağ"
     },
     {
       "name": "Azem Yortaç",
       "club": "Besiktas",
+      "position": "Centre-Back",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3262,12 +3423,12 @@
           "competitions": []
         }
       },
-      "fullName": null,
-      "position": "Centre-Back"
+      "fullName": null
     },
     {
       "name": "Milot Rashica",
       "club": "Besiktas",
+      "position": "Right Winger",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3342,12 +3503,12 @@
           ]
         }
       },
-      "fullName": "Milot Rashica",
-      "position": "Right Winger"
+      "fullName": "Milot Rashica"
     },
     {
       "name": "Can Keleş",
       "club": "Besiktas",
+      "position": "Right Winger",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3381,12 +3542,12 @@
           "competitions": []
         }
       },
-      "fullName": "Can Keles",
-      "position": "Right Winger"
+      "fullName": "Can Keles"
     },
     {
       "name": "Semih Kılıçsoy",
       "club": "Besiktas",
+      "position": "Centre-Forward",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3461,12 +3622,12 @@
           ]
         }
       },
-      "fullName": "Semih Kılıçsoy",
-      "position": "Centre-Forward"
+      "fullName": "Semih Kılıçsoy"
     },
     {
       "name": "Mustafa Hekimoğlu",
       "club": "Besiktas",
+      "position": "Centre-Forward",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3521,12 +3682,12 @@
           ]
         }
       },
-      "fullName": "Mustafa Erhan Hekimoğlu",
-      "position": "Centre-Forward"
+      "fullName": "Mustafa Erhan Hekimoğlu"
     },
     {
       "name": "Ahmet Sami Bircan",
       "club": "Besiktas",
+      "position": "Centre-Forward",
       "groups": [
         "Current Beşiktaş"
       ],
@@ -3561,8 +3722,7 @@
           ]
         }
       },
-      "fullName": "Sami Bircan Ahmet",
-      "position": "Centre-Forward"
+      "fullName": "Sami Bircan Ahmet"
     }
   ]
 }
