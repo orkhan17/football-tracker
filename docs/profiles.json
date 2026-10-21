@@ -21,6 +21,17 @@
     "joinedAt": "08/07/2026",
     "contractExpiry": "30/06/2029"
   },
+  "88543": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "17/10/1997",
+    "citizenship": "Czech Republic",
+    "height": "1,82 m",
+    "foot": "left",
+    "position": "Right Winger",
+    "club": "Beşiktaş JK",
+    "joinedAt": "02/09/2025",
+    "contractExpiry": "30/06/2028"
+  },
   "92407": {
     "fetchedAt": "2026-10-20",
     "birthDate": "17/05/1993",
@@ -42,6 +53,17 @@
     "club": "Beşiktaş JK",
     "joinedAt": "27/08/2025",
     "contractExpiry": "30/06/2028"
+  },
+  "313460": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "04/12/1994",
+    "citizenship": "Belgium",
+    "height": "1,72 m",
+    "foot": "right",
+    "position": "Left Winger",
+    "club": "Beşiktaş JK",
+    "joinedAt": "15/07/2026",
+    "contractExpiry": "30/06/2029"
   },
   "317485": {
     "fetchedAt": "2026-10-20",
@@ -76,6 +98,17 @@
     "joinedAt": "01/07/2026",
     "contractExpiry": "-"
   },
+  "321832": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "04/11/2000",
+    "citizenship": "Türkiye",
+    "height": "1,74 m",
+    "foot": "right",
+    "position": "Defensive Midfield",
+    "club": "Beşiktaş JK",
+    "joinedAt": "20/04/2020",
+    "contractExpiry": "30/06/2028"
+  },
   "478807": {
     "fetchedAt": "2026-10-20",
     "birthDate": "11/02/1996",
@@ -98,6 +131,17 @@
     "joinedAt": "01/07/2026",
     "contractExpiry": "30/06/2029"
   },
+  "3024700": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "16/12/1996",
+    "citizenship": "Nigeria, England",
+    "height": "1,81 m",
+    "foot": "right",
+    "position": "Defensive Midfield",
+    "club": "Beşiktaş JK",
+    "joinedAt": "07/08/2025",
+    "contractExpiry": "30/06/2028"
+  },
   "3994081": {
     "fetchedAt": "2026-10-20",
     "birthDate": "11/01/1998",
@@ -108,6 +152,17 @@
     "club": "Beşiktaş JK",
     "joinedAt": "09/07/2026",
     "contractExpiry": "30/06/2029"
+  },
+  "4077318": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "28/06/1996",
+    "citizenship": "Kosovo, Albania",
+    "height": "1,78 m",
+    "foot": "right",
+    "position": "Right Winger",
+    "club": "Beşiktaş JK",
+    "joinedAt": "16/08/2023",
+    "contractExpiry": "30/06/2027"
   },
   "4090520": {
     "fetchedAt": "2026-10-20",
@@ -120,6 +175,17 @@
     "joinedAt": "27/08/2026",
     "contractExpiry": "-"
   },
+  "4896969": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "28/01/2000",
+    "citizenship": "Serbia",
+    "height": "1,90 m",
+    "foot": "left",
+    "position": "Centre-Forward",
+    "club": "Beşiktaş JK",
+    "joinedAt": "13/08/2026",
+    "contractExpiry": "30/06/2029"
+  },
   "5000492": {
     "fetchedAt": "2026-10-20",
     "birthDate": "06/01/1994",
@@ -130,6 +196,17 @@
     "club": "Genclerbirligi Ankara",
     "joinedAt": "10/08/2026",
     "contractExpiry": "30/06/2028"
+  },
+  "5588464": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "12/04/2001",
+    "citizenship": "Korea, South",
+    "height": "1,87 m",
+    "foot": "right",
+    "position": "Centre-Forward",
+    "club": "Beşiktaş JK",
+    "joinedAt": "04/02/2026",
+    "contractExpiry": "30/06/2029"
   },
   "5982109": {
     "fetchedAt": "2026-10-20",
@@ -186,6 +263,17 @@
     "joinedAt": "02/08/2024",
     "contractExpiry": "30/06/2028"
   },
+  "8066898": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "29/10/2002",
+    "citizenship": "Türkiye",
+    "height": "1,88 m",
+    "foot": "right",
+    "position": "Goalkeeper",
+    "club": "Beşiktaş JK",
+    "joinedAt": "08/07/2026",
+    "contractExpiry": "30/06/2030"
+  },
   "9981027": {
     "fetchedAt": "2026-10-20",
     "birthDate": "17/12/1999",
@@ -208,6 +296,28 @@
     "joinedAt": "04/09/2026",
     "contractExpiry": "30/06/2028"
   },
+  "20761909": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "02/09/2001",
+    "citizenship": "Austria, Türkiye",
+    "height": "1,80 m",
+    "foot": "left",
+    "position": "Right Winger",
+    "club": "Beşiktaş JK",
+    "joinedAt": "22/07/2024",
+    "contractExpiry": "30/06/2028"
+  },
+  "21746102": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "17/06/1997",
+    "citizenship": "Cote d'Ivoire",
+    "height": "1,85 m",
+    "foot": "right",
+    "position": "Centre-Back",
+    "club": "Beşiktaş JK",
+    "joinedAt": "06/02/2026",
+    "contractExpiry": "30/06/2030"
+  },
   "24630256": {
     "fetchedAt": "2026-10-20",
     "birthDate": "06/05/2002",
@@ -219,6 +329,17 @@
     "joinedAt": "01/09/2023",
     "contractExpiry": "30/06/2033"
   },
+  "29271242": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "03/08/2003",
+    "citizenship": "Italy",
+    "height": "1,80 m",
+    "foot": "right",
+    "position": "Central Midfield",
+    "club": "Beşiktaş JK",
+    "joinedAt": "28/08/2026",
+    "contractExpiry": "30/06/2027"
+  },
   "44289644": {
     "fetchedAt": "2026-10-20",
     "birthDate": "26/02/2004",
@@ -228,6 +349,50 @@
     "position": "Goalkeeper",
     "club": "Eyüpspor",
     "joinedAt": "15/08/2026",
+    "contractExpiry": "30/06/2028"
+  },
+  "50367394": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "28/01/2004",
+    "citizenship": "Netherlands, Ghana",
+    "height": "1,76 m",
+    "foot": "right",
+    "position": "Right Winger",
+    "club": "Beşiktaş JK",
+    "joinedAt": "26/08/2026",
+    "contractExpiry": "30/06/2027"
+  },
+  "51021698": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "09/05/2002",
+    "citizenship": "Benin, Nigeria",
+    "height": "1,74 m",
+    "foot": "right",
+    "position": "Central Midfield",
+    "club": "Beşiktaş JK",
+    "joinedAt": "03/02/2026",
+    "contractExpiry": "30/06/2029"
+  },
+  "53635211": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "14/10/2004",
+    "citizenship": "Cote d'Ivoire, France",
+    "height": "1,84 m",
+    "foot": "left",
+    "position": "Left-Back",
+    "club": "Beşiktaş JK",
+    "joinedAt": "02/07/2026",
+    "contractExpiry": "30/06/2030"
+  },
+  "54187441": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "15/08/2005",
+    "citizenship": "Türkiye",
+    "height": "1,78 m",
+    "foot": "right",
+    "position": "Centre-Forward",
+    "club": "Beşiktaş JK",
+    "joinedAt": "05/05/2023",
     "contractExpiry": "30/06/2028"
   },
   "54203058": {
@@ -274,6 +439,17 @@
     "joinedAt": "03/09/2026",
     "contractExpiry": "30/06/2027"
   },
+  "59189711": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "06/10/2003",
+    "citizenship": "Türkiye, Romania",
+    "height": "1,92 m",
+    "foot": "left",
+    "position": "Centre-Back",
+    "club": "Beşiktaş JK",
+    "joinedAt": "02/09/2026",
+    "contractExpiry": "30/06/2030"
+  },
   "60542433": {
     "fetchedAt": "2026-10-20",
     "birthDate": "20/04/2006",
@@ -285,6 +461,39 @@
     "joinedAt": "28/01/2026",
     "contractExpiry": "27/01/2027"
   },
+  "63469735": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "16/01/2006",
+    "citizenship": "Türkiye",
+    "height": "1,90 m",
+    "foot": "right",
+    "position": "Goalkeeper",
+    "club": "Beşiktaş JK",
+    "joinedAt": "17/04/2024",
+    "contractExpiry": "30/06/2029"
+  },
+  "63540897": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "19/01/2006",
+    "citizenship": "Germany, Türkiye",
+    "height": "1,88 m",
+    "foot": "right",
+    "position": "Right-Back",
+    "club": "Beşiktaş JK",
+    "joinedAt": "16/08/2025",
+    "contractExpiry": "30/06/2030"
+  },
+  "70224973": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "22/04/2007",
+    "citizenship": "Türkiye",
+    "height": "1,86 m",
+    "foot": "right",
+    "position": "Centre-Forward",
+    "club": "Beşiktaş JK",
+    "joinedAt": "27/11/2023",
+    "contractExpiry": "30/06/2028"
+  },
   "71800841": {
     "fetchedAt": "2026-10-20",
     "birthDate": "04/01/2005",
@@ -294,6 +503,28 @@
     "position": "Left Winger",
     "club": "Kirklarelispor",
     "joinedAt": "04/09/2026",
+    "contractExpiry": "30/06/2028"
+  },
+  "71938818": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "20/01/2006",
+    "citizenship": "Türkiye, France",
+    "height": "1,80 m",
+    "foot": "right",
+    "position": "Left Winger",
+    "club": "Beşiktaş JK",
+    "joinedAt": "05/07/2026",
+    "contractExpiry": "30/06/2030"
+  },
+  "76965399": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "01/03/2008",
+    "citizenship": "Türkiye",
+    "height": "1,84 m",
+    "foot": "right",
+    "position": "Centre-Back",
+    "club": "Beşiktaş JK",
+    "joinedAt": "01/07/2026",
     "contractExpiry": "30/06/2028"
   },
   "85307453": {
@@ -316,6 +547,17 @@
     "position": "Right-Back",
     "club": "Corum FK",
     "joinedAt": "04/07/2026",
+    "contractExpiry": "30/06/2028"
+  },
+  "101513874": {
+    "fetchedAt": "2026-10-21",
+    "birthDate": "24/01/2007",
+    "citizenship": "Türkiye",
+    "height": null,
+    "foot": "right",
+    "position": "Centre-Forward",
+    "club": "Beşiktaş JK",
+    "joinedAt": "01/07/2026",
     "contractExpiry": "30/06/2028"
   },
   "107480695": {
