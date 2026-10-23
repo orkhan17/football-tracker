@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T11:35:04.090Z",
+  "generatedAt": "2026-10-23T21:27:09.498Z",
   "seasons": [
     2026,
     2025
@@ -3193,12 +3193,15 @@
       "id": 76965399,
       "seasons": {
         "2025": {
-          "competitions": []
+          "competitions": [],
+          "stale": true
         },
         "2026": {
-          "competitions": []
+          "competitions": [],
+          "stale": true
         }
       },
+      "error": "HTTP 429 for /football/players/76965399/statistics: You have exceeded the DAILY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/highlightly-api-highlightly-api-default/api/sport-highlights-api",
       "fullName": null
     },
     {
@@ -3252,7 +3255,8 @@
               "goals": 0,
               "assists": 0
             }
-          ]
+          ],
+          "stale": true
         },
         "2026": {
           "competitions": [
@@ -3276,9 +3280,11 @@
               "goals": 1,
               "assists": 0
             }
-          ]
+          ],
+          "stale": true
         }
       },
+      "error": "Skipped: request quota reached",
       "fullName": "Milot Rashica"
     },
     {
@@ -3312,12 +3318,15 @@
               "goals": 0,
               "assists": 0
             }
-          ]
+          ],
+          "stale": true
         },
         "2026": {
-          "competitions": []
+          "competitions": [],
+          "stale": true
         }
       },
+      "error": "Skipped: request quota reached",
       "fullName": "Can Keles"
     },
     {
@@ -3361,7 +3370,8 @@
               "goals": 0,
               "assists": 0
             }
-          ]
+          ],
+          "stale": true
         },
         "2026": {
           "competitions": [
@@ -3395,9 +3405,11 @@
               "goals": 1,
               "assists": 0
             }
-          ]
+          ],
+          "stale": true
         }
       },
+      "error": "Skipped: request quota reached",
       "fullName": "Semih Kılıçsoy"
     },
     {
@@ -3441,7 +3453,8 @@
               "goals": 0,
               "assists": 0
             }
-          ]
+          ],
+          "stale": true
         },
         "2026": {
           "competitions": [
@@ -3455,9 +3468,11 @@
               "goals": 0,
               "assists": 0
             }
-          ]
+          ],
+          "stale": true
         }
       },
+      "error": "Skipped: request quota reached",
       "fullName": "Mustafa Erhan Hekimoğlu"
     },
     {
@@ -3481,7 +3496,8 @@
               "goals": 0,
               "assists": 0
             }
-          ]
+          ],
+          "stale": true
         },
         "2026": {
           "competitions": [
@@ -3495,9 +3511,11 @@
               "goals": 0,
               "assists": 0
             }
-          ]
+          ],
+          "stale": true
         }
       },
+      "error": "Skipped: request quota reached",
       "fullName": "Sami Bircan Ahmet"
     }
   ]
