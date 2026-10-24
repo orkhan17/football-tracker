@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T21:27:09.498Z",
+  "generatedAt": "2026-10-24T10:55:19.533Z",
   "seasons": [
     2026,
     2025
@@ -17,24 +17,17 @@
     }
   },
   "changes": {
-    "since": "2026-10-21T11:45:27.048Z",
-    "until": "2026-10-23T11:35:04.090Z",
-    "items": [
-      {
-        "id": 92407,
-        "name": "Rafa Silva",
-        "season": 2026,
-        "competition": "UEFA Europa League",
-        "team": "SL Benfica",
-        "category": "europe",
-        "apps": 1,
-        "starts": 1,
-        "minutes": 69,
-        "goals": 0,
-        "assists": 0
-      }
-    ],
-    "added": []
+    "since": "2026-10-23T21:27:09.498Z",
+    "until": "2026-10-24T10:55:19.533Z",
+    "items": [],
+    "added": [
+      "Azem Yortaç",
+      "Milot Rashica",
+      "Can Keleş",
+      "Semih Kılıçsoy",
+      "Mustafa Hekimoğlu",
+      "Ahmet Sami Bircan"
+    ]
   },
   "players": [
     {
@@ -3193,15 +3186,12 @@
       "id": 76965399,
       "seasons": {
         "2025": {
-          "competitions": [],
-          "stale": true
+          "competitions": []
         },
         "2026": {
-          "competitions": [],
-          "stale": true
+          "competitions": []
         }
       },
-      "error": "HTTP 429 for /football/players/76965399/statistics: You have exceeded the DAILY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/highlightly-api-highlightly-api-default/api/sport-highlights-api",
       "fullName": null
     },
     {
@@ -3255,8 +3245,7 @@
               "goals": 0,
               "assists": 0
             }
-          ],
-          "stale": true
+          ]
         },
         "2026": {
           "competitions": [
@@ -3280,11 +3269,9 @@
               "goals": 1,
               "assists": 0
             }
-          ],
-          "stale": true
+          ]
         }
       },
-      "error": "Skipped: request quota reached",
       "fullName": "Milot Rashica"
     },
     {
@@ -3318,15 +3305,12 @@
               "goals": 0,
               "assists": 0
             }
-          ],
-          "stale": true
+          ]
         },
         "2026": {
-          "competitions": [],
-          "stale": true
+          "competitions": []
         }
       },
-      "error": "Skipped: request quota reached",
       "fullName": "Can Keles"
     },
     {
@@ -3370,8 +3354,7 @@
               "goals": 0,
               "assists": 0
             }
-          ],
-          "stale": true
+          ]
         },
         "2026": {
           "competitions": [
@@ -3405,11 +3388,9 @@
               "goals": 1,
               "assists": 0
             }
-          ],
-          "stale": true
+          ]
         }
       },
-      "error": "Skipped: request quota reached",
       "fullName": "Semih Kılıçsoy"
     },
     {
@@ -3453,8 +3434,7 @@
               "goals": 0,
               "assists": 0
             }
-          ],
-          "stale": true
+          ]
         },
         "2026": {
           "competitions": [
@@ -3468,11 +3448,9 @@
               "goals": 0,
               "assists": 0
             }
-          ],
-          "stale": true
+          ]
         }
       },
-      "error": "Skipped: request quota reached",
       "fullName": "Mustafa Erhan Hekimoğlu"
     },
     {
@@ -3496,8 +3474,7 @@
               "goals": 0,
               "assists": 0
             }
-          ],
-          "stale": true
+          ]
         },
         "2026": {
           "competitions": [
@@ -3511,11 +3488,9 @@
               "goals": 0,
               "assists": 0
             }
-          ],
-          "stale": true
+          ]
         }
       },
-      "error": "Skipped: request quota reached",
       "fullName": "Sami Bircan Ahmet"
     }
   ]
