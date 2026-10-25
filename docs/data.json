@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T10:55:19.533Z",
+  "generatedAt": "2026-10-25T11:22:03.966Z",
   "seasons": [
     2026,
     2025
@@ -17,17 +17,24 @@
     }
   },
   "changes": {
-    "since": "2026-10-23T21:27:09.498Z",
-    "until": "2026-10-24T10:55:19.533Z",
-    "items": [],
-    "added": [
-      "Azem Yortaç",
-      "Milot Rashica",
-      "Can Keleş",
-      "Semih Kılıçsoy",
-      "Mustafa Hekimoğlu",
-      "Ahmet Sami Bircan"
-    ]
+    "since": "2026-10-24T10:55:19.533Z",
+    "until": "2026-10-25T11:22:03.966Z",
+    "items": [
+      {
+        "id": 44289644,
+        "name": "Emre Bilgin",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Eyüpspor",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "added": []
   },
   "players": [
     {
@@ -456,9 +463,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Eyüpspor",
-              "apps": 2,
-              "starts": 1,
-              "minutes": 135,
+              "apps": 3,
+              "starts": 2,
+              "minutes": 225,
               "goals": 0,
               "assists": 0
             }
