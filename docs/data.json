@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T14:07:47.985Z",
+  "generatedAt": "2026-11-04T14:28:35.656Z",
   "seasons": [
     2026,
     2025
@@ -17,19 +17,32 @@
     }
   },
   "changes": {
-    "since": "2026-11-02T15:43:41.094Z",
-    "until": "2026-11-03T14:07:47.985Z",
+    "since": "2026-11-03T14:07:47.985Z",
+    "until": "2026-11-04T14:28:35.656Z",
     "items": [
       {
-        "id": 5000492,
-        "name": "Salih Uçan",
+        "id": 58735530,
+        "name": "Élan Ricardo",
         "season": 2026,
-        "competition": "Süper Lig",
-        "team": "Genclerbirligi Ankara",
+        "competition": "Nemzeti Bajnokság",
+        "team": "ETO FC",
         "category": "league",
         "apps": 2,
+        "starts": 2,
+        "minutes": 117,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 58735530,
+        "name": "Élan Ricardo",
+        "season": 2026,
+        "competition": "Magyar Kupa",
+        "team": "ETO FC",
+        "category": "cup",
+        "apps": 1,
         "starts": 1,
-        "minutes": 62,
+        "minutes": 45,
         "goals": 0,
         "assists": 0
       }
@@ -1257,9 +1270,9 @@
               "name": "Nemzeti Bajnokság",
               "category": "league",
               "team": "ETO FC",
-              "apps": 3,
-              "starts": 2,
-              "minutes": 155,
+              "apps": 5,
+              "starts": 4,
+              "minutes": 272,
               "goals": 0,
               "assists": 0
             },
@@ -1267,9 +1280,9 @@
               "name": "Magyar Kupa",
               "category": "cup",
               "team": "ETO FC",
-              "apps": 1,
-              "starts": 1,
-              "minutes": 90,
+              "apps": 2,
+              "starts": 2,
+              "minutes": 135,
               "goals": 0,
               "assists": 0
             }
