@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T14:28:35.656Z",
+  "generatedAt": "2026-11-05T14:36:20.478Z",
   "seasons": [
     2026,
     2025
@@ -17,32 +17,19 @@
     }
   },
   "changes": {
-    "since": "2026-11-03T14:07:47.985Z",
-    "until": "2026-11-04T14:28:35.656Z",
+    "since": "2026-11-04T14:28:35.656Z",
+    "until": "2026-11-05T14:36:20.478Z",
     "items": [
       {
-        "id": 58735530,
-        "name": "Élan Ricardo",
+        "id": 317485,
+        "name": "Ersin Destanoğlu",
         "season": 2026,
-        "competition": "Nemzeti Bajnokság",
-        "team": "ETO FC",
-        "category": "league",
-        "apps": 2,
-        "starts": 2,
-        "minutes": 117,
-        "goals": 0,
-        "assists": 0
-      },
-      {
-        "id": 58735530,
-        "name": "Élan Ricardo",
-        "season": 2026,
-        "competition": "Magyar Kupa",
-        "team": "ETO FC",
-        "category": "cup",
+        "competition": "AFC Champions League Two",
+        "team": "Al-Jazira Club",
+        "category": "europe",
         "apps": 1,
         "starts": 1,
-        "minutes": 45,
+        "minutes": 90,
         "goals": 0,
         "assists": 0
       }
@@ -1170,9 +1157,9 @@
               "name": "AFC Champions League Two",
               "category": "europe",
               "team": "Al-Jazira Club",
-              "apps": 3,
-              "starts": 3,
-              "minutes": 270,
+              "apps": 4,
+              "starts": 4,
+              "minutes": 360,
               "goals": 0,
               "assists": 0
             }
