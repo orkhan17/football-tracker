@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T15:36:09.863Z",
+  "generatedAt": "2026-11-21T14:36:52.513Z",
   "seasons": [
     2026,
     2025
@@ -17,19 +17,32 @@
     }
   },
   "changes": {
-    "since": "2026-11-15T13:54:35.611Z",
-    "until": "2026-11-18T15:36:09.863Z",
+    "since": "2026-11-18T15:36:09.863Z",
+    "until": "2026-11-21T14:36:52.513Z",
     "items": [
       {
-        "id": 54203380,
-        "name": "Göktuğ Baytekin",
+        "id": 20757562,
+        "name": "Emrecan Uzunhan",
         "season": 2026,
-        "competition": "2.Lig Kirmizi",
-        "team": "Sakaryaspor",
+        "competition": "1.Lig",
+        "team": "Istanbulspor",
+        "category": "league",
+        "apps": 2,
+        "starts": 2,
+        "minutes": 145,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 5000492,
+        "name": "Salih Uçan",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Genclerbirligi Ankara",
         "category": "league",
         "apps": 1,
-        "starts": 1,
-        "minutes": 130,
+        "starts": 0,
+        "minutes": 45,
         "goals": 0,
         "assists": 0
       }
@@ -513,9 +526,9 @@
               "name": "1.Lig",
               "category": "league",
               "team": "Istanbulspor",
-              "apps": 8,
-              "starts": 8,
-              "minutes": 702,
+              "apps": 10,
+              "starts": 10,
+              "minutes": 847,
               "goals": 0,
               "assists": 0
             }
@@ -948,9 +961,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Genclerbirligi Ankara",
-              "apps": 10,
+              "apps": 11,
               "starts": 2,
-              "minutes": 267,
+              "minutes": 312,
               "goals": 0,
               "assists": 0
             }
