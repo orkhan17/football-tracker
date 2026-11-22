@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T14:36:52.513Z",
+  "generatedAt": "2026-11-22T14:31:43.640Z",
   "seasons": [
     2026,
     2025
@@ -10,39 +10,52 @@
   },
   "nextMatches": {
     "Besiktas": {
-      "date": "2026-11-22T13:00:00.000Z",
-      "home": "Konyaspor",
-      "away": "Besiktas",
-      "competition": "Süper Lig"
+      "date": "2026-11-26T17:45:00.000Z",
+      "home": "Besiktas",
+      "away": "Hapoel Beer Sheva",
+      "competition": "UEFA Europa League"
     }
   },
   "changes": {
-    "since": "2026-11-18T15:36:09.863Z",
-    "until": "2026-11-21T14:36:52.513Z",
+    "since": "2026-11-21T14:36:52.513Z",
+    "until": "2026-11-22T14:31:43.640Z",
     "items": [
       {
-        "id": 20757562,
-        "name": "Emrecan Uzunhan",
+        "id": 24630256,
+        "name": "Cole Palmer",
         "season": 2026,
-        "competition": "1.Lig",
-        "team": "Istanbulspor",
+        "competition": "Premier League",
+        "team": "Chelsea FC",
         "category": "league",
-        "apps": 2,
-        "starts": 2,
-        "minutes": 145,
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
         "goals": 0,
         "assists": 0
       },
       {
-        "id": 5000492,
-        "name": "Salih Uçan",
+        "id": 54203380,
+        "name": "Göktuğ Baytekin",
         "season": 2026,
-        "competition": "Süper Lig",
-        "team": "Genclerbirligi Ankara",
+        "competition": "2.Lig Kirmizi",
+        "team": "Sakaryaspor",
         "category": "league",
         "apps": 1,
-        "starts": 0,
-        "minutes": 45,
+        "starts": 1,
+        "minutes": 56,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 317485,
+        "name": "Ersin Destanoğlu",
+        "season": 2026,
+        "competition": "UAE Pro League",
+        "team": "Al-Jazira Club",
+        "category": "league",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
         "goals": 0,
         "assists": 0
       }
@@ -197,9 +210,9 @@
               "name": "Premier League",
               "category": "league",
               "team": "Chelsea FC",
-              "apps": 10,
-              "starts": 10,
-              "minutes": 881,
+              "apps": 11,
+              "starts": 11,
+              "minutes": 971,
               "goals": 3,
               "assists": 3
             },
@@ -911,9 +924,9 @@
               "name": "2.Lig Kirmizi",
               "category": "league",
               "team": "Sakaryaspor",
-              "apps": 11,
-              "starts": 11,
-              "minutes": 985,
+              "apps": 12,
+              "starts": 12,
+              "minutes": 1041,
               "goals": 0,
               "assists": 0
             }
@@ -1161,9 +1174,9 @@
               "name": "UAE Pro League",
               "category": "league",
               "team": "Al-Jazira Club",
-              "apps": 7,
-              "starts": 7,
-              "minutes": 630,
+              "apps": 8,
+              "starts": 8,
+              "minutes": 720,
               "goals": 0,
               "assists": 0
             },
