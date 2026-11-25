@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T17:38:12.678Z",
+  "generatedAt": "2026-11-25T17:09:35.447Z",
   "seasons": [
     2026,
     2025
@@ -17,21 +17,21 @@
     }
   },
   "changes": {
-    "since": "2026-11-23T18:00:44.942Z",
-    "until": "2026-11-24T17:38:12.678Z",
+    "since": "2026-11-24T17:38:12.678Z",
+    "until": "2026-11-25T17:09:35.447Z",
     "items": [
       {
-        "id": 8051120,
-        "name": "Amir Hadziahmetovic",
+        "id": 33320,
+        "name": "João Mário",
         "season": 2026,
-        "competition": "efbet Liga",
-        "team": "Ludogorets Razgrad",
-        "category": "league",
-        "apps": 2,
+        "competition": "UEFA Champions League",
+        "team": "AEK Athens",
+        "category": "europe",
+        "apps": 1,
         "starts": 0,
-        "minutes": 26,
+        "minutes": 11,
         "goals": 0,
-        "assists": 2
+        "assists": 0
       }
     ],
     "added": []
@@ -740,9 +740,9 @@
               "name": "UEFA Champions League",
               "category": "europe",
               "team": "AEK Athens",
-              "apps": 2,
+              "apps": 3,
               "starts": 1,
-              "minutes": 82,
+              "minutes": 93,
               "goals": 0,
               "assists": 0
             }
