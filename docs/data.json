@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T17:09:35.447Z",
+  "generatedAt": "2026-11-26T16:50:24.700Z",
   "seasons": [
     2026,
     2025
@@ -17,19 +17,19 @@
     }
   },
   "changes": {
-    "since": "2026-11-24T17:38:12.678Z",
-    "until": "2026-11-25T17:09:35.447Z",
+    "since": "2026-11-25T17:09:35.447Z",
+    "until": "2026-11-26T16:50:24.700Z",
     "items": [
       {
-        "id": 33320,
-        "name": "João Mário",
+        "id": 317485,
+        "name": "Ersin Destanoğlu",
         "season": 2026,
-        "competition": "UEFA Champions League",
-        "team": "AEK Athens",
+        "competition": "AFC Champions League Two",
+        "team": "Al-Jazira Club",
         "category": "europe",
         "apps": 1,
-        "starts": 0,
-        "minutes": 11,
+        "starts": 1,
+        "minutes": 90,
         "goals": 0,
         "assists": 0
       }
@@ -1168,9 +1168,9 @@
               "name": "AFC Champions League Two",
               "category": "europe",
               "team": "Al-Jazira Club",
-              "apps": 4,
-              "starts": 4,
-              "minutes": 360,
+              "apps": 5,
+              "starts": 5,
+              "minutes": 450,
               "goals": 0,
               "assists": 0
             }
