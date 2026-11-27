@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T16:50:24.700Z",
+  "generatedAt": "2026-11-27T16:36:23.837Z",
   "seasons": [
     2026,
     2025
@@ -10,26 +10,286 @@
   },
   "nextMatches": {
     "Besiktas": {
-      "date": "2026-11-26T17:45:00.000Z",
+      "date": "2026-11-30T18:00:00.000Z",
       "home": "Besiktas",
-      "away": "Hapoel Beer Sheva",
-      "competition": "UEFA Europa League"
+      "away": "Galatasaray",
+      "competition": "Süper Lig"
     }
   },
   "changes": {
-    "since": "2026-11-25T17:09:35.447Z",
-    "until": "2026-11-26T16:50:24.700Z",
+    "since": "2026-11-26T16:50:24.700Z",
+    "until": "2026-11-27T16:36:23.837Z",
     "items": [
       {
-        "id": 317485,
-        "name": "Ersin Destanoğlu",
+        "id": 5982109,
+        "name": "Orkun Kökçü",
         "season": 2026,
-        "competition": "AFC Champions League Two",
-        "team": "Al-Jazira Club",
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
         "category": "europe",
         "apps": 1,
         "starts": 1,
         "minutes": 90,
+        "goals": 1,
+        "assists": 0
+      },
+      {
+        "id": 92407,
+        "name": "Rafa Silva",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "SL Benfica",
+        "category": "europe",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 59,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 64393,
+        "name": "Alexander Nübel",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 0,
+        "starts": 0,
+        "minutes": 16,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 320061,
+        "name": "Rıdvan Yılmaz",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 0,
+        "starts": 0,
+        "minutes": 16,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 8057560,
+        "name": "Emirhan Topçu",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 45,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 478807,
+        "name": "Amir Murillo",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 0,
+        "starts": 0,
+        "minutes": 16,
+        "goals": 0,
+        "assists": 1
+      },
+      {
+        "id": 313460,
+        "name": "Leandro Trossard",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 0,
+        "starts": 0,
+        "minutes": 16,
+        "goals": 1,
+        "assists": 0
+      },
+      {
+        "id": 313460,
+        "name": "Leandro Trossard",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 31,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 29271242,
+        "name": "Fabio Miretti",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 0,
+        "starts": 0,
+        "minutes": 16,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 4896969,
+        "name": "Dušan Vlahović",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 0,
+        "starts": 0,
+        "minutes": 15,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 4896969,
+        "name": "Dušan Vlahović",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 31,
+        "goals": 0,
+        "assists": 1
+      },
+      {
+        "id": 8066898,
+        "name": "Doğan Alemdar",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 21746102,
+        "name": "Emmanuel Agbadou",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 0,
+        "starts": 0,
+        "minutes": 15,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 53635211,
+        "name": "Kassoum Ouattara",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 63540897,
+        "name": "Taylan Bulut",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 90,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 51021698,
+        "name": "Junior Olaitan",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 31,
+        "goals": 1,
+        "assists": 0
+      },
+      {
+        "id": 71938818,
+        "name": "İlhan Fakılı",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 59,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 50367394,
+        "name": "Ernest Poku",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 0,
+        "starts": 0,
+        "minutes": 15,
+        "goals": 0,
+        "assists": 1
+      },
+      {
+        "id": 50367394,
+        "name": "Ernest Poku",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 4,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 5588464,
+        "name": "Hyeon-gyu Oh",
+        "season": 2026,
+        "competition": "Süper Lig",
+        "team": "Beşiktaş JK",
+        "category": "league",
+        "apps": 1,
+        "starts": 0,
+        "minutes": 1,
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "id": 5588464,
+        "name": "Hyeon-gyu Oh",
+        "season": 2026,
+        "competition": "UEFA Europa League",
+        "team": "Beşiktaş JK",
+        "category": "europe",
+        "apps": 1,
+        "starts": 1,
+        "minutes": 59,
         "goals": 0,
         "assists": 0
       }
@@ -106,10 +366,10 @@
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 3,
-              "starts": 2,
-              "minutes": 130,
-              "goals": 1,
+              "apps": 4,
+              "starts": 3,
+              "minutes": 220,
+              "goals": 2,
               "assists": 2
             },
             {
@@ -1536,9 +1796,9 @@
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "SL Benfica",
-              "apps": 2,
-              "starts": 2,
-              "minutes": 131,
+              "apps": 3,
+              "starts": 3,
+              "minutes": 190,
               "goals": 1,
               "assists": 0
             },
@@ -1608,7 +1868,7 @@
               "team": "Beşiktaş JK",
               "apps": 12,
               "starts": 12,
-              "minutes": 1064,
+              "minutes": 1080,
               "goals": 0,
               "assists": 0
             },
@@ -1678,7 +1938,7 @@
               "team": "Beşiktaş JK",
               "apps": 11,
               "starts": 11,
-              "minutes": 862,
+              "minutes": 878,
               "goals": 1,
               "assists": 1
             },
@@ -1776,9 +2036,9 @@
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 3,
-              "starts": 3,
-              "minutes": 270,
+              "apps": 4,
+              "starts": 4,
+              "minutes": 315,
               "goals": 0,
               "assists": 0
             },
@@ -1948,9 +2208,9 @@
               "team": "Beşiktaş JK",
               "apps": 11,
               "starts": 10,
-              "minutes": 858,
+              "minutes": 874,
               "goals": 1,
-              "assists": 2
+              "assists": 3
             },
             {
               "name": "UEFA Europa League",
@@ -2108,17 +2368,17 @@
               "team": "Beşiktaş JK",
               "apps": 11,
               "starts": 11,
-              "minutes": 902,
-              "goals": 2,
+              "minutes": 918,
+              "goals": 3,
               "assists": 4
             },
             {
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 3,
+              "apps": 4,
               "starts": 3,
-              "minutes": 270,
+              "minutes": 301,
               "goals": 0,
               "assists": 0
             },
@@ -2188,7 +2448,7 @@
               "team": "Beşiktaş JK",
               "apps": 5,
               "starts": 2,
-              "minutes": 233,
+              "minutes": 249,
               "goals": 0,
               "assists": 0
             },
@@ -2338,7 +2598,7 @@
               "team": "Beşiktaş JK",
               "apps": 10,
               "starts": 9,
-              "minutes": 799,
+              "minutes": 814,
               "goals": 11,
               "assists": 1
             },
@@ -2346,11 +2606,11 @@
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 3,
+              "apps": 4,
               "starts": 1,
-              "minutes": 125,
+              "minutes": 156,
               "goals": 0,
-              "assists": 0
+              "assists": 1
             },
             {
               "name": "UEFA Europa League Qualifying",
@@ -2391,7 +2651,18 @@
           ]
         },
         "2026": {
-          "competitions": []
+          "competitions": [
+            {
+              "name": "UEFA Europa League",
+              "category": "europe",
+              "team": "Beşiktaş JK",
+              "apps": 1,
+              "starts": 1,
+              "minutes": 90,
+              "goals": 0,
+              "assists": 0
+            }
+          ]
         }
       },
       "fullName": "Doğan Alemdar"
@@ -2457,7 +2728,7 @@
               "team": "Beşiktaş JK",
               "apps": 12,
               "starts": 11,
-              "minutes": 982,
+              "minutes": 997,
               "goals": 0,
               "assists": 1
             },
@@ -2545,9 +2816,9 @@
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 4,
-              "starts": 4,
-              "minutes": 353,
+              "apps": 5,
+              "starts": 5,
+              "minutes": 443,
               "goals": 0,
               "assists": 0
             },
@@ -2635,9 +2906,9 @@
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 1,
-              "starts": 1,
-              "minutes": 64,
+              "apps": 2,
+              "starts": 2,
+              "minutes": 154,
               "goals": 0,
               "assists": 0
             },
@@ -2725,10 +2996,10 @@
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 4,
+              "apps": 5,
               "starts": 3,
-              "minutes": 276,
-              "goals": 2,
+              "minutes": 307,
+              "goals": 3,
               "assists": 3
             },
             {
@@ -2795,9 +3066,9 @@
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 4,
-              "starts": 3,
-              "minutes": 254,
+              "apps": 5,
+              "starts": 4,
+              "minutes": 313,
               "goals": 1,
               "assists": 1
             },
@@ -3057,17 +3328,17 @@
               "team": "Beşiktaş JK",
               "apps": 6,
               "starts": 2,
-              "minutes": 179,
+              "minutes": 194,
               "goals": 1,
-              "assists": 0
+              "assists": 1
             },
             {
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 2,
+              "apps": 3,
               "starts": 1,
-              "minutes": 109,
+              "minutes": 113,
               "goals": 1,
               "assists": 1
             }
@@ -3155,9 +3426,9 @@
               "name": "Süper Lig",
               "category": "league",
               "team": "Beşiktaş JK",
-              "apps": 9,
+              "apps": 10,
               "starts": 2,
-              "minutes": 274,
+              "minutes": 275,
               "goals": 1,
               "assists": 1
             },
@@ -3165,9 +3436,9 @@
               "name": "UEFA Europa League",
               "category": "europe",
               "team": "Beşiktaş JK",
-              "apps": 4,
-              "starts": 3,
-              "minutes": 238,
+              "apps": 5,
+              "starts": 4,
+              "minutes": 297,
               "goals": 2,
               "assists": 1
             },
